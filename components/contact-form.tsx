@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitLeadDirectly } from "@/lib/crm/client-submit";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -19,23 +20,18 @@ export function ContactForm() {
     const message = String(fd.get("message") || "").trim();
 
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          form: "contact",
-          fullName: name,
-          email,
-          message,
-          service: "Contact form",
-        }),
+      const result = await submitLeadDirectly({
+        form: "contact",
+        fullName: name,
+        email,
+        message,
+        service: "Contact form",
       });
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; detail?: string };
 
-      if (!res.ok || !data.ok) {
-        const detail = typeof data.detail === "string" ? data.detail : "";
+      if (!result.ok) {
+        const detail = typeof result.detail === "string" ? result.detail : "";
         setErrorMessage(
-          (data.error || "Something went wrong. Please try again or email us directly.") +
+          (result.error || "Something went wrong. Please try again or email us directly.") +
             (detail ? ` ${detail}` : ""),
         );
         setStatus("error");

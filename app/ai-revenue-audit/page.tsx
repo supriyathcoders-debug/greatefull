@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitLeadDirectly } from "@/lib/crm/client-submit";
 
 export default function AiRevenueAuditPage() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -149,30 +150,20 @@ export default function AiRevenueAuditPage() {
       };
 
       try {
-        const response = await fetch("/api/leads", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            form: "ai-revenue-audit",
-            fullName,
-            email: formData.email,
-            phone: formData.phone?.trim() || undefined,
-            company: formData.company?.trim() || undefined,
-            message,
-            service: "AI Revenue Audit",
-            metadata,
-          }),
+        const result = await submitLeadDirectly({
+          form: "ai-revenue-audit",
+          fullName,
+          email: formData.email,
+          phone: formData.phone?.trim() || undefined,
+          company: formData.company?.trim() || undefined,
+          message,
+          service: "AI Revenue Audit",
+          metadata,
         });
 
-        const data = (await response.json().catch(() => ({}))) as {
-          ok?: boolean;
-          error?: string;
-          detail?: string;
-        };
-
-        if (!response.ok || !data.ok) {
-          const hint = data.detail ? ` (${data.detail})` : "";
-          setSubmitError((data.error || "Submission failed.") + hint);
+        if (!result.ok) {
+          const detail = result.detail ? ` (${result.detail})` : "";
+          setSubmitError(result.error + detail);
           return;
         }
 
