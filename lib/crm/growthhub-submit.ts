@@ -288,6 +288,14 @@ async function submitViaApi(payload: CanonicalLeadPayload): Promise<
     }
   }
 
+  if (contactId && msg) {
+    const noteUrl = `${base}/contacts/${encodeURIComponent(contactId)}/notes`;
+    // We don't block the whole flow if the note fails, but we try our best.
+    await postJson(noteUrl, { body: msg }, headers).catch((err) => {
+      console.error("Failed to create contact note:", err);
+    });
+  }
+
   const pipelineId = process.env.GROWTHHUB365_PIPELINE_ID?.trim();
   const stageId = process.env.GROWTHHUB365_PIPELINE_STAGE_ID?.trim();
 
