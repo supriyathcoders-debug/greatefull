@@ -55,6 +55,110 @@ async function postJson(url: string, body: unknown, headers: HeadersInit): Promi
   });
 }
 
+async function putJson(url: string, body: unknown, headers: HeadersInit): Promise<Response> {
+  return fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+    cache: "no-store",
+  });
+}
+
+async function getJson(url: string, headers: HeadersInit): Promise<Response> {
+  return fetch(url, { method: "GET", headers, cache: "no-store" });
+}
+
+function isDuplicateContactError(message: string): boolean {
+  const m = message.toLowerCase();
+  return m.includes("duplicat") || m.includes("already exists") || m.includes("contact already");
+}
+
+function extractContactsArray(data: unknown): Record<string, unknown>[] {
+  if (!data || typeof data !== "object") return [];
+  const o = data as Record<string, unknown>;
+  const raw = o.contacts ?? (o.data as Record<string, unknown> | undefined)?.contacts;
+  if (!Array.isArray(raw)) return [];
+  const out: Record<string, unknown>[] = [];
+  for (const item of raw) {
+    if (!item || typeof item !== "object") continue;
+    const r = item as Record<string, unknown>;
+    const inner = r.contact;
+    if (inner && typeof inner === "object") out.push(inner as Record<string, unknown>);
+    else out.push(r);
+  }
+  return out;
+}
+
+function normalizeTags(tags: unknown): string[] {
+  if (!Array.isArray(tags)) return [];
+  return tags.filter((t): t is string => typeof t === "string");
+}
+
+/** Find first contact id in this location matching email (case-insensitive). */
+async function findContactIdByEmail(
+  base: string,
+  token: string,
+  version: string,
+  locationId: string,
+  email: string,
+): Promise<string | undefined> {
+  const em = email.trim().toLowerCase();
+  const headers = lcHeaders(token, version);
+
+  const tryBodies = [
+    { locationId, page: 1, pageLimit: 10, query: em },
+    {
+      locationId,
+      page: 1,
+      pageLimit: 10,
+      filters: [{ field: "email", operator: "eq", value: em }],
+    },
+  ];
+
+  for (const body of tryBodies) {
+    const res = await postJson(`${base}/contacts/search`, body, headers);
+    const text = await res.text();
+    let data: unknown;
+    try {
+      data = JSON.parse(text) as unknown;
+    } catch {
+      continue;
+    }
+    if (!res.ok) continue;
+    const list = extractContactsArray(data);
+    const match = list.find((c) => {
+      const e = c.email;
+      return typeof e === "string" && e.trim().toLowerCase() === em;
+    });
+    const id = match?.id;
+    if (typeof id === "string") return id;
+  }
+  return undefined;
+}
+
+async function fetchContactForMerge(
+  base: string,
+  token: string,
+  version: string,
+  locationId: string,
+  contactId: string,
+): Promise<{ tags: string[] } | null> {
+  const q = new URLSearchParams({ locationId });
+  const url = `${base}/contacts/${encodeURIComponent(contactId)}?${q.toString()}`;
+  const res = await getJson(url, lcHeaders(token, version));
+  const text = await res.text();
+  let data: unknown;
+  try {
+    data = JSON.parse(text) as unknown;
+  } catch {
+    return null;
+  }
+  if (!res.ok || !data || typeof data !== "object") return null;
+  const o = data as Record<string, unknown>;
+  const contact = (o.contact as Record<string, unknown> | undefined) ?? o;
+  return { tags: normalizeTags(contact.tags) };
+}
+
 async function submitViaWebhook(
   webhookUrl: string,
   payload: CanonicalLeadPayload,
@@ -114,8 +218,9 @@ async function submitViaApi(payload: CanonicalLeadPayload): Promise<
     contactBody.customFields = [{ id: messageFieldId, value: payload.message.trim() }];
   }
 
-  const contactRes = await postJson(`${base}/contacts/`, contactBody, lcHeaders(token, version));
-  const contactText = await contactRes.text();
+  const headers = lcHeaders(token, version);
+  let contactRes = await postJson(`${base}/contacts/`, contactBody, headers);
+  let contactText = await contactRes.text();
   let contactJson: unknown;
   try {
     contactJson = JSON.parse(contactText) as unknown;
@@ -123,15 +228,66 @@ async function submitViaApi(payload: CanonicalLeadPayload): Promise<
     contactJson = undefined;
   }
 
-  if (!contactRes.ok) {
-    const msg =
+  let contactId: string | undefined;
+
+  if (contactRes.ok) {
+    contactId = getContactIdFromResponse(contactJson);
+  } else {
+    const errMsg =
       contactJson && typeof contactJson === "object" && "message" in contactJson
         ? String((contactJson as { message?: string }).message)
         : contactText.slice(0, 500);
-    return { ok: false, status: contactRes.status, detail: msg || contactRes.statusText };
+
+    if (isDuplicateContactError(errMsg || "")) {
+      const existingId = await findContactIdByEmail(base, token, version, locationId, payload.email);
+      if (!existingId) {
+        return {
+          ok: false,
+          status: contactRes.status,
+          detail: errMsg || contactRes.statusText,
+        };
+      }
+
+      const existing = await fetchContactForMerge(base, token, version, locationId, existingId);
+      const mergedTags = [...new Set([...(existing?.tags ?? []), ...tags])];
+
+      const updateBody: Record<string, unknown> = {
+        firstName,
+        lastName,
+        email: payload.email.trim(),
+        tags: mergedTags,
+        source,
+      };
+      if (phone) updateBody.phone = phone;
+      if (company) updateBody.companyName = company;
+      if (messageFieldId && payload.message.trim()) {
+        updateBody.customFields = [{ id: messageFieldId, value: payload.message.trim() }];
+      }
+
+      const putUrl = `${base}/contacts/${encodeURIComponent(existingId)}?locationId=${encodeURIComponent(locationId)}`;
+      const putRes = await putJson(putUrl, updateBody, headers);
+      const putText = await putRes.text();
+      let putJsonParsed: unknown;
+      try {
+        putJsonParsed = JSON.parse(putText) as unknown;
+      } catch {
+        putJsonParsed = undefined;
+      }
+
+      if (!putRes.ok) {
+        const putErr =
+          putJsonParsed && typeof putJsonParsed === "object" && "message" in putJsonParsed
+            ? String((putJsonParsed as { message?: string }).message)
+            : putText.slice(0, 500);
+        return { ok: false, status: putRes.status, detail: putErr || putRes.statusText };
+      }
+
+      contactId = existingId;
+    } else {
+      return { ok: false, status: contactRes.status, detail: errMsg || contactRes.statusText };
+    }
   }
 
-  const contactId = getContactIdFromResponse(contactJson);
   const pipelineId = process.env.GROWTHHUB365_PIPELINE_ID?.trim();
   const stageId = process.env.GROWTHHUB365_PIPELINE_STAGE_ID?.trim();
 
@@ -147,13 +303,13 @@ async function submitViaApi(payload: CanonicalLeadPayload): Promise<
       name: oppName.slice(0, 120),
       status: "open",
     };
-    const oppRes = await postJson(`${base}/opportunities/`, oppBody, lcHeaders(token, version));
+    const oppRes = await postJson(`${base}/opportunities/`, oppBody, headers);
     if (!oppRes.ok) {
       const oppText = await oppRes.text();
       return {
         ok: false,
         status: oppRes.status,
-        detail: `Contact created but opportunity failed: ${oppText.slice(0, 400)}`,
+        detail: `Contact saved but opportunity failed: ${oppText.slice(0, 400)}`,
       };
     }
   }

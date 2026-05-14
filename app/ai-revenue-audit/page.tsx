@@ -63,6 +63,19 @@ export default function AiRevenueAuditPage() {
     return newErrors.length === 0;
   };
 
+  const fieldLabel: Record<string, string> = {
+    firstName: "First name",
+    lastName: "Last name",
+    email: "Business email",
+    role: "Your role (choose from the list)",
+    company: "Company name",
+    industry: "Industry",
+    challenges: "At least one growth challenge",
+    primaryGoal: "Your #1 goal",
+    aiAdoption: "AI adoption level",
+    timeline: "Implementation timeline",
+  };
+
   const handleNext = () => {
     if (validateStep(currentStep)) {
       setSubmitError(null);
@@ -70,6 +83,10 @@ export default function AiRevenueAuditPage() {
         setCurrentStep((prevStep) => prevStep + 1);
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
+    } else {
+      requestAnimationFrame(() => {
+        document.getElementById("audit-form-feedback")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
     }
   };
 
@@ -230,7 +247,7 @@ export default function AiRevenueAuditPage() {
 
         {/* FORM CARD */}
         <div className="bg-surface border border-border-subtle rounded-[2rem] p-8 md:p-16 shadow-2xl relative overflow-hidden animate-[fade-up_0.8s_0.4s_ease-out_both]">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-brand/5 rounded-full blur-3xl -mr-32 -mt-32" />
+          <div className="pointer-events-none absolute top-0 right-0 w-64 h-64 bg-brand/5 rounded-full blur-3xl -mr-32 -mt-32" aria-hidden />
 
           {!isSubmitted ? (
             <div className="relative z-10">
@@ -282,12 +299,12 @@ export default function AiRevenueAuditPage() {
                         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c8a951' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.25rem' }}
                       >
                         <option value="" className="bg-[#0b1825]">Select position...</option>
-                        <option className="bg-[#0b1825]">Owner / Founder</option>
-                        <option className="bg-[#0b1825]">CEO / President</option>
-                        <option className="bg-[#0b1825]">Marketing Lead</option>
-                        <option className="bg-[#0b1825]">Operations Manager</option>
-                        <option className="bg-[#0b1825]">Sales Lead</option>
-                        <option className="bg-[#0b1825]">Other</option>
+                        <option value="Owner / Founder" className="bg-[#0b1825]">Owner / Founder</option>
+                        <option value="CEO / President" className="bg-[#0b1825]">CEO / President</option>
+                        <option value="Marketing Lead" className="bg-[#0b1825]">Marketing Lead</option>
+                        <option value="Operations Manager" className="bg-[#0b1825]">Operations Manager</option>
+                        <option value="Sales Lead" className="bg-[#0b1825]">Sales Lead</option>
+                        <option value="Other" className="bg-[#0b1825]">Other</option>
                       </select>
                     </div>
                   </div>
@@ -501,11 +518,26 @@ export default function AiRevenueAuditPage() {
                   </div>
                 )}
               </div>
-              {errors.length > 0 && (
-                <p className="mt-8 text-sm text-red-300">
-                  Please complete all required fields to continue.
-                </p>
-              )}
+              <div
+                id="audit-form-feedback"
+                className={
+                  errors.length > 0
+                    ? "mt-8 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+                    : "sr-only"
+                }
+                aria-live="polite"
+              >
+                {errors.length > 0 ? (
+                  <>
+                    <p className="font-semibold text-red-100">Please complete the following to continue:</p>
+                    <ul className="mt-2 list-disc pl-5 leading-relaxed">
+                      {errors.map((key) => (
+                        <li key={key}>{fieldLabel[key] ?? key}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : null}
+              </div>
               {submitError ? (
                 <p className="mt-6 text-sm text-red-300 leading-relaxed" role="alert">
                   {submitError}

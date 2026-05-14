@@ -30,7 +30,7 @@ export function ContactForm() {
           service: "Contact form",
         }),
       });
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string; detail?: string };
 
       if (!res.ok || !data.ok) {
         const detail = typeof data.detail === "string" ? data.detail : "";
