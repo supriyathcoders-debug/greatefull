@@ -30,7 +30,7 @@ function splitFullName(full: string): { firstName: string; lastName: string } {
  */
 export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise<{ ok: true } | { ok: false; error: string; detail?: string }> {
   const webhookUrl = process.env.NEXT_PUBLIC_GROWTHHUB365_WEBHOOK_URL?.trim();
-  
+
   if (webhookUrl) {
     try {
       const res = await fetch(webhookUrl, {
@@ -52,7 +52,7 @@ export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise
   // Fallback to direct API if no webhook but credentials exist
   const token = process.env.NEXT_PUBLIC_GROWTHHUB365_ACCESS_TOKEN?.trim();
   const locationId = process.env.NEXT_PUBLIC_GROWTHHUB365_LOCATION_ID?.trim();
-  
+
   if (!token || !locationId) {
     return { ok: false, error: "CRM Configuration Missing", detail: "Please set NEXT_PUBLIC_GROWTHHUB365_WEBHOOK_URL or API credentials in your environment." };
   }
@@ -65,7 +65,7 @@ export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise
   const tags = ["grateful-marketing-site", "static-export", payload.form];
   const baseSource = `Website · ${payload.form === "contact" ? "Contact" : "AI Revenue Audit"}`;
   const msg = payload.message.trim();
-  
+
   const source = messageFieldId || !msg
     ? baseSource
     : `${baseSource} | ${msg.replace(/\s+/g, " ").slice(0, 220)}${msg.length > 220 ? "…" : ""}`;
@@ -103,7 +103,7 @@ export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise
     });
 
     const contactData = await contactRes.json().catch(() => ({}));
-    
+
     if (!contactRes.ok) {
       // Check for duplicate
       const errMsg = contactData.message || "Contact creation failed";
@@ -121,7 +121,7 @@ export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise
         method: "POST",
         headers,
         body: JSON.stringify({ body: msg }),
-      }).catch(() => {}); // Ignore note failure
+      }).catch(() => { }); // Ignore note failure
     }
 
     // Handle Opportunity
@@ -141,7 +141,7 @@ export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise
           name: oppName.slice(0, 120),
           status: "open",
         }),
-      }).catch(() => {});
+      }).catch(() => { });
     }
 
     return { ok: true };
