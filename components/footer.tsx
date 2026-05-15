@@ -5,16 +5,20 @@ export function Footer() {
     <footer className="bg-[#060d14] px-[6vw] pt-20 pb-10 border-t border-brand/20 mt-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 pb-14 border-b border-border mb-10">
         <div>
-          <span className="font-heading text-2xl font-semibold block mb-4 text-foreground">
-            Grateful <strong className="text-brand">Marketing™</strong>
-          </span>
+          <Link href="/" className="block mb-4">
+            <img 
+              src="/logo.png" 
+              alt="Grateful Marketing Logo" 
+              className="h-12 w-auto object-contain"
+            />
+          </Link>
           <div className="text-[0.66rem] tracking-[0.2em] uppercase text-brand/60 mb-3">
             Innovating · Creating · Leading
           </div>
           <p className="text-sm text-muted leading-[1.82] font-light max-w-[325px]">
             North American AI-powered digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based businesses through the proprietary Gratitude™ methodology.
           </p>
-          <div className="text-base mt-4 font-heading font-bold text-brand italic">GM</div>
+          {/* GM Icon removed since main logo includes branding */}
         </div>
 
         <div>

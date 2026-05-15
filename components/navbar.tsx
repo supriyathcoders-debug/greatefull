@@ -49,8 +49,12 @@ export function Navbar() {
 
       <nav className="fixed top-0 left-0 right-0 z-[9999] bg-background/95 backdrop-blur-md border-b border-border-subtle animate-[slide-down_0.7s_cubic-bezier(0.16,1,0.3,1)_both]">
         <div className="flex items-center justify-between px-[6vw] py-5 relative">
-          <Link href="/" className="font-heading text-xl font-semibold no-underline text-white relative z-[10001]">
-            Grateful <strong className="text-brand">Marketing™</strong>
+          <Link href="/" className="relative z-[10001] flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="Grateful Marketing Logo" 
+              className="h-10 w-auto object-contain"
+            />
           </Link>
           
           {/* Desktop Menu */}
