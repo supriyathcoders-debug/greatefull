@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-[#060d14] px-[6vw] pt-20 pb-10 border-t border-brand/20 mt-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 pb-14 border-b border-border mb-10">
+    <footer className="bg-background px-[6vw] pt-20 pb-10 border-t border-white/5 mt-16 relative z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 pb-14 border-b border-white/5 mb-10">
         <div>
           <Link href="/" className="block mb-4">
             <img 
