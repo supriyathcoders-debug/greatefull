@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TestimonialsSection from '@/components/testimonials-section';
 
 export default function Home() {
   return (
@@ -183,6 +184,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+  <TestimonialsSection />
 
       <section id="funnel" className="py-28 px-[6vw] overflow-hidden">
         <div className="max-w-[840px] mx-auto text-center border p-12 border-brand/20 bg-brand-soft relative shadow-[0_0_30px_rgba(200,169,81,0.05)]">
