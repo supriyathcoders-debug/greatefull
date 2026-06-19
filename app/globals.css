@@ -9,11 +9,13 @@
   --border: rgba(255, 255, 255, 0.1);
   --border-subtle: rgba(255, 255, 255, 0.04);
   
-  --brand: #e8a365; /* Warm, emotional gold/orange */
-  --brand-secondary: #f47c7c; /* Soft creative pink/red */
-  --brand-tertiary: #a1c4fd; /* Empowering blue */
-  
-  --brand-soft: #120b0a;
+  --brand: #d4af37; /* Metallic gold — matches brand assets */
+  --brand-secondary: #e8a365; /* Warm gold/orange accent */
+  --brand-tertiary: #a78bfa; /* Soft purple highlight */
+  --brand-purple: #2e1a47; /* Deep purple from brand graphics */
+  --brand-purple-deep: #1a0a2e;
+
+  --brand-soft: #120b1a;
 }
 
 @theme inline {
@@ -92,11 +94,32 @@ a {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: 
-    radial-gradient(circle at 20% 40%, rgba(232, 163, 101, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 80% 60%, rgba(244, 124, 124, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 50% 100%, rgba(161, 196, 253, 0.04) 0%, transparent 50%);
+  background:
+    radial-gradient(circle at 15% 30%, rgba(46, 26, 71, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 85% 55%, rgba(59, 26, 107, 0.35) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 70% 20%, rgba(232, 163, 101, 0.04) 0%, transparent 35%);
   animation: pulse-bg 15s ease-in-out infinite alternate;
+}
+
+/* Brand image frame */
+.brand-image-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow:
+    0 25px 60px -15px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(46, 26, 71, 0.4);
+}
+
+.brand-image-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 @keyframes pulse-bg {

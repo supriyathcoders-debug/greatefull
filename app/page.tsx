@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 // Intersection Observer Hook for Scroll Animations
@@ -93,64 +94,80 @@ export default function Home() {
       <section id="hero" className="min-h-[90vh] flex items-center px-[6vw] pt-24 pb-24 relative overflow-hidden">
         {/* Floating Ambient Orbs */}
         <div className="absolute top-[10%] left-[15%] w-72 h-72 bg-brand/10 rounded-full blur-[100px] float" />
-        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-[#f47c7c]/10 rounded-full blur-[120px] float" style={{ animationDelay: '-4s' }} />
+        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-[#3b1a6b]/30 rounded-full blur-[120px] float" style={{ animationDelay: '-4s' }} />
 
-        <div className="relative z-10 max-w-[840px]">
-          <FadeIn delay={0.1}>
-            <div className="inline-flex items-center gap-3 mb-10">
-              <span className="w-11 h-px bg-brand flex-shrink-0 animate-pulse"></span>
-              <span className="text-[0.68rem] tracking-[0.24em] uppercase text-brand font-normal">North American AI Marketing Consultancy · Est. 2022</span>
+        <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-16 xl:gap-24 items-center">
+          <div className="max-w-[840px]">
+            <FadeIn delay={0.1}>
+              <div className="inline-flex items-center gap-3 mb-10">
+                <span className="w-11 h-px bg-brand flex-shrink-0 animate-pulse"></span>
+                <span className="text-[0.68rem] tracking-[0.24em] uppercase text-brand font-normal">North American AI Marketing Consultancy · Est. 2022</span>
+              </div>
+            </FadeIn>
+            
+            <h1 className="font-heading text-[clamp(2.8rem,5.5vw,5.5rem)] font-semibold leading-[1.06] mb-8 title-reveal">
+              <span style={{ animationDelay: '0.2s' }}>Scale Your Impact with</span><br />
+              <span style={{ animationDelay: '0.4s' }}><em className="italic font-light text-gradient">AI-Powered Marketing</em></span><br/>
+              <span style={{ animationDelay: '0.6s' }}>You Can Trust.</span>
+            </h1>
+            
+            <FadeIn delay={0.8}>
+              <p className="max-w-[560px] text-[1.05rem] font-light leading-[1.86] text-white/70 mb-12">
+                Grateful Marketing™ combines cutting-edge artificial intelligence with our proprietary <strong className="text-white font-normal">Gratitude™ methodology</strong>. We help purpose-driven organizations build predictable growth systems—without losing their human touch.
+              </p>
+            </FadeIn>
+            
+            <FadeIn delay={1.0} className="flex items-center gap-5 flex-wrap mb-16">
+              <a href="https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS" className="interactive group relative overflow-hidden inline-block no-underline bg-white !text-[#000000] font-semibold text-[0.77rem] tracking-[0.12em] uppercase px-10 py-4 rounded-full transition-transform hover:scale-105">
+                <span className="relative z-10">Book Your Strategy Session</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-brand to-[#ff8a8a] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+              </a>
+              <Link href="#services" className="interactive inline-block no-underline bg-transparent text-white font-normal text-[0.77rem] tracking-[0.12em] uppercase px-10 py-4 border border-white/20 rounded-full transition-all hover:border-brand hover:bg-white/5 hover:text-brand">
+                See How We Work
+              </Link>
+            </FadeIn>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10">
+              <FadeIn delay={1.2}>
+                <div className="pt-2">
+                  <div className="font-heading text-4xl font-semibold text-gradient leading-none">25+</div>
+                  <div className="text-[0.66rem] text-white/50 tracking-[0.1em] uppercase mt-2 font-light max-w-[150px]">Years of Strategic Expertise</div>
+                </div>
+              </FadeIn>
+              <FadeIn delay={1.3}>
+                <div className="sm:border-l sm:border-white/10 sm:pl-8 pt-2">
+                  <div className="font-heading text-4xl font-semibold text-gradient leading-none">4</div>
+                  <div className="text-[0.66rem] text-white/50 tracking-[0.1em] uppercase mt-2 font-light max-w-[150px]">Core Pillars of Growth</div>
+                </div>
+              </FadeIn>
+              <FadeIn delay={1.4}>
+                <div className="border-l-0 lg:border-l lg:border-white/10 lg:pl-10 pt-2">
+                  <div className="font-heading text-4xl font-semibold leading-none text-[#ffe66d] float">🌍</div>
+                  <div className="text-[0.66rem] text-white/50 tracking-[0.1em] uppercase mt-2 font-light max-w-[180px]">Globally Trademarked Methodology</div>
+                </div>
+              </FadeIn>
+              <FadeIn delay={1.5}>
+                <div className="sm:border-l sm:border-white/10 sm:pl-8 lg:pl-10 pt-2">
+                  <div className="font-heading text-4xl font-semibold text-gradient leading-none">∞</div>
+                  <div className="text-[0.66rem] text-white/50 tracking-[0.1em] uppercase mt-2 font-light max-w-[150px]">Impact-Driven Results</div>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+
+          <FadeIn direction="right" delay={0.4} className="relative max-w-[380px] sm:max-w-[440px] mx-auto lg:max-w-none lg:mx-0">
+            <div className="absolute -inset-6 bg-[#3b1a6b]/40 rounded-3xl blur-3xl pointer-events-none" />
+            <div className="brand-image-frame float">
+              <Image
+                src="/images/ai-playbook.png"
+                alt="The AI Playbook — Grateful Marketing's strategic guide to AI-powered growth"
+                width={640}
+                height={640}
+                priority
+                className="w-full h-auto relative z-0"
+              />
             </div>
           </FadeIn>
-          
-          <h1 className="font-heading text-[clamp(2.8rem,5.5vw,5.5rem)] font-semibold leading-[1.06] mb-8 title-reveal">
-            <span style={{ animationDelay: '0.2s' }}>Scale Your Impact with</span><br />
-            <span style={{ animationDelay: '0.4s' }}><em className="italic font-light text-gradient">AI-Powered Marketing</em></span><br/>
-            <span style={{ animationDelay: '0.6s' }}>You Can Trust.</span>
-          </h1>
-          
-          <FadeIn delay={0.8}>
-            <p className="max-w-[560px] text-[1.05rem] font-light leading-[1.86] text-white/70 mb-12">
-              Grateful Marketing™ combines cutting-edge artificial intelligence with our proprietary <strong className="text-white font-normal">Gratitude™ methodology</strong>. We help purpose-driven organizations build predictable growth systems—without losing their human touch.
-            </p>
-          </FadeIn>
-          
-          <FadeIn delay={1.0} className="flex items-center gap-5 flex-wrap mb-16">
-            <a href="https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS" className="interactive group relative overflow-hidden inline-block no-underline bg-white !text-[#000000] font-semibold text-[0.77rem] tracking-[0.12em] uppercase px-10 py-4 rounded-full transition-transform hover:scale-105">
-              <span className="relative z-10">Book Your Strategy Session</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-brand to-[#ff8a8a] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            </a>
-            <Link href="#services" className="interactive inline-block no-underline bg-transparent text-white font-normal text-[0.77rem] tracking-[0.12em] uppercase px-10 py-4 border border-white/20 rounded-full transition-all hover:border-brand hover:bg-white/5 hover:text-brand">
-              See How We Work
-            </Link>
-          </FadeIn>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10">
-            <FadeIn delay={1.2}>
-              <div className="pt-2">
-                <div className="font-heading text-4xl font-semibold text-gradient leading-none">25+</div>
-                <div className="text-[0.66rem] text-white/50 tracking-[0.1em] uppercase mt-2 font-light max-w-[150px]">Years of Strategic Expertise</div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={1.3}>
-              <div className="sm:border-l sm:border-white/10 sm:pl-8 pt-2">
-                <div className="font-heading text-4xl font-semibold text-gradient leading-none">4</div>
-                <div className="text-[0.66rem] text-white/50 tracking-[0.1em] uppercase mt-2 font-light max-w-[150px]">Core Pillars of Growth</div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={1.4}>
-              <div className="border-l-0 lg:border-l lg:border-white/10 lg:pl-10 pt-2">
-                <div className="font-heading text-4xl font-semibold leading-none text-[#ffe66d] float">🌍</div>
-                <div className="text-[0.66rem] text-white/50 tracking-[0.1em] uppercase mt-2 font-light max-w-[180px]">Globally Trademarked Methodology</div>
-              </div>
-            </FadeIn>
-            <FadeIn delay={1.5}>
-              <div className="sm:border-l sm:border-white/10 sm:pl-8 lg:pl-10 pt-2">
-                <div className="font-heading text-4xl font-semibold text-gradient leading-none">∞</div>
-                <div className="text-[0.66rem] text-white/50 tracking-[0.1em] uppercase mt-2 font-light max-w-[150px]">Impact-Driven Results</div>
-              </div>
-            </FadeIn>
-          </div>
         </div>
         
         <span className="absolute right-[4vw] bottom-[10vh] z-10 hidden md:block [writing-mode:vertical-rl] text-[0.6rem] tracking-[0.3em] uppercase text-brand/30 font-light float">Innovating · Creating · Leading</span>
@@ -330,7 +347,22 @@ export default function Home() {
         <FadeIn>
           <div className="inline-flex items-center gap-2.5 text-[0.66rem] tracking-[0.24em] uppercase text-brand font-normal mb-5"><span className="w-7 h-px bg-brand"></span>Who We Serve</div>
           <h2 className="font-heading text-[clamp(2.5rem,4vw,4rem)] font-semibold leading-[1.12] mb-6">Built for organizations<br /><span className="font-light">ready to lead <em className="italic text-gradient">with trust.</em></span></h2>
-          <p className="text-[1.05rem] text-white/70 leading-[1.88] font-light max-w-[650px] mb-20">We partner with purpose-driven organizations across highly regulated and trust-dependent sectors. When compliance, privacy, and authentic connection are non-negotiable, we build the intelligent systems that fuel your lasting growth.</p>
+          <p className="text-[1.05rem] text-white/70 leading-[1.88] font-light max-w-[650px] mb-16">We partner with purpose-driven organizations across highly regulated and trust-dependent sectors. When compliance, privacy, and authentic connection are non-negotiable, we build the intelligent systems that fuel your lasting growth.</p>
+        </FadeIn>
+
+        <FadeIn delay={0.15}>
+          <div className="mb-20 max-w-3xl mx-auto">
+            <div className="brand-image-frame glow-effect">
+              <Image
+                src="/images/b2b-dtc.png"
+                alt="B2B and DTC — Different Strategies, Same Results"
+                width={800}
+                height={800}
+                className="w-full h-auto"
+              />
+            </div>
+            <p className="text-center text-[0.72rem] tracking-[0.18em] uppercase text-white/40 mt-5 font-light">Different strategies · Same results</p>
+          </div>
         </FadeIn>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -406,24 +438,35 @@ export default function Home() {
       <section id="platform" className="py-32 px-[6vw] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <FadeIn direction="left">
-            <div className="glass-card p-12 relative overflow-hidden glow-effect">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand to-transparent"></div>
-              <h3 className="font-heading text-2xl font-semibold mb-8 text-white">What AI-Powered Marketing Delivers for You</h3>
-              <ul className="list-none space-y-4">
-                {[
-                  "Personalized content at scale — Maintain a consistent brand voice across every channel, generated in a fraction of the time.",
-                  "Intelligent lead scoring and nurturing — Identify your best prospects and move them through your funnel automatically.",
-                  "Predictive campaign optimization — Continuously improve your performance based on real-time data signals.",
-                  "AI-powered reputation management — Automate client communication flows that build trust on autopilot.",
-                  "Automated reporting dashboards — Gain instant visibility into the metrics that are actually driving your growth.",
-                  "North American data residency compliance — Enjoy privacy-first design, specifically tailored for legal, financial, and insurance clients."
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 pb-4 border-b border-white/5 last:border-0 last:pb-0 text-[0.95rem] text-white/70 font-light leading-relaxed">
-                    <span className="text-brand flex-shrink-0 text-sm mt-1">◆</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-8">
+              <div className="brand-image-frame glow-effect max-w-md mx-auto lg:mx-0">
+                <Image
+                  src="/images/ai-tools-today.png"
+                  alt="AI Tools You Can Use Today — practical AI solutions from Grateful Marketing"
+                  width={640}
+                  height={640}
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="glass-card p-12 relative overflow-hidden glow-effect">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand to-transparent"></div>
+                <h3 className="font-heading text-2xl font-semibold mb-8 text-white">What AI-Powered Marketing Delivers for You</h3>
+                <ul className="list-none space-y-4">
+                  {[
+                    "Personalized content at scale — Maintain a consistent brand voice across every channel, generated in a fraction of the time.",
+                    "Intelligent lead scoring and nurturing — Identify your best prospects and move them through your funnel automatically.",
+                    "Predictive campaign optimization — Continuously improve your performance based on real-time data signals.",
+                    "AI-powered reputation management — Automate client communication flows that build trust on autopilot.",
+                    "Automated reporting dashboards — Gain instant visibility into the metrics that are actually driving your growth.",
+                    "North American data residency compliance — Enjoy privacy-first design, specifically tailored for legal, financial, and insurance clients."
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-4 pb-4 border-b border-white/5 last:border-0 last:pb-0 text-[0.95rem] text-white/70 font-light leading-relaxed">
+                      <span className="text-brand flex-shrink-0 text-sm mt-1">◆</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </FadeIn>
           
