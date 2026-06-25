@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 // Intersection Observer Hook for Scroll Animations
@@ -91,28 +92,20 @@ export default function AIVoiceAgentsPage() {
 
       {/* Hero Section */}
       <section className="min-h-[80vh] flex items-center px-[6vw] pt-24 pb-24 relative overflow-hidden text-center z-10">
+        <div className="page-hero-bg">
+          <Image
+            src="/images/ai-voice-agents-hero.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center opacity-60"
+          />
+          <div className="page-hero-bg-mask" />
+        </div>
         {/* Floating Ambient Orbs */}
         <div className="absolute top-[10%] left-[15%] w-72 h-72 bg-brand/10 rounded-full blur-[100px] float" />
-        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-[#a1c4fd]/10 rounded-full blur-[120px] float" style={{ animationDelay: '-4s' }} />
-        
-        {/* AI Voice Ring Animation Background */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
-          <svg width="600" height="600" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="45" stroke="url(#paint0_linear)" strokeWidth="0.5" strokeDasharray="4 4" className="animate-[spin_40s_linear_infinite]" />
-            <circle cx="50" cy="50" r="35" stroke="url(#paint1_linear)" strokeWidth="0.5" strokeDasharray="2 6" className="animate-[spin_20s_linear_infinite_reverse]" />
-            <circle cx="50" cy="50" r="25" stroke="var(--brand)" strokeWidth="0.5" className="animate-[pulse_4s_ease-in-out_infinite]" />
-            <defs>
-              <linearGradient id="paint0_linear" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                <stop stopColor="var(--brand)" />
-                <stop offset="1" stopColor="var(--brand-secondary)" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient id="paint1_linear" x1="100" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-                <stop stopColor="var(--brand-tertiary)" />
-                <stop offset="1" stopColor="var(--brand)" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-[#3b1a6b]/30 rounded-full blur-[120px] float" style={{ animationDelay: '-4s' }} />
 
         <div className="relative z-10 max-w-[840px] mx-auto">
           <FadeIn delay={0.1}>
