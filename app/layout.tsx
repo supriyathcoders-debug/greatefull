@@ -38,18 +38,17 @@ const mono = Outfit({
 // };
 export const metadata: Metadata = {
   title: {
-    default: "Grateful Marketing™ | AI Business Consulting Agency",
+    default: "Grateful Marketing™ | Human-First AI Consultancy",
     template: "%s | Grateful Marketing™",
   },
 
   description:
-    "Grateful Marketing® - AI Business Consulting, AI Training & Empowerment, and AI Strategy & Deployment. We help businesses embrace AI with integrity, confidence, and purpose. Technology that empowers people. Growth that lasts. We also deploy AI voice agents, AI chatbots, AI content creation, AI agents/employees, AI automation, and AI website and app development.",
-
+    "Premium human-first AI consultancy. Built around your people, powered by AI. GRATITUDE™ methodology, AI business consulting, marketing strategy, team training, and voice agents for North American enterprises.",
 
   openGraph: {
-    title: "Grateful Marketing™ | AI Business Consulting Agency",
+    title: "Grateful Marketing™ | Human-First AI Consultancy",
     description:
-      "Grateful Marketing® - AI Business Consulting, AI Training & Empowerment, and AI Strategy & Deployment. We help businesses embrace AI with integrity, confidence, and purpose. Technology that empowers people. Growth that lasts. We also deploy AI voice agents, AI chatbots, AI content creation, AI agents/employees, AI automation, and AI website and app development.",
+      "Built around your people. Powered by AI. Premium AI marketing consultancy serving legal, financial, insurance, B2B, and service-based businesses.",
   },
   verification: {
     google: "7r5toPumjGEoNgJWa-8BgoZ_kQOMwgkO3jgxC2DX8jQ",

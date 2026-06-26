@@ -1,5 +1,5 @@
-import React from 'react';
-import { Testimonial } from '@/lib/testimonials';
+import React from "react";
+import { Testimonial } from "@/lib/testimonials";
 
 type Props = {
   item: Testimonial;
@@ -7,18 +7,29 @@ type Props = {
 
 export function TestimonialCard({ item }: Props) {
   return (
-    <article className="h-full flex flex-col p-7 border border-border-subtle bg-background/40 rounded-md hover:shadow-xl transition-transform hover:-translate-y-1 will-change-transform">
-      <div className="text-brand/80 mb-3 text-4xl leading-none select-none">“</div>
+    <article className="h-full flex flex-col p-8 border border-border-subtle bg-background/60 relative overflow-hidden transition-all duration-300 hover:border-brand/30 hover:shadow-[0_8px_40px_rgba(212,175,55,0.08)] group">
+      <div className="absolute top-0 left-0 w-0 h-0.5 bg-brand transition-all duration-500 group-hover:w-full" />
 
-      {/* main content grows so footer stays at bottom */}
-      <div className="flex-1">
-        <p className="text-sm text-muted leading-relaxed mb-4">{item.quote}</p>
+      <div className="text-brand/60 mb-4 text-3xl leading-none select-none font-heading">
+        &ldquo;
       </div>
 
-      <div className="mt-4 pt-4 border-t border-border-subtle">
-        <div className="text-sm font-semibold text-foreground">{item.name}</div>
-        <div className="text-[0.72rem] text-muted mt-0.5">{item.title}</div>
-        {item.industry && <div className="text-[0.68rem] text-muted mt-1 font-light">{item.industry}</div>}
+      <div className="flex-1">
+        <p className="text-sm text-muted leading-[1.85] font-light">
+          {item.quote}
+        </p>
+      </div>
+
+      <div className="mt-6 pt-5 border-t border-border-subtle">
+        <div className="text-sm font-medium text-foreground">{item.name}</div>
+        <div className="text-[0.72rem] text-muted mt-0.5 font-light">
+          {item.title}
+        </div>
+        {item.industry && (
+          <div className="text-[0.65rem] text-brand/70 mt-2 tracking-[0.08em] uppercase font-light">
+            {item.industry}
+          </div>
+        )}
       </div>
     </article>
   );
