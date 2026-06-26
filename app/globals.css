@@ -2,15 +2,15 @@
 
 :root {
   --background: #0b0b2b;
-  --foreground: #ffffff;
-  --muted: rgba(255, 255, 255, 0.65);
-  --surface: #12123a;
-  --border: rgba(212, 175, 55, 0.18);
-  --brand: #d4af37;
-  --brand-light: #e8c96a;
-  --brand-dark: #b89741;
-  --brand-soft: #141438;
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --foreground: #f5f3ef;
+  --muted: rgba(245, 243, 239, 0.62);
+  --surface: #111132;
+  --border: rgba(212, 175, 55, 0.14);
+  --brand: #c9a84c;
+  --brand-light: #dfc06a;
+  --brand-dark: #a8883a;
+  --brand-soft: #131336;
+  --border-subtle: rgba(255, 255, 255, 0.07);
 }
 
 @theme inline {
@@ -48,13 +48,11 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(ellipse 70% 55% at 85% 35%, rgba(212, 175, 55, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 45% 50% at 5% 90%, rgba(100, 80, 180, 0.08) 0%, transparent 55%),
-    linear-gradient(165deg, #0b0b2b 0%, #0a0a24 50%, #080820 100%);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -71,32 +69,36 @@ a {
 }
 
 .section-shell {
-  padding-left: 6vw;
-  padding-right: 6vw;
+  padding-left: clamp(1.25rem, 6vw, 5rem);
+  padding-right: clamp(1.25rem, 6vw, 5rem);
+}
+
+.page-backdrop {
+  background:
+    radial-gradient(ellipse 60% 45% at 90% 10%, rgba(201, 168, 76, 0.07) 0%, transparent 55%),
+    linear-gradient(180deg, #0c0c30 0%, #0b0b2b 100%);
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #f0d878 0%, #d4af37 45%, #b89741 100%);
+  background: linear-gradient(135deg, #ecd282 0%, #c9a84c 50%, #a8883a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gold-glow {
-  box-shadow: 0 0 60px rgba(212, 175, 55, 0.15), 0 0 120px rgba(212, 175, 55, 0.05);
-}
-
-.hero-grid {
-  background-image:
-    linear-gradient(rgba(212, 175, 55, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 175, 55, 0.025) 1px, transparent 1px);
-  background-size: 72px 72px;
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes slide-down {
   from {
     opacity: 0;
-    transform: translateY(-16px);
+    transform: translateY(-12px);
   }
   to {
     opacity: 1;
@@ -107,38 +109,10 @@ a {
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes float-gentle {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-@keyframes marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
   }
 }

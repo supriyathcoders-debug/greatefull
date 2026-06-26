@@ -18,5 +18,4 @@ export const IMAGES = {
   acceleratingGrowth: "/images/brand/accelerating-growth.png",
   aiPartnership: "/images/brand/ai-partnership.png",
   pillarsGratitude: "/images/brand/pillars-gratitude.png",
-  voiceAgentsHero: "/images/ai-voice-agents-hero.png",
 } as const;

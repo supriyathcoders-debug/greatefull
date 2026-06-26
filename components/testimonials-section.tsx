@@ -84,14 +84,9 @@ export function TestimonialsSection({ hideHeading }: Props) {
         {!hideHeading && (
           <StaggerReveal className="mb-10">
             <StaggerItem>
-              <Eyebrow className="mb-4">Client Testimonials</Eyebrow>
-              <SectionHeading className="mb-3">
-                Trusted by leaders who value{" "}
-                <em className="italic text-brand font-light">results.</em>
-              </SectionHeading>
-              <p className="text-sm text-muted font-light max-w-[480px]">
-                What our clients say about working with Grateful Marketing.
-              </p>
+              <Eyebrow className="mb-4">Testimonials</Eyebrow>
+              <SectionHeading className="mb-3">Testimonials</SectionHeading>
+              <p className="text-muted font-light">What Our Clients Say</p>
             </StaggerItem>
           </StaggerReveal>
         )}
