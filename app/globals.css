@@ -1,15 +1,18 @@
 @import "tailwindcss";
+@source "./**/*.{js,ts,jsx,tsx,mdx}";
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
 
 :root {
-  --background: #060d14;
-  --foreground: #ffffff;
-  --muted: rgba(255, 255, 255, 0.65);
-  --surface: #0a141e;
-  --border: rgba(255, 255, 255, 0.12);
-  --brand: #c8a951;
-  --brand-dark: #b89741;
-  --brand-soft: #0f1e2f;
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  --background: #0b0b2b;
+  --foreground: #f5f3ef;
+  --muted: rgba(245, 243, 239, 0.62);
+  --surface: #111132;
+  --border: rgba(212, 175, 55, 0.14);
+  --brand: #c9a84c;
+  --brand-light: #dfc06a;
+  --brand-dark: #a8883a;
+  --brand-soft: #131336;
+  --border-subtle: rgba(255, 255, 255, 0.07);
 }
 
 @theme inline {
@@ -19,10 +22,12 @@
   --color-surface: var(--surface);
   --color-border: var(--border);
   --color-brand: var(--brand);
+  --color-brand-light: var(--brand-light);
   --color-brand-dark: var(--brand-dark);
   --color-brand-soft: var(--brand-soft);
   --font-sans: var(--font-outfit);
   --font-heading: var(--font-cormorant);
+  --font-display: var(--font-playfair);
   --font-mono: var(--font-mono);
 }
 
@@ -45,13 +50,11 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(ellipse 65% 50% at 78% 42%, rgba(200, 169, 81, 0.075) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 55% at 4% 88%, rgba(200, 169, 81, 0.04) 0%, transparent 58%),
-    linear-gradient(162deg, #0b1825 0%, #091420 55%, #070d14 100%);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -67,46 +70,37 @@ a {
   text-decoration: none;
 }
 
-.section-fade {
-  animation: section-fade 700ms ease-out both;
-}
-
-.text-balance {
-  text-wrap: balance;
-}
-
 .section-shell {
-  padding-left: 6vw;
-  padding-right: 6vw;
+  padding-left: clamp(1.25rem, 6vw, 5rem);
+  padding-right: clamp(1.25rem, 6vw, 5rem);
 }
 
-.text-gold {
-  color: var(--brand);
+.page-backdrop {
+  background:
+    radial-gradient(ellipse 60% 45% at 90% 10%, rgba(201, 168, 76, 0.07) 0%, transparent 55%),
+    linear-gradient(180deg, #0c0c30 0%, #0b0b2b 100%);
 }
 
-.bg-navy-light {
-  background-color: var(--brand-soft);
+.text-gold-gradient {
+  background: linear-gradient(135deg, #ecd282 0%, #c9a84c 50%, #a8883a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.bg-navy-medium {
-  background-color: #efe8fb;
-}
-
-@keyframes section-fade {
+@keyframes marquee-scroll {
   from {
-    opacity: 0;
-    transform: translateY(18px);
+    transform: translateX(0);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%);
   }
 }
 
 @keyframes slide-down {
   from {
     opacity: 0;
-    transform: translateY(-16px);
+    transform: translateY(-12px);
   }
   to {
     opacity: 1;
@@ -117,29 +111,10 @@ a {
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes float-icon {
-  0%,
-  100% {
-    transform: translateY(-50%) translateX(0);
-  }
-  50% {
-    transform: translateY(calc(-50% - 12px)) translateX(4px);
-  }
-}
-
-@keyframes marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
   }
 }

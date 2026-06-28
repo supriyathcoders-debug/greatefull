@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-[#060d14] px-[6vw] pt-20 pb-10 border-t border-brand/20 mt-16">
+    <footer className="bg-background px-[6vw] pt-20 pb-10 border-t border-brand/20 mt-16">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 pb-14 border-b border-border mb-10">
         <div>
           <Link href="/" className="block mb-4">
@@ -16,7 +16,7 @@ export function Footer() {
             Innovating · Creating · Leading
           </div>
           <p className="text-sm text-muted leading-[1.82] font-light max-w-[325px]">
-            North American AI-powered digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based businesses through the proprietary Gratitude™ methodology.
+            Premium human-first AI consultancy serving legal, financial, insurance, B2B, and service-based businesses through the proprietary GRATITUDE™ methodology.
           </p>
           {/* GM Icon removed since main logo includes branding */}
         </div>
@@ -45,9 +45,9 @@ export function Footer() {
         <div>
           <h4 className="text-[0.64rem] tracking-[0.2em] uppercase text-brand mb-5 font-normal">Company</h4>
           <ul className="list-none space-y-2.5">
-            <li><Link href="/#methodology" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Our Methodology</Link></li>
-            <li><Link href="/#clients" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Who We Serve</Link></li>
-            <li><Link href="/#why" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Why Grateful Marketing</Link></li>
+            <li><Link href="/#gratitude" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">GRATITUDE Framework</Link></li>
+            <li><Link href="/#about" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">About Andrea</Link></li>
+            <li><Link href="/#industries" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Industries</Link></li>
             <li><Link href="/#platform" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">AI Platform</Link></li>
             <li><Link href="/privacy-policy" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Privacy Policy</Link></li>
             <li><a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Contact Us</a></li>

@@ -199,6 +199,36 @@ export const testimonials: Testimonial[] = [
     title: 'VP of Operations | Insurance Company',
     company: 'Insurance Company',
   },
+  {
+    id: 't20',
+    category: 'AI Voice Agents',
+    industry: 'Retail & E-Commerce',
+    quote:
+      "During peak season, our phones become a wall of noise — order questions, return requests, stock inquiries, all at once. Our team was stretched thin and customers were waiting too long. Grateful Marketing's voice agent changed that overnight. It handles the high-volume, repeatable calls with a warmth that genuinely sounds like our brand, so every customer feels attended to from the first ring. Our human team now steps in only where their judgment and empathy actually matter. Wait times dropped by 70%, and our customer satisfaction scores went up during our busiest quarter ever — which used to be our worst.",
+    name: 'Priya Nair',
+    title: 'Head of Customer Operations | Specialty Retail & E-Commerce',
+    company: 'Specialty Retail & E-Commerce',
+  },
+  {
+    id: 't21',
+    category: 'AI Voice Agents',
+    industry: 'Primary Care & Allied Health',
+    quote:
+      "Healthcare administration is already hard on staff. Adding call volume on top of clinical responsibilities was burning people out, and patients were feeling it too — hold times, missed callbacks, intake forms that never got sent. Grateful Marketing designed a voice agent that meets patients where they are: warm, clear, unhurried. It collects intake information, confirms appointments, and answers the questions that don't need a clinician — 24 hours a day, in a tone that never sounds rushed. Our staff finally have the headspace to focus on actual patient care, and our no-show rate has dropped by 40%.",
+    name: 'Dr. James Osei',
+    title: 'Clinic Director | Family Health Clinic',
+    company: 'Family Health Clinic',
+  },
+  {
+    id: 't22',
+    category: 'AI Voice Agents',
+    industry: 'Real Estate & Property Services',
+    quote:
+      "In real estate, the difference between winning a client and losing one is often measured in minutes. Buyers and sellers don't wait — and they certainly don't call back. Our old after-hours voicemail was a graveyard for warm leads. Grateful Marketing built us a voice agent that responds to every inquiry the moment it comes in, day or night, weekends included. It asks the right questions, qualifies the opportunity, and has a follow-up brief ready for my agents by the time they start their morning. We've recaptured leads we never would have touched before, and our conversion rate on after-hours inquiries has climbed 55% in four months.",
+    name: 'Adrienne Kowalski',
+    title: 'Broker of Record | Residential Real Estate Brokerage',
+    company: 'Residential Real Estate Brokerage',
+  },
 ];
 
 export default testimonials;
