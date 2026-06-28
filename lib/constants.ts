@@ -1,21 +1,22 @@
 export const BOOKING_URL =
   "https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS";
 
-/** All 15 client brand images — clean paths under /images/brand/ */
+/** Client handoff images — paths match README_Developer_Handoff.md */
 export const IMAGES = {
-  hero: "/images/brand/hero-empowered-strategy.png",
-  heartGratitude: "/images/brand/heart-gratitude.png",
-  growthWithAi: "/images/brand/growth-with-ai.png",
-  founderReflection: "/images/brand/founder-reflection.png",
-  gratitudeAlways: "/images/brand/gratitude-always.png",
-  aiOpportunity: "/images/brand/ai-opportunity.png",
-  nextChapter: "/images/brand/next-chapter.png",
-  celebratingWins: "/images/brand/celebrating-wins.png",
-  communityPower: "/images/brand/community-power.png",
-  pathForward: "/images/brand/path-forward.png",
-  dataConfidence: "/images/brand/data-confidence.png",
-  sparkInnovation: "/images/brand/spark-innovation.png",
-  acceleratingGrowth: "/images/brand/accelerating-growth.png",
-  aiPartnership: "/images/brand/ai-partnership.png",
+  heroGoldSilhouette: "/images/brand/hero_gold_silhouette_woman_chin_bob.png",
+  heartCircuitGratitude: "/images/brand/heart_circuit_gratitude.png",
+  agencyProfessionalWoman: "/images/brand/agency_professional_woman.png",
+  heroHumanSpark: "/images/brand/hero_human_spark.png",
+  bridgeMotifStrategy: "/images/brand/bridge_motif_strategy.png",
+  cuppedHandsSpark: "/images/brand/cupped_hands_spark.png",
+  handsMeetingMinimalist: "/images/brand/hands_meeting_minimalist.png",
+  footprintsTurningToLight: "/images/brand/footprints_turning_to_light.png",
+  aiPlatformDataConfidence: "/images/brand/ai_platform_data_confidence.png",
+  teamCommunityCircle: "/images/brand/team_community_circle.png",
+  founderStrategicReflection: "/images/brand/founder_strategic_reflection.png",
+  innovationAiOpportunity: "/images/brand/innovation_ai_opportunity.png",
+  clientGrowthTransformation: "/images/brand/client_growth_transformation.png",
+  celebratingWins: "/images/brand/celebrating_wins.png",
+  writingNextChapter: "/images/brand/writing_next_chapter.png",
   pillarsGratitude: "/images/brand/pillars-gratitude.png",
 } as const;

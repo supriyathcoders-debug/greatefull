@@ -11,7 +11,7 @@ import { FinalCtaSection } from "@/components/home/final-cta-section";
 /** Client brief: 9 sections in this exact order */
 export default function Home() {
   return (
-    <div className="overflow-x-hidden pt-16">
+    <div className="overflow-x-hidden">
       <HeroSection />
       <GratitudeFrameworkSection />
       <AboutSection />

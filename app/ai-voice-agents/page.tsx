@@ -1,3 +1,5 @@
+import TestimonialsSection from "@/components/testimonials-section";
+
 export default function AIVoiceAgentsPage() {
   return (
     <div className="overflow-x-hidden pt-16">
@@ -203,6 +205,19 @@ export default function AIVoiceAgentsPage() {
           </div>
         </div>
       </section>
+
+      <div className="section-shell pt-28 pb-4 max-w-[720px] mx-auto text-center">
+        <div className="inline-flex items-center gap-2.5 text-[0.66rem] tracking-[0.24em] uppercase text-brand font-normal mb-5">
+          <span className="w-7 h-px bg-brand" />
+          Client Stories
+          <span className="w-7 h-px bg-brand" />
+        </div>
+        <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-semibold leading-[1.12]">
+          Trusted by leaders who{" "}
+          <em className="italic text-brand font-light">scale with voice AI.</em>
+        </h2>
+      </div>
+      <TestimonialsSection hideHeading categoryFilter="AI Voice Agents" />
 
       <section className="py-24 section-shell bg-brand-soft border-t border-border text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-semibold mb-6">

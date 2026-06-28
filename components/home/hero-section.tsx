@@ -10,10 +10,24 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[88vh] flex items-center section-shell pt-28 pb-20 page-backdrop"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden"
     >
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <StaggerReveal>
+      {/* Full artwork on the right — never crop (object-contain only) */}
+      <div
+        className="absolute inset-0 z-0 overflow-hidden bg-[#2E0854]"
+        aria-hidden="true"
+      >
+        <img
+          src={IMAGES.heroGoldSilhouette}
+          alt=""
+          className="absolute inset-0 h-full w-full object-contain object-center md:object-right"
+        />
+        {/* Left-only gradient so HTML text stays readable over solid purple */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2E0854] from-0% via-[#2E0854]/92 via-[38%] to-transparent to-72%" />
+      </div>
+
+      <div className="relative z-10 w-full section-shell pt-28 pb-24 lg:pt-32 lg:pb-28">
+        <StaggerReveal className="max-w-[640px]">
           <StaggerItem>
             <Eyebrow className="mb-8">{HERO.eyebrow}</Eyebrow>
           </StaggerItem>
@@ -39,19 +53,6 @@ export function HeroSection() {
               <PremiumButton href={HERO.ctaSecondaryHref} variant="secondary">
                 {HERO.ctaSecondary}
               </PremiumButton>
-            </div>
-          </StaggerItem>
-        </StaggerReveal>
-
-        <StaggerReveal className="hidden lg:block">
-          <StaggerItem>
-            <div className="relative max-w-[420px] ml-auto border border-brand/20 bg-[#0b0b2b] overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-px bg-brand/50" />
-              <img
-                src={IMAGES.hero}
-                alt="Grateful Marketing — human-first AI consultancy"
-                className="w-full h-auto object-contain"
-              />
             </div>
           </StaggerItem>
         </StaggerReveal>
