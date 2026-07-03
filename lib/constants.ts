@@ -9,7 +9,7 @@ export const IMAGES = {
   heroHumanSpark: "/images/brand/hero_human_spark.png",
   bridgeMotifStrategy: "/images/brand/bridge_motif_strategy.png",
   cuppedHandsSpark: "/images/brand/cupped_hands_spark.png",
-  handsMeetingMinimalist: "/images/brand/hands_meeting_minimalist.png",
+  // handsMeetingMinimalist: "/images/brand/hands_meeting_minimalist.png",
   footprintsTurningToLight: "/images/brand/footprints_turning_to_light.png",
   aiPlatformDataConfidence: "/images/brand/ai_platform_data_confidence.png",
   teamCommunityCircle: "/images/brand/team_community_circle.png",

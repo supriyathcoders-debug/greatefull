@@ -7,10 +7,10 @@ type Props = {
 
 export function TestimonialCard({ item }: Props) {
   return (
-    <article className="h-full flex flex-col p-8 border border-border-subtle bg-background/60 relative overflow-hidden transition-all duration-300 hover:border-brand/30 hover:shadow-[0_8px_40px_rgba(212,175,55,0.08)] group">
-      <div className="absolute top-0 left-0 w-0 h-0.5 bg-brand transition-all duration-500 group-hover:w-full" />
+    <article className="card-glass group h-full flex flex-col p-8 relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-      <div className="text-brand/60 mb-4 text-3xl leading-none select-none font-heading">
+      <div className="text-brand/40 mb-4 text-4xl leading-none select-none font-heading italic">
         &ldquo;
       </div>
 
@@ -21,12 +21,15 @@ export function TestimonialCard({ item }: Props) {
       </div>
 
       <div className="mt-6 pt-5 border-t border-border-subtle">
-        <div className="text-sm font-medium text-foreground">{item.title}</div>
-        {item.industry && (
-          <div className="text-[0.65rem] text-brand/70 mt-2 tracking-[0.08em] uppercase font-light">
+        <div className="text-sm font-medium text-foreground">{item.name}</div>
+        <div className="text-[0.72rem] text-muted mt-0.5 font-light">
+          {item.title}
+        </div>
+        {item.industry ? (
+          <div className="text-[0.62rem] tracking-[0.14em] uppercase text-brand/70 mt-2 font-medium">
             {item.industry}
           </div>
-        )}
+        ) : null}
       </div>
     </article>
   );

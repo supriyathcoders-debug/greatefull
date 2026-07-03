@@ -16,7 +16,6 @@ const SECONDARY = [
   { src: IMAGES.innovationAiOpportunity, alt: "The AI opportunity" },
   { src: IMAGES.footprintsTurningToLight, alt: "The path forward" },
   { src: IMAGES.writingNextChapter, alt: "Writing the next chapter" },
-  { src: IMAGES.handsMeetingMinimalist, alt: "The AI partnership" },
 ] as const;
 
 export function BrandVisualShowcase() {

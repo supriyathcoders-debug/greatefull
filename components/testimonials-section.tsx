@@ -89,15 +89,15 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
       <div className="max-w-[1200px] mx-auto">
         {!hideHeading && (
           <>
-            <StaggerReveal className="mb-10">
-              <StaggerItem>
+            {/* <StaggerReveal className="mb-10"> */}
+              {/* <StaggerItem>
                 <BrandImage
                   src={IMAGES.handsMeetingMinimalist}
                   alt="The AI partnership — trusted client collaboration"
                   className="max-w-[900px] mx-auto mb-10"
                 />
-              </StaggerItem>
-            </StaggerReveal>
+              </StaggerItem> */}
+            {/* </StaggerReveal> */}
             <StaggerReveal className="mb-10 max-w-[720px]">
               <StaggerItem>
                 <Eyebrow className="mb-4">{TESTIMONIALS.eyebrow}</Eyebrow>

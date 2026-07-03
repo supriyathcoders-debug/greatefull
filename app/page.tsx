@@ -1,4 +1,6 @@
 import { HeroSection } from "@/components/home/hero-section";
+import { StatsBar } from "@/components/home/stats-bar";
+import { ProblemWeSolveSection } from "@/components/home/problem-we-solve-section";
 import { GratitudeFrameworkSection } from "@/components/home/gratitude-framework-section";
 import { AboutSection } from "@/components/home/about-section";
 import { ServicesSection } from "@/components/home/services-section";
@@ -13,6 +15,8 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <HeroSection />
+      <StatsBar />
+      <ProblemWeSolveSection />
       <GratitudeFrameworkSection />
       <AboutSection />
       <ServicesSection />
