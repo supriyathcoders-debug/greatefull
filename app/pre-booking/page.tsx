@@ -1,234 +1,321 @@
+"use client";
+
+import { PremiumButton } from "@/components/ui/premium-button";
+import { BrandImage } from "@/components/ui/brand-image";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
+import { BOOKING_URL } from "@/lib/constants";
+import { IMAGES } from "@/lib/content/home";
+
+const CHECK_ICON = (
+  <svg className="w-5 h-5 fill-current text-brand" viewBox="0 0 20 20">
+    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+  </svg>
+);
+
+const PAIN_POINTS = [
+  "Your systems are messy or too manual",
+  "You're wasting too much time doing things that don't generate revenue",
+  "Sales opportunities keep slipping through the cracks",
+  "Scaling feels too overwhelming (and expensive)",
+];
+
+const BENEFITS = [
+  "Pinpoint the #1 bottleneck slowing your growth",
+  "Get clarity on where to focus first for maximum impact",
+  "Learn how the right AI-powered systems can save you hours every week",
+  "Walk away with a clear, actionable plan to hit your next revenue milestone",
+];
+
+const INDUSTRIES = [
+  {
+    title: "B2B & DTC",
+    desc: "Scale your revenue with AI-driven systems that streamline lead generation and optimize customer acquisition.",
+  },
+  {
+    title: "Legal",
+    desc: "Build compliant AI systems that automate intake, nurture leads, and manage client communications.",
+  },
+  {
+    title: "Financial & Insurance",
+    desc: "Drive consistent growth with intelligent content, automated lead scoring, and precision-targeted outreach.",
+  },
+];
+
+const TESTIMONIALS = [
+  {
+    quote: "Within 30 days, my team's admin workload was cut in half — and I booked 3 new clients.",
+    author: "Founder, Law Firm",
+  },
+  {
+    quote: "My leads no longer slip away. The system follows up automatically and my calendar stays full.",
+    author: "Managing Partner, Law Firm",
+  },
+  {
+    quote: "For the first time in years, I feel like my business is running me instead of me running it.",
+    author: "Owner, Insurance Agency",
+  },
+];
+
 export default function PreBookingPage() {
-  const formUrl = "https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS";
-  const calendarUrl = "https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS";
-
   return (
-    <div className="min-h-screen bg-white text-slate-900 selection:bg-[#00daae]/30 overflow-x-hidden font-['Poppins',_sans-serif]">
-      
-      {/* SECTION 1: HERO (FYTfAt2HlU) */}
-      <section className="py-20 px-[6vw] text-center relative overflow-hidden" style={{ background: 'linear-gradient(0deg, #272943 0%, #010101 100%)' }}>
-        <div className="max-w-[1170px] mx-auto space-y-8 relative z-10">
-          <div className="space-y-4">
-            <h1 className="text-[40px] sm:text-[70px] font-bold text-white tracking-tight leading-[1.3] uppercase">
-              Unlock Your Next Level <br /> of Growth — <br />
-              <span className="text-white">in 30 Minutes or Less!</span>
-            </h1>
-          </div>
-          
-          <p className="max-w-3xl mx-auto text-[20px] sm:text-[30px] font-normal text-white/90 leading-relaxed">
-            Book your complimentary strategy session and discover how to streamline your business, close more deals, and free up hours every week—using a proven blend of strategy, automation, and the right AI tools.
-          </p>
+    <div className="min-h-screen overflow-x-hidden page-backdrop">
+      {/* Hero */}
+      <section className="relative min-h-[80dvh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] blob-gold opacity-20" />
+          <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] blob-purple opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30" />
+        </div>
+        <div className="relative z-10 w-full section-shell pt-32 pb-20">
+          <StaggerReveal className="max-w-[800px]">
+            <StaggerItem>
+              <Eyebrow className="mb-8">Book a Strategy Call</Eyebrow>
+            </StaggerItem>
+            <StaggerItem>
+              <h1 className="font-heading text-[clamp(2.4rem,5vw,4.5rem)] font-semibold leading-[1.08] mb-8">
+                Unlock Your Next Level
+                <br />
+                of Growth —
+                <br />
+                <em className="italic text-brand font-light">In 30 Minutes or Less!</em>
+              </h1>
+            </StaggerItem>
+            <StaggerItem>
+              <p className="max-w-[620px] text-base font-light leading-[1.86] text-muted mb-10">
+                Book your complimentary strategy session and discover how to streamline your business, close more deals, and free up hours every week—using a proven blend of strategy, automation, and the right AI tools.
+              </p>
+            </StaggerItem>
+            <StaggerItem>
+              <PremiumButton href={BOOKING_URL} external>
+                Schedule My Strategy Session
+              </PremiumButton>
+            </StaggerItem>
+          </StaggerReveal>
+        </div>
+      </section>
 
-          <div className="pt-6 flex justify-center">
-            <img 
-              src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/zUZd380lxhqjQgVX8jRh/media/47981b93-3931-445b-bf43-5777f8a88470.png" 
-              alt="Growth Graph" 
-              className="h-[250px] sm:h-[400px] w-auto object-contain"
+      {/* Growth Graph Image */}
+      <section className="pb-16 section-shell">
+        <ScrollReveal className="max-w-[800px] mx-auto">
+          <BrandImage
+            src={IMAGES.agencyProfessionalWoman}
+            alt="Growth strategy visualization"
+            blob
+            floating
+          />
+        </ScrollReveal>
+      </section>
+
+      {/* Pain Points */}
+      <section className="py-24 section-shell relative section-noise section-divider-top">
+        <div className="absolute right-0 top-1/3 w-[300px] h-[300px] blob-purple opacity-15 pointer-events-none" aria-hidden="true" />
+        <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <ScrollReveal className="relative">
+            <BrandImage
+              src={IMAGES.heroHumanSpark}
+              alt="Business challenges"
+              className="rounded-2xl"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 2: THE PROBLEM (mna8hMK2gU) */}
-      <section className="bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative min-h-[400px] lg:min-h-[700px] bg-slate-100 overflow-hidden">
-             <div 
-               className="absolute inset-0 w-full h-full bg-cover bg-center"
-               style={{ 
-                 backgroundImage: 'url(https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/zUZd380lxhqjQgVX8jRh/media/d7f8f960-e0e4-469d-aeb7-b0fae472de4f.jpeg)',
-                 objectPosition: '60%'
-               }}
-             />
-          </div>
-          
-          <div className="py-20 px-[8vw] lg:px-[6vw] flex flex-col justify-center space-y-6">
-            <h2 className="text-[32px] font-bold text-slate-900 leading-[1.3]">
-              If you’re like most [consultant target audience], you’re working harder than ever — <br /><br />but growth feels slower than it should.
-            </h2>
-            
-            <p className="text-[18px] font-medium text-slate-800">You know there’s so much potential in your business, but:</p>
-            
-            <ul className="space-y-4">
-              {[
-                "Your systems are messy or too manual",
-                "You’re wasting too much time doing things that don’t generate revenue",
-                "Sales opportunities keep slipping through the cracks",
-                "Scaling feels too overwhelming (and expensive)"
-              ].map((item, i) => (
-                <li key={i} className="flex gap-4 items-start text-[18px] text-slate-700">
-                  <span className="text-[#00daaeff] flex-shrink-0 mt-1">
-                    <svg className="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-[18px] font-medium text-slate-800 pt-4">It doesn’t have to be this way.</p>
-            
-            <div className="pt-4">
-              <a 
-                href={formUrl} 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#00daae] text-white font-bold text-[20px] px-10 py-5 rounded-[75px] transition-all hover:brightness-105 uppercase tracking-wide shadow-lg text-center"
-              >
-                SCHEDULE MY STRATEGY SESSION
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: THE PROMISE (oY4pZy33NI) */}
-      <section className="py-24 px-[6vw] relative overflow-hidden" style={{ background: 'linear-gradient(0deg, #272943 0%, #010101 100%)' }}>
-        <div className="max-w-[1170px] mx-auto text-center space-y-16">
-          <h2 className="text-[30px] sm:text-[40px] font-bold text-white leading-tight">
-            In this complimentary strategy <br className="hidden sm:block" /> session, I’ll help you:
-          </h2>
-          
-          <div className="max-w-3xl mx-auto">
-            <ul className="space-y-6 text-left">
-              {[
-                { t: "Pinpoint the #1 bottleneck slowing your growth", h: "#1 bottleneck" },
-                { t: "Get clarity on where to focus first for maximum impact", h: "where to focus first" },
-                { t: "Learn how the right AI-powered systems can save you hours every week", h: "save you hours every week" },
-                { t: "Walk away with a clear, actionable plan to hit your next revenue milestone—without adding more stress or overhead", h: "clear, actionable plan" }
-              ].map((item, i) => {
-                const parts = item.t.split(item.h);
-                return (
-                  <li key={i} className="flex gap-5 items-start text-[20px] font-normal text-white/90 leading-normal">
-                    <span className="text-[#00daae] flex-shrink-0 mt-1.5">
-                      <svg className="w-6 h-6 fill-current" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
-                    </span>
-                    <span>
-                      {parts[0]}<span className="text-[#00daae] font-bold">{item.h}</span>{parts[1]}
-                    </span>
+          </ScrollReveal>
+          <StaggerReveal>
+            <StaggerItem>
+              <Eyebrow className="mb-4">The Challenge</Eyebrow>
+              <SectionHeading className="mb-6">
+                Working harder than ever,
+                <br />
+                <em className="italic text-brand font-light">but growth feels slower</em>
+              </SectionHeading>
+            </StaggerItem>
+            <StaggerItem>
+              <p className="text-muted font-light leading-relaxed mb-8">
+                You know there&apos;s so much potential in your business, but the path forward isn&apos;t clear. It doesn&apos;t have to be this way.
+              </p>
+            </StaggerItem>
+            <StaggerItem>
+              <ul className="space-y-4">
+                {PAIN_POINTS.map((point, i) => (
+                  <li key={i} className="flex gap-4 items-start text-foreground">
+                    <span className="flex-shrink-0 mt-0.5">{CHECK_ICON}</span>
+                    <span className="text-sm font-light leading-relaxed">{point}</span>
                   </li>
-                );
-              })}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: MEET ANDREA (M5qaYBtMh9) */}
-      <section className="py-24 px-[6vw] bg-white">
-        <div className="max-w-[1170px] mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
-          <div className="space-y-8 flex flex-col justify-center order-2 lg:order-1">
-             <div className="space-y-4 text-[22px] sm:text-[26px] font-semibold text-slate-900 leading-[1.4]">
-               <p>For over 25+ years, I’ve helped business owners identify hidden revenue opportunities, eliminate inefficiencies, and create systems that run like</p>
-               <h2 className="text-[48px] sm:text-[60px] font-bold uppercase tracking-wider mt-2">clockwork.</h2>
-             </div>
-
-             <div className="space-y-6 text-[18px] text-slate-600 font-normal leading-relaxed">
-               <p>My approach blends proven growth strategy with smart automation and AI tools—so you can scale without sacrificing your time, your energy, or your client experience.</p>
-               <p>Whether you’re just trying to create consistency or you’re ready to go after your next big revenue leap, this session will show you the most direct path forward.</p>
-               <p className="font-bold text-slate-900">Every month you wait is another month stuck in the same cycle—and the cost of doing nothing is higher than you think:</p>
-             </div>
-
-             <ul className="space-y-3">
-               {["Lost deals", "Wasted hours", "Burnt-out teams", "Stalled revenue"].map((item, i) => (
-                 <li key={i} className="flex gap-3 items-center text-[18px] text-slate-800">
-                    <span className="w-2 h-2 rounded-full bg-[#00daae]"></span>
-                    {item}
-                 </li>
-               ))}
-             </ul>
-
-             <div className="pt-4">
-                <a 
-                  href={formUrl} 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-[#00daae] text-white font-bold text-[20px] px-12 py-5 rounded-[50px] transition-all hover:brightness-105 uppercase tracking-wide shadow-lg text-center"
-                >
-                  BOOK MY STRATEGY SESSION
-                </a>
-             </div>
-          </div>
-
-          <div className="relative group overflow-hidden rounded-2xl order-1 lg:order-2">
-            <img 
-              src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/zUZd380lxhqjQgVX8jRh/media/ac4e8ce0-f746-448c-91c7-5d98643f4214.jpeg" 
-              alt="Andrea Strategy" 
-              className="w-full h-[500px] lg:h-[700px] object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6: INDUSTRIES SERVED (WzwhrL7GFv) */}
-      <section className="py-24 px-[6vw] bg-white border-t border-slate-100">
-        <div className="max-w-[1170px] mx-auto">
-          <h2 className="text-[40px] font-bold text-slate-900 text-center mb-20 tracking-tight font-sans uppercase">INDUSTRIES SERVED</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            {[
-              { 
-                t: "B2B and DTC Companies", 
-                d: "Scale your revenue with precision. We implement AI-driven systems that streamline lead generation for B2B and optimize customer acquisition for DTC brands, ensuring your growth is both predictable and profitable.", 
-                icon: (
-                  <svg className="w-24 h-24 text-[#00daae]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/><path d="M16 11h.01"/><path d="M16 15h.01"/><path d="M16 19h.01"/><path d="M12 11h.01"/><path d="M12 15h.01"/><path d="M12 19h.01"/><path d="M8 11h.01"/><path d="M8 15h.01"/><path d="M8 19h.01"/>
-                  </svg>
-                )
-              },
-              { 
-                t: "Legal", 
-                d: "Scale your practice without increasing your overhead. We build compliant AI systems that automate intake, nurture leads, and manage client communications while maintaining the highest standards of professional trust.", 
-                icon: (
-                  <svg className="w-24 h-24 text-[#00daae]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
-                  </svg>
-                )
-              },
-              { 
-                t: "Financial & Insurance", 
-                d: "Drive consistent growth in highly regulated environments. We help advisors and firms build authority through intelligent content, automated lead scoring, and precision-targeted outreach.", 
-                icon: (
-                  <svg className="w-24 h-24 text-[#00daae]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M12 8v4"/><path d="M12 16h.01"/><circle cx="12" cy="12" r="10"/>
-                  </svg>
-                )
-              }
-            ].map((industry, i) => (
-              <div key={i} className="flex flex-col items-center space-y-6">
-                <div className="h-[120px] flex items-center justify-center">
-                  {industry.icon}
-                </div>
-                <div className="space-y-4">
-                  <h3 className="text-[24px] font-bold text-slate-900 leading-tight uppercase font-sans">{industry.t}</h3>
-                  <p className="text-slate-600 leading-relaxed font-normal text-[16px]">{industry.d}</p>
-                </div>
+                ))}
+              </ul>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="mt-8">
+                <PremiumButton href={BOOKING_URL} external>
+                  Schedule My Strategy Session
+                </PremiumButton>
               </div>
-            ))}
-          </div>
+            </StaggerItem>
+          </StaggerReveal>
         </div>
       </section>
 
-      {/* SECTION 7: TESTIMONIALS (JWhm8Vo_op) */}
-      <section className="py-24 px-[6vw]" style={{ background: 'linear-gradient(0deg, #272843 0%, #1e1f2f 100%)' }}>
-        <div className="max-w-[1170px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
-           {[
-             { q: "Within 30 days, my team’s admin workload was cut in half — and I booked 3 new clients.", n: "Founder, Law Firm" },
-             { q: "My leads no longer slip away. The system follows up automatically and my calendar stays full.", n: "Managing Partner, Law Firm" },
-             { q: "For the first time in years, I feel like my business is running me instead of me running it.", n: "Owner, Insurance Agency" }
-           ].map((t, i) => (
-             <div key={i} className="space-y-6">
-               <p className="text-[18px] font-medium text-white leading-relaxed">“{t.q}”</p>
-               <div className="space-y-3">
-                 <p className="text-[18px] text-white/80">— {t.n}</p>
-                 <div className="flex justify-center gap-1">
-                   <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/zUZd380lxhqjQgVX8jRh/media/243281f7-8b05-406e-bf46-75bdcf6cfa52.png" alt="5 Stars" className="w-[100px] h-auto" />
-                 </div>
-               </div>
-             </div>
-           ))}
+      {/* Benefits */}
+      <section className="py-28 section-shell text-center section-divider-bottom">
+        <div className="absolute left-0 bottom-0 w-[350px] h-[350px] blob-gold opacity-10 pointer-events-none" aria-hidden="true" />
+        <StaggerReveal>
+          <StaggerItem>
+            <Eyebrow className="mb-4 justify-center">What You&apos;ll Get</Eyebrow>
+            <SectionHeading className="mb-16 text-center">
+              In this complimentary strategy session,
+              <br />
+              <em className="italic text-brand font-light">I&apos;ll help you:</em>
+            </SectionHeading>
+          </StaggerItem>
+        </StaggerReveal>
+        <div className="max-w-[700px] mx-auto grid grid-cols-1 gap-5">
+          {BENEFITS.map((benefit, i) => (
+            <ScrollReveal key={i} delay={i * 0.08}>
+              <div className="card-glass p-5 text-left flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-brand/15 border border-brand/20 flex items-center justify-center flex-shrink-0">
+                  <span className="font-heading text-lg font-bold text-brand">{i + 1}</span>
+                </div>
+                <p className="text-sm font-light text-foreground leading-relaxed">{benefit}</p>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </section>
 
+      {/* Story */}
+      <section className="py-28 section-shell relative section-noise">
+        <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-16 items-center">
+          <StaggerReveal className="order-2 lg:order-1">
+            <StaggerItem>
+              <Eyebrow className="mb-4">25+ Years of Experience</Eyebrow>
+              <SectionHeading className="mb-6">
+                Systems that run like
+                <br />
+                <em className="italic text-brand font-light">clockwork.</em>
+              </SectionHeading>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="space-y-5 text-muted font-light leading-relaxed text-sm">
+                <p>
+                  My approach blends proven growth strategy with smart automation and AI tools—so you can scale without sacrificing your time, your energy, or your client experience.
+                </p>
+                <p>
+                  Whether you&apos;re just trying to create consistency or you&apos;re ready to go after your next big revenue leap, this session will show you the most direct path forward.
+                </p>
+                <p className="text-foreground font-medium">
+                  Every month you wait is another month stuck in the same cycle.
+                </p>
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="mt-8 grid grid-cols-2 gap-3">
+                {["Lost deals", "Wasted hours", "Burnt-out teams", "Stalled revenue"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-muted font-light">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand/60" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </StaggerItem>
+            <StaggerItem>
+              <div className="mt-8">
+                <PremiumButton href={BOOKING_URL} external>
+                  Book My Strategy Session
+                </PremiumButton>
+              </div>
+            </StaggerItem>
+          </StaggerReveal>
+          <ScrollReveal className="order-1 lg:order-2">
+            <BrandImage
+              src={IMAGES.founderStrategicReflection}
+              alt="Andrea — Founder & Strategist"
+              blob
+            />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Industries */}
+      <section className="py-28 section-shell text-center section-divider-top">
+        <StaggerReveal>
+          <StaggerItem>
+            <Eyebrow className="mb-4 justify-center">Who We Serve</Eyebrow>
+            <SectionHeading className="mb-16 text-center">
+              Industries We&apos;ve
+              <br />
+              <em className="italic text-brand font-light">Transformed</em>
+            </SectionHeading>
+          </StaggerItem>
+        </StaggerReveal>
+        <div className="max-w-[1000px] mx-auto grid grid-cols-1 sm:grid-cols-3 gap-5">
+          {INDUSTRIES.map((industry, i) => (
+            <ScrollReveal key={i} delay={i * 0.1}>
+              <div className="card-modern p-6 h-full text-center group">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand/20 to-brand/5 border border-brand/15 flex items-center justify-center mx-auto mb-4 group-hover:border-brand/30 transition-colors">
+                  <span className="font-heading text-xl font-bold text-brand">{industry.title[0]}</span>
+                </div>
+                <h3 className="font-heading text-lg font-semibold mb-2">{industry.title}</h3>
+                <p className="text-[0.72rem] text-muted font-light leading-relaxed">{industry.desc}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-28 section-shell relative section-noise section-divider-top section-divider-bottom">
+        <div className="absolute right-0 top-1/4 w-[300px] h-[300px] blob-purple opacity-15 pointer-events-none" aria-hidden="true" />
+        <StaggerReveal>
+          <StaggerItem>
+            <Eyebrow className="mb-4 justify-center">Client Results</Eyebrow>
+            <SectionHeading className="mb-16 text-center">
+              What Our Clients
+              <br />
+              <em className="italic text-brand font-light">Are Saying</em>
+            </SectionHeading>
+          </StaggerItem>
+        </StaggerReveal>
+        <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+          {TESTIMONIALS.map((t, i) => (
+            <ScrollReveal key={i} delay={i * 0.1}>
+              <div className="card-glass p-5 h-full flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-4 h-4 text-brand" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm text-foreground font-light leading-relaxed flex-1">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <p className="text-[0.72rem] text-muted/80 mt-4 pt-4 border-t border-border-subtle">
+                  — {t.author}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-28 section-shell text-center">
+        <StaggerReveal>
+          <StaggerItem>
+            <Eyebrow className="mb-4 justify-center">Ready to Grow?</Eyebrow>
+            <SectionHeading className="mb-8 text-center">
+              Don&apos;t Wait Another Month.
+              <br />
+              <em className="italic text-brand font-light">Book Your Free Strategy Session Today.</em>
+            </SectionHeading>
+          </StaggerItem>
+          <StaggerItem>
+            <PremiumButton href={BOOKING_URL} external>
+              Book My Strategy Session
+            </PremiumButton>
+          </StaggerItem>
+        </StaggerReveal>
+      </section>
     </div>
   );
 }
