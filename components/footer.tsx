@@ -71,7 +71,7 @@ export function Footer() {
              </a></li>
               <li><span className="text-[0.79rem] text-muted font-light">North America</span></li>
               <li><a href="https://www.instagram.com/grateful.marketing/" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Instagram</a></li>
-              <li><a href="https://www.facebook.com/share/1B5yef4BR8/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Facebook</a></li>
+              <li><a href="https://www.facebook.com/people/Grateful-Marketing/61572075292335/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Facebook</a></li>
            </ul>
         </div>
       </div>
