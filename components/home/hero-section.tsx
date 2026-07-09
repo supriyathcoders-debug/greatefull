@@ -10,32 +10,29 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-[#23004c] lg:min-h-[100dvh] lg:flex lg:items-center"
+      className="relative min-h-[100dvh] overflow-hidden bg-[#12082a]"
     >
-      {/* Desktop — full-bleed background image with text overlay */}
+      {/* Full hero background — image never cropped */}
       <div
-        className="absolute inset-0 z-0 hidden lg:block overflow-hidden bg-[#23004c]"
+        className="absolute inset-0 z-0 bg-[#12082a] bg-contain bg-center bg-no-repeat lg:bg-[length:auto_100%] lg:bg-right"
+        style={{ backgroundImage: `url(${IMAGES.heroGoldSilhouette})` }}
         aria-hidden="true"
-      >
-        <img
-          src={IMAGES.heroGoldSilhouette}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover object-[60%_center] xl:object-[68%_center]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#23004c] from-0% via-[#23004c]/92 via-[38%] to-transparent to-72%" />
-      </div>
+      />
 
-      {/* Mobile — image on top, separate from text */}
-      <div className="lg:hidden pt-20">
-        <img
-          src={IMAGES.heroGoldSilhouette}
-          alt="Grateful Marketing — Gratitude Always"
-          className="w-full h-auto object-contain"
-        />
-      </div>
+      {/* Desktop — left gradient so text reads over the background */}
+      <div
+        className="absolute inset-0 z-[1] hidden bg-gradient-to-r from-[#12082a] from-0% via-[#12082a]/95 via-[45%] to-transparent to-100% lg:block"
+        aria-hidden="true"
+      />
 
-      {/* Text — below image on mobile, left overlay on desktop */}
-      <div className="relative z-10 w-full section-shell py-10 lg:py-0 lg:pt-32 lg:pb-28">
+      {/* Mobile — bottom fade so text sits on solid purple, not over the portrait */}
+      <div
+        className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent from-40% via-[#12082a]/90 via-58% to-[#12082a] to-100% lg:hidden"
+        aria-hidden="true"
+      />
+
+      {/* Text */}
+      <div className="relative z-10 flex min-h-[100dvh] flex-col justify-end lg:justify-center section-shell pb-10 pt-28 lg:py-32">
         <StaggerReveal className="max-w-[640px]">
           <StaggerItem>
             <Eyebrow className="mb-6 lg:mb-8">{HERO.eyebrow}</Eyebrow>
