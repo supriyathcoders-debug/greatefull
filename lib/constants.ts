@@ -3,7 +3,7 @@ export const BOOKING_URL =
 
 /** Client handoff images — paths match README_Developer_Handoff.md */
 export const IMAGES = {
-  heroGoldSilhouette: "/images/brand/hero_gold_silhouette_woman_chin_bob.png",
+  heroGoldSilhouette: "/images/brand/hero_human_first_ai_second.png",
   heartCircuitGratitude: "/images/brand/heart_circuit_gratitude.png",
   agencyProfessionalWoman: "/images/brand/agency_professional_woman.png",
   heroHumanSpark: "/images/brand/hero_human_spark.png",
