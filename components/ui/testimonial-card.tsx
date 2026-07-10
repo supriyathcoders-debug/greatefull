@@ -21,10 +21,7 @@ export function TestimonialCard({ item }: Props) {
       </div>
 
       <div className="mt-6 pt-5 border-t border-border-subtle">
-        <div className="text-sm font-medium text-foreground">{item.name}</div>
-        <div className="text-[0.72rem] text-muted mt-0.5 font-light">
-          {item.title}
-        </div>
+        <div className="text-sm font-medium text-foreground">{item.title}</div>
         {item.industry ? (
           <div className="text-[0.62rem] tracking-[0.14em] uppercase text-brand/70 mt-2 font-medium">
             {item.industry}
