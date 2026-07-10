@@ -375,3 +375,16 @@ a {
     animation: none;
   }
 }
+
+/* Hero — only one layout visible; backup if JS/Tailwind breakpoints fail */
+@media (max-width: 1023px) {
+  .hero-layout-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-layout-mobile {
+    display: none !important;
+  }
+}
