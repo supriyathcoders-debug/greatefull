@@ -1,4 +1,5 @@
 import { IMAGES } from "@/lib/constants";
+import { SERVICE_ITEMS } from "@/lib/content/offers";
 
 export { IMAGES };
 
@@ -194,53 +195,12 @@ export const ABOUT = {
 
 export const SERVICES = {
   eyebrow: "Our Services",
-  heading: "Five pillars.",
-  headingEm: "Four services.",
-  headingSuffix: "One human-first philosophy.",
+  heading: "Five offers.",
+  headingEm: "One human-first",
+  headingSuffix: "philosophy.",
   intro:
-    "The 5 Pillars of Gratitude™ — Time, Gratitude, Innovation, Productivity, and Potential — are the foundation everything is built on. Our four core services are how we deliver them. Every engagement starts with your people: your team, your customers, your goals. We bring the strategy. You keep the soul of your business.",
-  items: [
-    {
-      number: "01",
-      title: "AI Business Consulting",
-      description:
-        "Your people deserve a strategy built around them — not around the technology. We sit with your team, learn how you actually work, and build a clear AI roadmap that serves your goals and protects what makes you worth choosing.",
-      tags: ["AI Readiness Audits", "Strategic Roadmaps", "ROI Modeling", "Change Management", "Competitive Analysis"],
-      image: IMAGES.heroHumanSpark,
-      imageAlt: "The spark of innovation — AI business consulting",
-      href: null,
-    },
-    {
-      number: "02",
-      title: "Marketing Strategy & Deployment",
-      description:
-        "Your customers want to feel understood — not marketed to. We design and deploy end-to-end marketing systems that attract the right people, earn their trust, and convert consistently, with AI doing the heavy lifting so your voice stays unmistakably yours.",
-      tags: ["Smart Content Systems", "Automated Lead Generation", "AI Automation", "Campaign Management", "Seamless CRM Integration"],
-      image: IMAGES.bridgeMotifStrategy,
-      imageAlt: "The path forward — marketing strategy and deployment",
-      href: null,
-    },
-    {
-      number: "03",
-      title: "AI Team Training & Empowerment",
-      description:
-        "Your people aren't the obstacle — they're the whole point. We designed our training around them first: their worries, their roles, their potential. By the end, they don't just use AI confidently. They lead with it.",
-      tags: ["Interactive Workshops", "Hands-On Training", "AI Tool Adoption", "Ongoing Support", "Custom Curricula"],
-      image: IMAGES.cuppedHandsSpark,
-      imageAlt: "Cupped hands holding the spark — AI team training",
-      href: null,
-    },
-    {
-      number: "04",
-      title: "AI Voice Agents",
-      description:
-        "Every missed call is a real person who needed you and didn't reach you. Our voice agents answer every inquiry with genuine warmth — day, night, and weekends — so no one ever feels ignored, and your team focuses on the conversations that truly need a human.",
-      tags: ["24/7 Availability", "Lead Qualification", "Intelligent Routing", "Warm Handoffs"],
-      image: IMAGES.clientGrowthTransformation,
-      imageAlt: "Accelerating growth — AI voice agents",
-      href: "/ai-voice-agents",
-    },
-  ],
+    "Human First. AI Empowered. Each offer maps to a step in your AI journey — from ongoing growth partnership, to voice coverage, a full AI workforce, team readiness, and licensing the Gratitude™ methodology. Every engagement starts with your people.",
+  items: SERVICE_ITEMS,
 } as const;
 
 export const INDUSTRIES = {

@@ -1,12 +1,10 @@
 "use client";
 
-import { useMemo, useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { BrandImage } from "@/components/ui/brand-image";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { PremiumButton } from "@/components/ui/premium-button";
 import { Marquee } from "@/components/ui/marquee";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
+import { getOffersInOrder } from "@/lib/content/offers";
 import { SERVICES } from "@/lib/content/home";
 
 const PILLAR_MARQUEE_ITEMS = [
@@ -42,60 +40,13 @@ function PillarMarqueeCard({
 }
 
 export function ServicesSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  const [slidesPerView, setSlidesPerView] = useState(1);
-
-  useEffect(() => {
-    const update = () => {
-      setSlidesPerView(window.innerWidth >= 1024 ? 2 : 1);
-    };
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
-
-  const items = useMemo(() => SERVICES.items, []);
-
-  const maxIndex = Math.max(0, items.length - slidesPerView);
-
-  const goTo = useCallback(
-    (next: number) => {
-      setDirection(next > currentIndex ? 1 : -1);
-      setCurrentIndex(Math.min(Math.max(next, 0), maxIndex));
-    },
-    [currentIndex, maxIndex],
-  );
-
-  const next = useCallback(() => {
-    if (currentIndex < maxIndex) goTo(currentIndex + 1);
-    else goTo(0);
-  }, [currentIndex, maxIndex, goTo]);
-
-  const prev = useCallback(() => {
-    if (currentIndex > 0) goTo(currentIndex - 1);
-    else goTo(maxIndex);
-  }, [currentIndex, maxIndex, goTo]);
-
-  useEffect(() => {
-    const timer = setInterval(next, 5000);
-    return () => clearInterval(timer);
-  }, [next]);
-
-  const visible = items.slice(currentIndex, currentIndex + slidesPerView);
-  const padded =
-    visible.length < slidesPerView
-      ? [...visible, ...items.slice(0, slidesPerView - visible.length)]
-      : visible;
+  const offers = getOffersInOrder();
 
   return (
     <section id="services" className="py-28 section-shell relative section-noise">
       <div className="max-w-[1200px] mx-auto">
-        {/* Decorative blob */}
         <div className="absolute right-1/4 top-0 w-[400px] h-[400px] blob-purple opacity-20 pointer-events-none" aria-hidden="true" />
 
-        {/* Section header */}
         <StaggerReveal className="mb-16 max-w-[720px]">
           <StaggerItem>
             <Eyebrow className="mb-5">{SERVICES.eyebrow}</Eyebrow>
@@ -110,7 +61,6 @@ export function ServicesSection() {
           </StaggerItem>
         </StaggerReveal>
 
-        {/* Five Pillars — scrolling promotional bar */}
         <StaggerReveal className="mb-6 max-w-[720px]">
           <StaggerItem>
             <p className="text-[0.8rem] font-light text-muted">
@@ -127,113 +77,63 @@ export function ServicesSection() {
               ))}
             </Marquee>
           </div>
-          <p className="section-shell mt-3 text-[0.65rem] font-light text-muted/60">
-            &#9888;&#65039; Client asset required: Replace with day_5.png from Developer Handoff package
-          </p>
         </div>
 
-        {/* Carousel */}
-        <div className="relative">
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={currentIndex}
-              custom={direction}
-              initial={{ opacity: 0, x: direction >= 0 ? 40 : -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: direction >= 0 ? -40 : 40 }}
-              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-7"
-            >
-              {padded.map((service) => (
-                <article
-                  key={service.title}
-                  className="card-modern group h-full flex flex-col overflow-hidden relative"
-                >
-                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+        {/* All five offers — fixed document order 01 → 05 (no carousel) */}
+        <StaggerReveal className="flex flex-col gap-7">
+          {offers.map((offer) => (
+            <StaggerItem key={offer.id}>
+              <article
+                id={offer.id}
+                className="card-modern group flex flex-col overflow-hidden relative scroll-mt-28 lg:flex-row"
+              >
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
 
-                  <div className="overflow-hidden rounded-t-2xl">
-                    <BrandImage
-                      src={service.image}
-                      alt={service.imageAlt}
-                      frame="none"
-                      className="border-0 w-full"
+                <div className="w-full lg:w-[42%] shrink-0 bg-surface/30">
+                  <div className="relative w-full aspect-[3/2]">
+                    <img
+                      src={offer.image}
+                      alt={offer.imageAlt}
+                      className="absolute inset-0 w-full h-full object-contain p-3 lg:p-4"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
+                </div>
 
-                  <div className="p-8 flex flex-col flex-1">
-                    <span className="font-heading text-[0.82rem] text-brand/50 mb-3 font-medium tracking-wider group-hover:text-brand transition-colors duration-300">
-                      {service.number}
-                    </span>
-                    <h3 className="font-heading text-[1.3rem] font-semibold mb-3 text-foreground leading-tight group-hover:text-brand transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-[0.88rem] text-muted leading-[1.85] font-light mb-4 flex-1">
-                      {service.description}
-                    </p>
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {service.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[0.62rem] tracking-[0.06em] uppercase text-brand/60 bg-brand-soft/30 px-3 py-1.5 font-medium rounded-lg"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    {service.href && (
-                      <div className="mt-auto">
-                        <PremiumButton href={service.href} variant="ghost">
-                          Learn More
-                        </PremiumButton>
-                      </div>
-                    )}
+                <div className="p-8 flex flex-col flex-1">
+                  <span className="font-heading text-[0.82rem] text-brand/50 mb-1 font-medium tracking-wider">
+                    Offer {offer.number}
+                  </span>
+                  <h3 className="font-heading text-[1.3rem] font-semibold mb-1 text-foreground leading-tight group-hover:text-brand transition-colors duration-300">
+                    {offer.title}
+                  </h3>
+                  <p className="text-[0.68rem] tracking-[0.06em] uppercase text-brand/60 mb-4">
+                    {offer.subtitle}
+                  </p>
+                  <p className="text-[0.88rem] text-muted leading-[1.85] font-light mb-4 flex-1">
+                    {offer.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {offer.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[0.62rem] tracking-[0.06em] uppercase text-brand/60 bg-brand-soft/30 px-3 py-1.5 font-medium rounded-lg"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                </article>
-              ))}
-            </motion.div>
-          </AnimatePresence>
-
-          {items.length > slidesPerView && (
-            <div className="flex items-center justify-between mt-10">
-              <div className="flex gap-2">
-                {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => goTo(i)}
-                    aria-label={`Go to slide ${i + 1}`}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      i === currentIndex
-                        ? "w-8 bg-brand glow-brand"
-                        : "w-4 bg-white/10 hover:bg-brand/40"
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <div className="flex gap-3">
-                <button
-                  onClick={prev}
-                  aria-label="Previous services"
-                  className="w-11 h-11 rounded-xl border border-white/10 flex items-center justify-center text-muted transition-all hover:border-brand hover:text-brand hover:bg-brand/10 hover:shadow-[0_0_20px_rgba(201,168,76,0.1)]"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="m15 18-6-6 6-6" />
-                  </svg>
-                </button>
-                <button
-                  onClick={next}
-                  aria-label="Next services"
-                  className="w-11 h-11 rounded-xl border border-white/10 flex items-center justify-center text-muted transition-all hover:border-brand hover:text-brand hover:bg-brand/10 hover:shadow-[0_0_20px_rgba(201,168,76,0.1)]"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
+                  <div className="mt-auto">
+                    <PremiumButton href={offer.href} variant="ghost">
+                      {offer.cta}
+                    </PremiumButton>
+                  </div>
+                </div>
+              </article>
+            </StaggerItem>
+          ))}
+        </StaggerReveal>
       </div>
     </section>
   );
