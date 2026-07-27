@@ -28,7 +28,7 @@ export default function ContactPage() {
       <Section title="Prefer to Talk Live?">
         <div className="flex flex-wrap gap-3">
           <CtaButton href="/ai-revenue-audit">Get Your AI Revenue Audit</CtaButton>
-          <CtaButton href="/pre-booking">Book a Strategy Call</CtaButton>
+          <CtaButton href="/pre-booking">Let&apos;s have a conversation</CtaButton>
           <CtaButton href="https://app.growthhub365.com/v2/preview/QAuss4a9CGC8EExSO5WE" variant="secondary">
             See Demo
           </CtaButton>

@@ -29,31 +29,37 @@ export function GratitudeFrameworkSection() {
               <p className="text-sm text-brand/80 tracking-wide mb-5 font-light">
                 {GRATITUDE.subhead}
               </p>
-              <p className="text-base text-muted leading-[1.88] font-light">
+              <p className="text-base text-muted leading-[1.88] font-light mb-8">
                 {GRATITUDE.intro}
               </p>
+              <div className="relative pl-6 py-5 border-l-2 border-brand/40 bg-brand-soft/30 rounded-r-xl mt-8">
+                <p className="text-[0.75rem] font-semibold tracking-[0.15em] uppercase text-brand mb-2 flex items-center gap-2">
+                  <span className="w-4 h-px bg-brand" />
+                  Pain to Purpose
+                </p>
+                <p className="text-[0.9rem] text-foreground/80 leading-[1.85] font-light italic">
+                  {GRATITUDE.personalStory}
+                </p>
+              </div>
             </StaggerItem>
           </StaggerReveal>
         </div>
 
-        <StaggerReveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {GRATITUDE_PILLARS.map((pillar) => (
+        <StaggerReveal className="flex flex-col border border-border-subtle bg-brand-soft/5 rounded-lg overflow-hidden mt-8 shadow-sm">
+          {GRATITUDE_PILLARS.map((pillar, index) => (
             <StaggerItem key={pillar.title}>
-              <article className="p-6 border border-border-subtle bg-brand-soft/20 hover:border-brand/25 transition-colors h-full">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="font-heading text-lg font-bold text-brand">
+              <article className={`flex flex-col sm:flex-row items-stretch ${index !== GRATITUDE_PILLARS.length - 1 ? 'border-b border-border-subtle/60' : ''}`}>
+                <div className="flex sm:w-20 lg:w-24 flex-shrink-0 items-center justify-center bg-brand-soft/20 border-b sm:border-b-0 sm:border-r border-border-subtle/60 p-4">
+                  <span className="font-heading text-3xl lg:text-4xl font-bold text-brand">
                     {pillar.letter}
                   </span>
-                  <div className="w-8 h-8 flex items-center justify-center border border-brand/25 text-brand">
-                    <PillarIcon name={pillar.icon} className="w-3.5 h-3.5" />
-                  </div>
                 </div>
-                <h3 className="font-heading text-lg font-semibold mb-2">
-                  {pillar.title}
-                </h3>
-                <p className="text-[0.8rem] text-muted leading-relaxed font-light">
-                  {pillar.description}
-                </p>
+                <div className="flex-1 p-5 lg:p-6 flex items-center bg-background/50 hover:bg-brand-soft/5 transition-colors">
+                  <p className="text-[0.9rem] lg:text-[0.95rem] text-muted leading-[1.8] font-light">
+                    <strong className="text-foreground font-semibold mr-1">{pillar.title} —</strong>
+                    {pillar.description}
+                  </p>
+                </div>
               </article>
             </StaggerItem>
           ))}

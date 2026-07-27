@@ -15,8 +15,8 @@ export const OFFER_ORDER = [
   "ai-growth-retainer",
   "ai-voice-agent",
   "ai-agent-build",
-  "ai-ready-team-intensive",
-  "gratitude-licensing",
+  "ai-training-intensive",
+  "ai-content-development",
 ] as const;
 
 export type OfferId = (typeof OFFER_ORDER)[number];
@@ -35,38 +35,28 @@ type Offer = {
 };
 
 const OFFERS_BY_ID: Record<OfferId, Offer> = {
-  "ai-ready-team-intensive": {
-    id: "ai-ready-team-intensive",
+  "ai-growth-retainer": {
+    id: "ai-growth-retainer",
     number: "01",
-    title: "The AI-Ready Team Intensive",
-    subtitle: "Workshop · Half-Day, Full-Day & Two-Day Formats",
+    title: "Grateful Growth AI Retainer",
+    subtitle: "Offer: Ongoing AI Growth Partner for Marketing & Sales",
     description:
-      "Most AI training teaches software. The AI-Ready Team Intensive teaches transformation — the kind that sticks, spreads through your organization, and shows up in your results within weeks. In one powerful day with Andrea Gureckas, your team moves from AI-hesitant to AI-confident.",
-    tags: [
-      "Pre-Workshop Audit",
-      "Live AI Agent Builds",
-      "Custom AI Playbook",
-      "30-Day Implementation Support",
-    ],
-    cta: "Book Your Strategy Call",
-    image: IMAGES.teamCommunityCircle,
-    imageAlt: "The power of community — AI team training",
-    href: "/pre-booking",
+      "• One-time AI Growth Diagnostic to map out high‑ROI use cases and quick wins.\n• Monthly strategic advisory on campaigns, funnels, and automation.\n• Light implementation oversight and governance (policies, workflows, prompts).",
+    tags: ["Diagnostic", "Strategic Advisory", "Governance"],
+    cta: "Let's have a conversation",
+    image: IMAGES.bridgeMotifStrategy,
+    imageAlt: "The path forward — AI growth retainer",
+    href: "/ai-revenue-audit",
   },
   "ai-voice-agent": {
     id: "ai-voice-agent",
     number: "02",
-    title: "The AI Voice Agent",
-    subtitle: "24/7 Call Answering · Speed-to-Lead · Calendar Booking",
+    title: "AI Voice Agents",
+    subtitle: "Offer: AI Receptionist & Lead Intake System",
     description:
-      "Every unanswered call is a customer calling your competitor next. Your AI Voice Agent answers every call, every time — nights, weekends, holidays — trained on your website and FAQs, sounding like your team, and booking meetings directly to your calendar.",
-    tags: [
-      "24/7/365 Coverage",
-      "Human-Sounding Voice",
-      "FAQ-Trained",
-      "Calendar Booking",
-    ],
-    cta: "Book a Free Voice Agent Demo",
+      "• Handles inbound calls 24/7 for FAQs, booking, and lead capture.\n• Custom scripts aligned with brand voice and escalation to humans.\n• Built‑in consent and data‑handling practices aligned with Canadian privacy rules.",
+    tags: ["24/7 Calls", "Custom Scripts", "Privacy Compliant"],
+    cta: "Let's have a conversation",
     image: IMAGES.clientGrowthTransformation,
     imageAlt: "Accelerating growth — AI voice agents",
     href: "/ai-voice-agents",
@@ -74,56 +64,41 @@ const OFFERS_BY_ID: Record<OfferId, Offer> = {
   "ai-agent-build": {
     id: "ai-agent-build",
     number: "03",
-    title: "The AI Agent Build",
-    subtitle: "Custom AI Employees · Foundation, Growth & Enterprise Tiers",
+    title: 'AI Agents / "AI Employees"',
+    subtitle: "Offer: AI Marketing Pod (Pre‑Built AI Roles)",
     description:
-      "We design, build, and deploy a custom team of AI Agents — department-structured AI Employees configured around your real workflows, using the same architecture that runs Grateful Marketing™ itself. Not a chatbot. A workforce, built once and handed to your team to run.",
-    tags: [
-      "Department-Mapped Agents",
-      "Trained on Your Business",
-      "Gratitude™ Methodology",
-      "30-Day Post-Launch Support",
-    ],
-    cta: "Book Your AI Workforce Blueprint",
+      "• AI Campaign Analyst for performance summaries and optimization suggestions.\n• AI Content Operations Assistant to manage calendars, briefs, and drafts.\n• AI CRM Assistant for follow‑up messages and basic data updates, under human approval.",
+    tags: ["Campaign Analyst", "Content Ops", "CRM Assistant"],
+    cta: "Let's have a conversation",
     image: IMAGES.innovationAiOpportunity,
     imageAlt: "The AI opportunity — custom AI agent build",
     href: "/pre-booking",
   },
-  "ai-growth-retainer": {
-    id: "ai-growth-retainer",
+  "ai-training-intensive": {
+    id: "ai-training-intensive",
     number: "04",
-    title: "The AI Growth Retainer",
-    subtitle: "Ongoing Monthly Partnership · Foundation, Growth & Transformation",
+    title: "AI Training Intensive",
+    subtitle: "Offer: AI for Marketers & Sales Intensive (1–2 Days)",
     description:
-      "AI strategy without implementation is just a PowerPoint. The AI Growth Retainer is our premium ongoing partnership — Andrea and her team audit your operations, build your AI infrastructure, deploy your tools, and train your people until your team owns it.",
-    tags: [
-      "Monthly Strategy Sessions",
-      "Workflow Audits",
-      "AI Agent Development",
-      "Performance Dashboard",
-    ],
-    cta: "Book Your AI Opportunity Audit",
-    image: IMAGES.bridgeMotifStrategy,
-    imageAlt: "The path forward — AI growth retainer",
-    href: "/ai-revenue-audit",
+      "• Practical training on using AI for content, campaigns, and lead gen.\n• Live build‑along of prompts and simple agents tailored to the client’s tools.\n• Module on responsible AI and Canadian data/privacy basics.",
+    tags: ["Practical Training", "Live Build-along", "Responsible AI"],
+    cta: "Let's have a conversation",
+    image: IMAGES.teamCommunityCircle,
+    imageAlt: "The power of community — AI team training",
+    href: "/pre-booking",
   },
-  "gratitude-licensing": {
-    id: "gratitude-licensing",
+  "ai-content-development": {
+    id: "ai-content-development",
     number: "05",
-    title: "The Gratitude™ Licensing Program",
-    subtitle: "License a Globally Trademarked AI Methodology",
+    title: "AI Content Development & Systems",
+    subtitle: "Offer: AI Content Engine Setup & Monthly Content Ops",
     description:
-      "You don't have to build your AI framework from scratch. Qualified consultants, coaches, and L&D professionals can license the globally trademarked Gratitude™ Methodology — full curriculum, certification, community, and co-marketing referrals from Grateful Marketing™.",
-    tags: [
-      "Full Licensing Rights",
-      "Complete Curriculum",
-      "Practitioner Certification",
-      "Licensee Community",
-    ],
-    cta: "Apply for Licensing",
+      "• Design and implement an AI‑assisted workflow for blogs, social, email, and landing pages.\n• Brand voice guidelines and prompt library, plus human editorial review.\n• Ongoing content production and performance tracking linked to marketing goals.",
+    tags: ["AI-assisted Workflow", "Brand Voice", "Performance Tracking"],
+    cta: "Let's have a conversation",
     image: IMAGES.pillarsGratitude,
-    imageAlt: "Gratitude always — licensing program",
-    href: "/contact",
+    imageAlt: "AI Content Engine",
+    href: "/pre-booking",
   },
 };
 
@@ -133,48 +108,6 @@ export function getOffersInOrder(): Offer[] {
     ...OFFERS_BY_ID[id],
     number: String(index + 1).padStart(2, "0"),
   }));
-}
-
-/**
- * Legacy testimonial categories in `lib/testimonials.ts`, grouped by offer.
- * Order follows OFFER_ORDER (01 → 05).
- */
-export const OFFER_TESTIMONIAL_CATEGORIES: Record<OfferId, readonly string[]> = {
-  "ai-ready-team-intensive": ["AI Team Training & Empowerment"],
-  "ai-voice-agent": ["AI Voice Agents"],
-  "ai-agent-build": ["Integrated Solutions"],
-  "ai-growth-retainer": [
-    "AI Marketing Strategy & Deployment",
-    "AI Business Consulting",
-  ],
-  "gratitude-licensing": [],
-};
-
-export type OfferFilterTab = {
-  offerId: OfferId;
-  number: string;
-  label: string;
-  categories: readonly string[];
-};
-
-/** Testimonial filter tabs — one per offer that has stories, in document order. */
-export function getOfferFilterTabs(): OfferFilterTab[] {
-  return getOffersInOrder()
-    .map((offer) => ({
-      offerId: offer.id,
-      number: offer.number,
-      label: offer.title.replace(/^The /, ""),
-      categories: OFFER_TESTIMONIAL_CATEGORIES[offer.id],
-    }))
-    .filter((tab) => tab.categories.length > 0);
-}
-
-/** Sort key for testimonials when showing “All” — matches offer funnel order. */
-export function getTestimonialOfferIndex(category: string): number {
-  const idx = OFFER_ORDER.findIndex((id) =>
-    OFFER_TESTIMONIAL_CATEGORIES[id].includes(category),
-  );
-  return idx === -1 ? OFFER_ORDER.length : idx;
 }
 
 export const OFFERS = getOffersInOrder();

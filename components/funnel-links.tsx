@@ -14,7 +14,7 @@ const funnelLinks = [
     href: "https://app.growthhub365.com/v2/preview/QAuss4a9CGC8EExSO5WE",
   },
   {
-    title: "Book a Strategy Call",
+    title: "Let's have a conversation",
     href: "/pre-booking",
   },
 ];

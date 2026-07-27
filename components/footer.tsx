@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-background px-[6vw] pt-20 pb-10 border-t border-brand/10 mt-16 relative section-noise">
       <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-brand/20 to-transparent pointer-events-none" aria-hidden="true" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 pb-14 border-b border-border mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 pb-14 border-b border-border mb-10 relative z-10">
         <div>
           <Link href="/" className="block mb-4">
             <img 
@@ -47,7 +47,7 @@ export function Footer() {
             <li><Link href="/#industries" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Industries</Link></li>
             <li><Link href="/#platform" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">AI Platform</Link></li>
             <li><Link href="/privacy-policy" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Privacy Policy</Link></li>
-            <li><a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Contact Us</a></li>
+            <li><Link href="/contact" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -67,7 +67,7 @@ export function Footer() {
         </div>
       </div>
       
-      <div className="flex items-center justify-between text-[0.68rem] text-foreground/40 flex-wrap gap-2 pt-2">
+      <div className="flex items-center justify-between text-[0.68rem] text-foreground/40 flex-wrap gap-2 pt-2 relative z-10">
         <span>&copy; {new Date().getFullYear()} Grateful Marketing&#8482;. All rights reserved. North America.</span>
         <span className="text-brand/50">Gratitude&#8482; is a globally registered trademark of Grateful Marketing&#8482;.</span>
       </div>

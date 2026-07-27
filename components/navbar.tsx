@@ -8,7 +8,7 @@ const navItems = [
   { href: "/#gratitude", label: "GRATITUDE" },
   { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
-  { href: "/#testimonials", label: "Testimonials" },
+  { href: "/#case-studies", label: "Case Studies" },
   { href: "/#industries", label: "Industries" },
   { href: "/#platform", label: "Platform" },
   { href: "/ai-voice-agents", label: "Voice Agents" },
@@ -74,7 +74,7 @@ export function Navbar() {
             href="https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS" 
             className="hidden lg:inline-block text-[0.73rem] font-medium tracking-[0.12em] uppercase text-brand bg-transparent border border-brand px-6 py-2.5 no-underline transition-all hover:bg-brand hover:text-background"
           >
-            Book a Call
+            Let&apos;s have a conversation
           </a>
 
           {/* MOBILE HAMBURGER - Label triggers checkbox */}
@@ -132,7 +132,7 @@ export function Navbar() {
             href="https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS" 
             className="block w-full text-sm font-semibold tracking-widest uppercase text-background bg-brand px-8 py-5 no-underline shadow-2xl text-center font-sans mobile-nav-link"
           >
-            Book Your Call
+            Let&apos;s have a conversation
           </a>
         </div>
       </div>

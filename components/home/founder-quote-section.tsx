@@ -38,6 +38,14 @@ export function FounderQuoteSection() {
                     Founder & CEO, Grateful Marketing™
                   </div>
                 </cite>
+                <div className="mt-8 pt-8 border-t border-brand/10">
+                  <p className="text-[0.85rem] text-muted font-light">
+                    This is the philosophy behind every strategy call.{" "}
+                    <a href="/pre-booking" className="text-brand font-medium hover:underline transition-all">
+                      Let&apos;s have a conversation &rarr;
+                    </a>
+                  </p>
+                </div>
               </footer>
             </div>
           </StaggerItem>

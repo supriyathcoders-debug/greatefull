@@ -144,10 +144,10 @@ export function ProblemWeSolveSection() {
             </p>
             <div className="flex flex-wrap gap-4">
               <PremiumButton href={BOOKING_URL}>
-                Get Your AI Revenue Audit
+                Get your AI Revenue Audit
               </PremiumButton>
               <PremiumButton href="/pre-booking" variant="secondary">
-                Book a Strategy Call
+                Let&apos;s have a conversation
               </PremiumButton>
             </div>
           </StaggerItem>

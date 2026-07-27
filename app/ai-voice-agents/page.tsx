@@ -1,4 +1,4 @@
-import TestimonialsSection from "@/components/testimonials-section";
+import CaseStudiesSection from "@/components/case-studies-section";
 
 export default function AIVoiceAgentsPage() {
   return (
@@ -30,7 +30,7 @@ export default function AIVoiceAgentsPage() {
               href="/pre-booking"
               className="inline-block no-underline bg-brand text-background font-semibold text-[0.77rem] tracking-[0.12em] uppercase px-10 py-4 border-2 border-brand transition-all hover:brightness-110"
             >
-              Book Free Strategy Session
+              Let&apos;s have a conversation
             </a>
           </div>
 
@@ -217,7 +217,7 @@ export default function AIVoiceAgentsPage() {
           <em className="italic text-brand font-light">scale with voice AI.</em>
         </h2>
       </div>
-      <TestimonialsSection hideHeading categoryFilter="AI Voice Agents" />
+      <CaseStudiesSection hideHeading categoryFilter="AI Strategy & Deployment" />
 
       <section className="py-24 section-shell bg-brand-soft border-t border-border text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-semibold mb-6">
@@ -231,7 +231,7 @@ export default function AIVoiceAgentsPage() {
           href="/pre-booking"
           className="inline-block bg-brand text-background font-semibold text-[0.77rem] tracking-[0.12em] uppercase px-8 py-4 transition-transform hover:-translate-y-1"
         >
-          Book My Strategy Call
+          Let&apos;s have a conversation
         </a>
       </section>
     </div>

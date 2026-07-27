@@ -111,7 +111,7 @@ export function ServicesSection() {
                   <p className="text-[0.68rem] tracking-[0.06em] uppercase text-brand/60 mb-4">
                     {offer.subtitle}
                   </p>
-                  <p className="text-[0.88rem] text-muted leading-[1.85] font-light mb-4 flex-1">
+                  <p className="text-[0.88rem] text-muted leading-[1.85] font-light mb-4 flex-1 whitespace-pre-line">
                     {offer.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">

@@ -72,7 +72,7 @@ export default function PreBookingPage() {
         <div className="relative z-10 w-full section-shell pt-32 pb-20">
           <StaggerReveal className="max-w-[800px]">
             <StaggerItem>
-              <Eyebrow className="mb-8">Book a Strategy Call</Eyebrow>
+              <Eyebrow className="mb-8">Let&apos;s have a conversation</Eyebrow>
             </StaggerItem>
             <StaggerItem>
               <h1 className="font-heading text-[clamp(2.4rem,5vw,4.5rem)] font-semibold leading-[1.08] mb-8">
@@ -220,7 +220,7 @@ export default function PreBookingPage() {
             <StaggerItem>
               <div className="mt-8">
                 <PremiumButton href={BOOKING_URL} external>
-                  Book My Strategy Session
+                  Let&apos;s have a conversation
                 </PremiumButton>
               </div>
             </StaggerItem>
@@ -311,7 +311,7 @@ export default function PreBookingPage() {
           </StaggerItem>
           <StaggerItem>
             <PremiumButton href={BOOKING_URL} external>
-              Book My Strategy Session
+              Let&apos;s have a conversation
             </PremiumButton>
           </StaggerItem>
         </StaggerReveal>
