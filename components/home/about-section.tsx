@@ -4,6 +4,7 @@ import { BrandImage } from "@/components/ui/brand-image";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
+import { Marquee } from "@/components/ui/marquee";
 import { ABOUT, IMAGES } from "@/lib/content/home";
 
 export function AboutSection() {
@@ -60,6 +61,25 @@ export function AboutSection() {
             </StaggerItem>
           </StaggerReveal>
         </div>
+      </div>
+
+      {/* Meet Your Expert Image Slider - Full Width */}
+      <div className="mt-28 w-full overflow-hidden">
+        <StaggerReveal>
+          <StaggerItem>
+            <Marquee speed={45} className="py-8 [mask-image:none] [-webkit-mask-image:none]">
+              {[1, 2, 3, 4].map((num) => (
+                <div key={num} className="h-[220px] md:h-[280px] lg:h-[320px] shrink-0 relative mx-6 lg:mx-10 group flex items-center justify-center">
+                  <img
+                    src={`/${num}.jpeg`}
+                    alt={`Grateful Marketing Credential ${num}`}
+                    className="h-full w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_20px_40px_rgba(200,169,81,0.15)] drop-shadow-xl"
+                  />
+                </div>
+              ))}
+            </Marquee>
+          </StaggerItem>
+        </StaggerReveal>
       </div>
     </section>
   );

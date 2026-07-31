@@ -3,7 +3,7 @@
 import { BrandImage } from "@/components/ui/brand-image";
 import { PremiumButton } from "@/components/ui/premium-button";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
-import { BOOKING_URL } from "@/lib/constants";
+import { BOOKING_URL, REVENUE_AUDIT_URL } from "@/lib/constants";
 import { FINAL_CTA, IMAGES } from "@/lib/content/home";
 
 export function FinalCtaSection() {
@@ -19,11 +19,11 @@ export function FinalCtaSection() {
               <p className="text-lg text-muted font-light mb-6">
                 {FINAL_CTA.subheading}
               </p>
-              <div className="flex flex-wrap gap-4">
-                <PremiumButton href={BOOKING_URL}>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <PremiumButton href={REVENUE_AUDIT_URL} external className="!px-6 flex-1 text-center whitespace-nowrap">
                   {FINAL_CTA.buttonPrimary}
                 </PremiumButton>
-                <PremiumButton href="/pre-booking" variant="secondary">
+                <PremiumButton href="/pre-booking" variant="secondary" className="!px-6 flex-1 text-center whitespace-nowrap">
                   {FINAL_CTA.buttonSecondary}
                 </PremiumButton>
               </div>

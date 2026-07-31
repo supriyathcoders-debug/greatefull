@@ -217,7 +217,7 @@ export default function AIVoiceAgentsPage() {
           <em className="italic text-brand font-light">scale with voice AI.</em>
         </h2>
       </div>
-      <CaseStudiesSection hideHeading categoryFilter="AI Strategy & Deployment" />
+      <CaseStudiesSection hideHeading />
 
       <section className="py-24 section-shell bg-brand-soft border-t border-border text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-semibold mb-6">

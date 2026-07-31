@@ -1,9 +1,10 @@
 import { CtaButton } from "@/components/ui/cta-button";
+import { REVENUE_AUDIT_URL } from "@/lib/constants";
 
 const funnelLinks = [
   {
     title: "Get Your AI Revenue Audit",
-    href: "/ai-revenue-audit",
+    href: REVENUE_AUDIT_URL,
   },
   {
     title: "Get Your AI Employee Demo",

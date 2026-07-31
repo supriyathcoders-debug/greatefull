@@ -63,11 +63,7 @@ export function CaseStudiesSection({ hideHeading, categoryFilter }: Props) {
     else goTo(maxIndex);
   }, [currentIndex, maxIndex, goTo]);
 
-  useEffect(() => {
-    // Longer interval for case studies because there is more to read
-    const timer = setInterval(next, 12000);
-    return () => clearInterval(timer);
-  }, [next]);
+
 
   const visible = filtered.slice(currentIndex, currentIndex + slidesPerView);
   const padded =

@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { PremiumButton } from "@/components/ui/premium-button";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { PROBLEM } from "@/lib/content/home";
-import { BOOKING_URL } from "@/lib/constants";
+import { REVENUE_AUDIT_URL } from "@/lib/constants";
 
 export function ProblemWeSolveSection() {
   return (
@@ -18,18 +18,13 @@ export function ProblemWeSolveSection() {
         <StaggerReveal className="max-w-[720px] mb-20">
           <StaggerItem>
             <Eyebrow className="mb-5">{PROBLEM.eyebrow}</Eyebrow>
-          </StaggerItem>
-          <StaggerItem>
-            <SectionHeading className="mb-6">
-              {PROBLEM.heading}{" "}
-              <em className="italic text-brand font-light">{PROBLEM.headingEm}</em>
-            </SectionHeading>
-          </StaggerItem>
-          <StaggerItem>
-            <p className="text-base text-muted leading-[1.88] font-light">
-              {PROBLEM.intro}
+            <SectionHeading className="mb-6">{PROBLEM.mainHeading}</SectionHeading>
+            <p className="text-lg text-muted leading-relaxed mb-8 whitespace-pre-line">
+              {PROBLEM.mainDescription}
             </p>
           </StaggerItem>
+
+
         </StaggerReveal>
 
         {/* Pull quote */}
@@ -55,16 +50,26 @@ export function ProblemWeSolveSection() {
               {PROBLEM.subIntro}
             </p>
           </StaggerItem>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-8">
             {PROBLEM.personas.map((persona) => (
-              <StaggerItem key={persona.title}>
-                <article className="card-modern p-8 h-full group">
-                  <h4 className="font-heading text-[1.05rem] font-semibold text-foreground mb-4">
-                    {persona.title}
-                  </h4>
-                  <p className="text-[0.85rem] text-muted leading-[1.82] font-light">
-                    {persona.description}
-                  </p>
+              <StaggerItem key={persona.title} className="w-full">
+                <article className="card-modern p-6 md:p-10 flex flex-col md:flex-row gap-8 md:gap-12 group">
+                  <div className="flex-1">
+                    <h4 className="font-heading text-[1.2rem] font-semibold text-foreground mb-4">
+                      {persona.title}
+                    </h4>
+                    <p className="text-[0.95rem] text-muted leading-[1.82] font-light">
+                      {persona.description}
+                    </p>
+                  </div>
+                  <div className="md:w-[45%] md:border-l md:border-t-0 md:pl-12 border-t border-brand/15 pt-8 md:pt-0 flex flex-col justify-center">
+                    <p className="text-[0.8rem] text-brand font-bold uppercase tracking-wider mb-3">
+                      How Grateful Marketing Helps
+                    </p>
+                    <p className="text-[0.95rem] text-foreground/90 leading-[1.82] font-light">
+                      {persona.howWeHelp}
+                    </p>
+                  </div>
                 </article>
               </StaggerItem>
             ))}
@@ -143,7 +148,7 @@ export function ProblemWeSolveSection() {
               {PROBLEM.ctaLabel}
             </p>
             <div className="flex flex-wrap gap-4">
-              <PremiumButton href={BOOKING_URL}>
+              <PremiumButton href={REVENUE_AUDIT_URL} external>
                 Get your AI Revenue Audit
               </PremiumButton>
               <PremiumButton href="/pre-booking" variant="secondary">

@@ -19,15 +19,15 @@ export default function Home() {
       <HeroSection />
       <StatsBar />
       <IndustriesSection />
-      <CaseStudiesSection />
       <ProblemWeSolveSection />
       <GratitudeFrameworkSection />
       <AboutSection />
+      <ServicesSection />
       <WhyGratefulMarketingSection />
       <FounderQuoteSection />
-      <ServicesSection />
       <OutcomesSection />
       <AiPlatformSection />
+      <CaseStudiesSection />
       <FinalCtaSection />
     </div>
   );

@@ -39,7 +39,7 @@ export const caseStudies: CaseStudy[] = [
       "Led thought-leadership and demand-generation event programs end to end — timelines, asset coordination, promotion, and post-event analysis.",
     ],
     impact:
-      "Seven years of running digital execution and project delivery in parallel across a large, varied client base — the direct precursor to the multi-workstream discipline Grateful Marketing™ applies today.",
+      "Years of running digital execution and project delivery in parallel across a large, varied client base — the direct precursor to the multi-workstream discipline Grateful Marketing™ applies today.",
     capabilities:
       "Paid digital campaign management (Google/LinkedIn/Meta), dashboard reporting, multi-account project management, event program management.",
   },
@@ -77,7 +77,7 @@ export const caseStudies: CaseStudy[] = [
       "Adapted web and social media messaging for accessibility, healthcare, and inclusion-focused audiences, keeping communications aligned with organizational guidelines.",
     ],
     impact:
-      "A multi-year digital marketing management relationship built on consistency — accessible, accurate content delivered on schedule, with governance that never lapsed.",
+      "A digital marketing management relationship built on consistency — accessible, accurate content delivered on schedule, with governance that never lapsed.",
     capabilities:
       "Social platform management, CMS/website management, editorial calendar & analytics ownership, accessibility-conscious marketing management.",
   },
@@ -134,7 +134,7 @@ export const caseStudies: CaseStudy[] = [
       "Trains client teams directly on AI adoption and workflow integration as part of engagement delivery.",
     ],
     impact:
-      "The Offer This experience now underpins Grateful Marketing™’s AI Business Consulting, AI & Marketing Strategy & Deployment, and AI Team Training & Empowerment service lines — helping clients move from AI curiosity to AI-empowered delivery.",
+      "The Offer this experience now underpins Grateful Marketing's AI service lines including the Grateful™ Growth Retainer, The AI Voice Agent, The AI Agent, The AI Team Intensive for Sales and Marketing, and The AI Content Engine — helping clients move from AI curiosity to AI-empowered delivery.",
     capabilities:
       "AI-assisted content & workflow design, AI team/agent architecture, prompt engineering, client AI training & change management.",
   },

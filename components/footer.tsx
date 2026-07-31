@@ -9,9 +9,9 @@ export function Footer() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2.2fr_1fr_1fr_1fr] gap-12 pb-14 border-b border-border mb-10 relative z-10">
         <div>
           <Link href="/" className="block mb-4">
-            <img 
-              src="/logo.png" 
-              alt="Grateful Marketing Logo" 
+            <img
+              src="/logo.png"
+              alt="Grateful Marketing Logo"
               className="h-12 w-auto object-contain"
             />
           </Link>
@@ -19,7 +19,7 @@ export function Footer() {
             Innovating · Creating · Leading
           </div>
           <p className="text-sm text-muted leading-[1.82] font-light max-w-[325px]">
-            North American digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based organizations — through the human-first, globally trademarked Gratitude&#8482; methodology.
+            North American digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based organizations — through the human-first, Gratitude™ trademarked Gratitude&#8482; methodology.
           </p>
         </div>
 
@@ -52,21 +52,21 @@ export function Footer() {
         </div>
 
         <div>
-           <h4 className="text-[0.64rem] tracking-[0.2em] uppercase text-brand mb-5 font-normal">Connect</h4>
-           <ul className="list-none space-y-2.5">
-             <li><a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-               client-services@grateful-marketing.com
-             </a></li>
-             <li><a href="tel:+12263329712" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-               +1 (226) 332-9712
-             </a></li>
-              <li><span className="text-[0.79rem] text-muted font-light">North America</span></li>
-              <li><a href="https://www.instagram.com/grateful.marketing/" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Instagram</a></li>
-              <li><a href="https://www.facebook.com/people/Grateful-Marketing/61572075292335/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Facebook</a></li>
-           </ul>
+          <h4 className="text-[0.64rem] tracking-[0.2em] uppercase text-brand mb-5 font-normal">Connect</h4>
+          <ul className="list-none space-y-2.5">
+            <li><a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
+              client-services@grateful-marketing.com
+            </a></li>
+            <li><a href="tel:+12263329712" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
+              +1 (226) 332-9712
+            </a></li>
+            <li><span className="text-[0.79rem] text-muted font-light">North America</span></li>
+            <li><a href="https://www.instagram.com/grateful.marketing/" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Instagram</a></li>
+            <li><a href="https://www.facebook.com/people/Grateful-Marketing/61572075292335/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Facebook</a></li>
+          </ul>
         </div>
       </div>
-      
+
       <div className="flex items-center justify-between text-[0.68rem] text-foreground/40 flex-wrap gap-2 pt-2 relative z-10">
         <span>&copy; {new Date().getFullYear()} Grateful Marketing&#8482;. All rights reserved. North America.</span>
         <span className="text-brand/50">Gratitude&#8482; is a globally registered trademark of Grateful Marketing&#8482;.</span>

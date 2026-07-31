@@ -12,6 +12,7 @@ type BrandImageProps = {
   aspectRatio?: string;
   floating?: boolean;
   blob?: boolean;
+  fillHeight?: boolean;
 };
 
 export function BrandImage({
@@ -23,6 +24,7 @@ export function BrandImage({
   aspectRatio = "3/2",
   floating,
   blob,
+  fillHeight,
 }: BrandImageProps) {
   const frameClasses = {
     gold:
@@ -36,7 +38,7 @@ export function BrandImage({
   };
 
   return (
-    <div className={cn("relative", floating && "animate-float-slow", className)}>
+    <div className={cn("relative", floating && "animate-float-slow", fillHeight && "h-full", className)}>
       {blob && (
         <div
           className="blob-gold absolute -inset-8 -z-10"
@@ -51,6 +53,7 @@ export function BrandImage({
         whileHover={{ scale: 1.01 }}
         className={cn(
           "relative overflow-hidden rounded-2xl",
+          fillHeight && "h-full",
           frameClasses[frame],
         )}
       >
@@ -64,7 +67,7 @@ export function BrandImage({
             aria-hidden="true"
           />
         )}
-        <div className="w-full" style={{ aspectRatio }}>
+        <div className={cn("w-full", fillHeight && "h-full")} style={fillHeight ? undefined : { aspectRatio }}>
           <motion.img
             src={src}
             alt={alt}

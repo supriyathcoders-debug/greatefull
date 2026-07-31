@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // Contact form removed per client instructions — we now show direct contact details only
 import { CtaButton } from "@/components/ui/cta-button";
 import { Section } from "@/components/ui/section";
+import { REVENUE_AUDIT_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -27,7 +28,7 @@ export default function ContactPage() {
 
       <Section title="Prefer to Talk Live?">
         <div className="flex flex-wrap gap-3">
-          <CtaButton href="/ai-revenue-audit">Get Your AI Revenue Audit</CtaButton>
+          <CtaButton href={REVENUE_AUDIT_URL}>Get Your AI Revenue Audit</CtaButton>
           <CtaButton href="/pre-booking">Let&apos;s have a conversation</CtaButton>
           <CtaButton href="https://app.growthhub365.com/v2/preview/QAuss4a9CGC8EExSO5WE" variant="secondary">
             See Demo
