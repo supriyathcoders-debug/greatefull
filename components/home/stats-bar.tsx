@@ -7,10 +7,10 @@ export function StatsBar() {
   return (
     <section className="py-12 section-shell bg-brand-soft/20 relative section-divider-top section-noise">
       <div className="max-w-[1100px] mx-auto">
-        <StaggerReveal className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+        <StaggerReveal className="flex flex-col md:flex-row flex-wrap justify-around gap-10 md:gap-4 text-center md:text-left">
           {STATS.items.map((stat) => (
             <StaggerItem key={stat.label}>
-              <div className="text-left">
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <div className="font-heading text-[clamp(1.75rem,3vw,2.75rem)] font-bold text-brand leading-none mb-2">
                   {stat.number}
                 </div>

@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { PremiumButton } from "@/components/ui/premium-button";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { PROBLEM } from "@/lib/content/home";
-import { BOOKING_URL } from "@/lib/constants";
+import { REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
 
 export function ProblemWeSolveSection() {
   return (
@@ -18,18 +18,13 @@ export function ProblemWeSolveSection() {
         <StaggerReveal className="max-w-[720px] mb-20">
           <StaggerItem>
             <Eyebrow className="mb-5">{PROBLEM.eyebrow}</Eyebrow>
-          </StaggerItem>
-          <StaggerItem>
-            <SectionHeading className="mb-6">
-              {PROBLEM.heading}{" "}
-              <em className="italic text-brand font-light">{PROBLEM.headingEm}</em>
-            </SectionHeading>
-          </StaggerItem>
-          <StaggerItem>
-            <p className="text-base text-muted leading-[1.88] font-light">
-              {PROBLEM.intro}
+            <SectionHeading className="mb-6">{PROBLEM.mainHeading}</SectionHeading>
+            <p className="text-lg text-muted leading-relaxed mb-8 whitespace-pre-line">
+              {PROBLEM.mainDescription}
             </p>
           </StaggerItem>
+
+
         </StaggerReveal>
 
         {/* Pull quote */}
@@ -55,20 +50,51 @@ export function ProblemWeSolveSection() {
               {PROBLEM.subIntro}
             </p>
           </StaggerItem>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {PROBLEM.personas.map((persona) => (
-              <StaggerItem key={persona.title}>
-                <article className="card-modern p-8 h-full group">
-                  <h4 className="font-heading text-[1.05rem] font-semibold text-foreground mb-4">
-                    {persona.title}
-                  </h4>
-                  <p className="text-[0.85rem] text-muted leading-[1.82] font-light">
-                    {persona.description}
-                  </p>
-                </article>
-              </StaggerItem>
-            ))}
-          </div>
+          <StaggerItem>
+            <div className="card-modern overflow-hidden">
+              {/* Desktop Header */}
+              <div className="hidden lg:grid grid-cols-12 gap-6 border-b border-brand/20 bg-brand/5 py-5 px-6">
+                <div className="col-span-3 font-heading text-sm font-bold text-foreground uppercase tracking-wider">
+                  Industry
+                </div>
+                <div className="col-span-4 font-heading text-sm font-bold text-foreground uppercase tracking-wider">
+                  Problem
+                </div>
+                <div className="col-span-5 font-heading text-sm font-bold text-brand uppercase tracking-wider">
+                  How Grateful Marketing Helps
+                </div>
+              </div>
+              
+              {/* Rows */}
+              <div className="divide-y divide-border-subtle/50">
+                {PROBLEM.personas.map((persona) => (
+                  <div key={persona.title} className="group hover:bg-surface-light/30 transition-colors p-6 flex flex-col lg:grid lg:grid-cols-12 lg:gap-6">
+                    {/* Industry */}
+                    <div className="lg:col-span-3 mb-5 lg:mb-0">
+                      <span className="lg:hidden text-[0.7rem] font-bold uppercase tracking-wider text-muted block mb-1">Industry</span>
+                      <h4 className="font-heading text-[1.05rem] font-semibold text-foreground">
+                        {persona.title}
+                      </h4>
+                    </div>
+                    {/* Problem */}
+                    <div className="lg:col-span-4 mb-5 lg:mb-0">
+                      <span className="lg:hidden text-[0.7rem] font-bold uppercase tracking-wider text-muted block mb-1">Problem</span>
+                      <p className="text-[0.95rem] text-muted leading-[1.7] font-light">
+                        {persona.description}
+                      </p>
+                    </div>
+                    {/* How We Help */}
+                    <div className="lg:col-span-5">
+                      <span className="lg:hidden text-[0.7rem] font-bold uppercase tracking-wider text-brand block mb-1">How Grateful Marketing Helps</span>
+                      <p className="text-[0.95rem] text-foreground/90 leading-[1.7] font-light">
+                        {persona.howWeHelp}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </StaggerItem>
         </StaggerReveal>
 
         {/* Insight */}
@@ -143,11 +169,11 @@ export function ProblemWeSolveSection() {
               {PROBLEM.ctaLabel}
             </p>
             <div className="flex flex-wrap gap-4">
-              <PremiumButton href={BOOKING_URL}>
-                Get Your AI Revenue Audit
+              <PremiumButton href={REVENUE_AUDIT_URL} external>
+                Get your AI Revenue Audit
               </PremiumButton>
-              <PremiumButton href="/pre-booking" variant="secondary">
-                Book a Strategy Call
+              <PremiumButton href={BOOKING_URL} variant="secondary">
+                Let&apos;s have a conversation
               </PremiumButton>
             </div>
           </StaggerItem>

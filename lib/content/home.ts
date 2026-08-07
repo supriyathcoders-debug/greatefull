@@ -5,50 +5,57 @@ export { IMAGES };
 
 export const HERO = {
   eyebrow: "North American AI Marketing Consultancy · Est. 2022",
-  headline: "Built around your people.",
-  headlineEm: "Powered by AI.",
-  supporting:
-    "Grateful Marketing™ helps purpose-driven organizations build predictable, profitable growth — without ever losing the human touch your customers trust. Our globally trademarked Gratitude™ methodology keeps people at the center while AI does the heavy lifting behind the scenes.",
-  ctaPrimary: "Book Your Strategy Session",
+  headline: "Here's the",
+  headlineEm: "Problem.",
+  supporting: "Leads go unanswered. Teams drown in repetitive tasks. Growth stalls because there’s no real AI strategy — just guesswork. Grateful Marketing™️ fixes this for Direct to Consumer Businesses, Business to Business Companies, Service-Based Businesses, and Non-Profits - with AI Voice Agents that capture every lead, an AI Growth Retainer that pairs strategy with execution, AI Employees  and AI Marketing Content Engines that handle the busywork— so your team can focus on what actually grows the business.",
+  ctaPrimary: "Let's have a conversation",
   ctaSecondary: "See How We Work",
-  ctaSecondaryHref: "#gratitude",
+  ctaSecondaryHref: "#about",
 } as const;
 
 export const STATS = {
   items: [
     { number: "25+", label: "Years partnering with real businesses" },
+    { number: "50+", label: "Brands and Businesses served" },
     { number: "∞", label: "People served with intention" },
-    { number: "5", label: "Pillars of Gratitude™" },
-    { number: "™", label: "Globally trademarked methodology" },
+    { number: "™", label: "Gratitude™ trademarked methodology" },
   ],
 } as const;
 
 export const PROBLEM = {
   eyebrow: "The Problem We Solve",
-  heading: "The World Has Plenty of AI.",
-  headingEm: "It's Starving for Humanity.",
-  intro:
-    "Something quietly broke in the marketing world — and most organizations can feel it, even if they haven't named it yet. The tools got smarter. The dashboards got bigger. The content got faster. And somehow — despite all of it — most organizations feel more disconnected from their audience than ever before.",
+  mainHeading: "The World Has Plenty of AI. It's Starving for Humanity.",
+  mainDescription: "Something quietly broke in the marketing world - and most organizations can feel it, even if they haven't name it yet.\n\nThe tools got smarter. The dashboards got bigger. The content got faster. And somehow - despite of all of it - most organizations feel more disconnected from their audience then ever before.",
+
   pullQuote:
     "When everyone sounds like AI, the rarest thing a brand can offer is a human voice.",
   subheading: "It's Not a Technology Problem. It's a Human One.",
   subIntro:
-    "Every week, we talk to leaders across B2B, DTC, and Non-Profit who are running into the same wall — just from different directions.",
+    "Every week, we talk to leaders across Business to Business, Direct to Consumer and Non-Profit Businesses - who are running into the same wall - just from different directions.",
   personas: [
     {
-      title: "The B2B Leader",
+      title: "The Business to Business Leader",
       description:
         "Buried under a stack of AI tools their team doesn't know how to use, a CRM that doesn't reflect their real pipeline, and a content strategy that feels like shouting into a void. They know AI is important. They just don't have a guide they trust.",
+      howWeHelp: "We help guide businesses on how to use AI strategically with the Grateful Growth Retainer. We also offer the AI Voice Agent to support your Sales and Customer Service team, 24/7, 365 days a year - so you can respond to your leads quickly, and never lose a customer to the competition again! We also build the AI Agent/Employee for your business, to maximize your outputs in Sales, Operations and Marketing - saving you time and money!",
     },
     {
-      title: "The DTC Founder",
+      title: "The Direct to Consumer Business",
       description:
         "Built something real — a product they believe in, a community that genuinely cares. But somewhere along the way, their brand started sounding like everyone else's. Polished. Generic. Algorithm-optimized. Human-optional. And the numbers are starting to show it.",
+      howWeHelp: "We help guide businesses on how to use AI strategically with the Grateful Growth Retainer. We also help you build the AI Voice Agent, to support your Sales and Customer Service team, 24/7, 365 days a year - so you can respond to your leads quickly, and never lose a customer to the competition again! We also build the AI Agent/Employee for your business, to maximize your outputs in Sales, Operations and Marketing - saving you time and money!",
     },
     {
       title: "The Non-Profit Leader",
       description:
         "Carries a mission that deserves to move people — and a marketing budget that doesn't. They need AI to extend their capacity. But every agency they've tried has been too expensive, too generic, or too focused on what the technology can do rather than who the organization is here to serve.",
+      howWeHelp: "We help build the AI Employee and Agent, that knows your brand and business - to maximize your outputs with Sales, Operations and Marketing - saving you time and money. We also offer the AI Team Training Intensive - for Sales & Marketing - so your team can comfortably use AI, to maximize their outputs with effectiveness and efficiency!",
+    },
+    {
+      title: "The Service-Based Business",
+      description:
+        "Has a business that requires excellent customer service and speed to lead is very important. If a call is missed, then the customer will be lost to the competition.",
+      howWeHelp: "We help build and install the AI Voice AI Agent that answers calls 24/7, 365 days a year - so you respond to customers and leads quickly, so you never miss a customer to your competition again!",
     },
   ],
   insight:
@@ -96,13 +103,13 @@ export const PROBLEM = {
     "Campaigns that keep getting smarter. Continuously improving on real data, so your results compound while you sleep.",
     "Marketing your audience can actually feel. Because they can tell the difference between content made for them and content made for the algorithm.",
   ],
-  ctaLabel: "If any of this felt familiar — that feeling is the beginning of something.",
+  ctaLabel: "If any of this felt familiar — that feeling is the beginning of something. The organizations who fix it first are the ones your competitors will be trying to catch up to a year from now.",
 } as const;
 
 export const GRATITUDE = {
   eyebrow: "Our Methodology",
   heading: "The Gratitude™ Framework",
-  subhead: "Globally trademarked · Built for people, scaled by AI",
+  subhead: "Gratitude™ trademarked · Built for people, scaled by AI",
   intro:
     "Most agencies start with the technology. We start with you — your people, your customers, your purpose. Then we bring AI in to amplify what already makes you worth choosing. Every letter of GRATITUDE keeps a human at the center and a measurable result at the finish line.",
   personalStory:
@@ -175,6 +182,38 @@ export const GRATITUDE_PILLARS = [
   },
 ] as const;
 
+export const WHY_GM = {
+  eyebrow: "Why Grateful Marketing™",
+  heading: "The difference is in the approach.",
+  items: [
+    {
+      number: "01",
+      title: "Human-First, AI-Second",
+      description: "— We don't lead with the technology — we lead with you. Every strategy keeps authentic human connection at its core, then uses AI to scale it intelligently. Technology and humanity belong together, and we build like we believe it."
+    },
+    {
+      number: "02",
+      title: "Founder-Led, Always",
+      description: "— You work directly with Andrea — a certified AI consultant and senior strategist. No junior handoffs, no account managers. Just direct, experienced thinking applied to your business."
+    },
+    {
+      number: "03",
+      title: "Proprietary Gratitude™ System",
+      description: "— Our Gratitude™ trademarked methodology wasn't borrowed from a textbook. It was built over 25+ years of real-world results, grounded in the belief that the best growth serves people first."
+    },
+    {
+      number: "04",
+      title: "Regulated Industry Depth",
+      description: "— We bring particular expertise to legal, financial, and insurance sectors — where trust, compliance, and precision aren't features, they're requirements."
+    },
+    {
+      number: "05",
+      title: "Results Over Hours",
+      description: "— We measure success by your growth, not by time spent. Every engagement is built around tangible outcomes: more of the right leads, better conversions, stronger teams, measurable ROI."
+    }
+  ]
+} as const;
+
 export const ABOUT = {
   eyebrow: "About Grateful Marketing™",
   heading: "Where genuine purpose meets",
@@ -182,7 +221,7 @@ export const ABOUT = {
   paragraphs: [
     "Grateful Marketing™ is a North American digital marketing consultancy founded by Andrea — a strategic leader with 25+ years across technology, business consulting, and marketing.",
     "We believe the most powerful marketing isn't just smart — it's grateful. Grateful to customers. Grateful to communities. Driven by a genuine desire to do good in the world.",
-    "That belief led to our globally trademarked Gratitude™ methodology: not just a framework, but a lens for building organizations that grow with intention, serve with excellence, and lead with integrity. AI makes it scalable. People make it matter.",
+    "That belief led to our Gratitude™ trademarked Gratitude™ methodology: not just a framework, but a lens for building organizations that grow with intention, serve with excellence, and lead with integrity. AI makes it scalable. People make it matter.",
   ],
   expertHeading: "Meet Your Expert — Andrea",
   expertBio:
@@ -190,7 +229,7 @@ export const ABOUT = {
   expertEnterprise:
     "She has worked with enterprise organizations including Roche, CNIB, Telus, CIBC, and leading marketing agencies — bringing the same human-first lens to every engagement, regardless of scale.",
   expertCredential:
-    "Her International Certified AI Business Consultant credential, combined with decades of real-world results, means you're not getting someone who read about AI. You're getting someone who builds with it — every day.",
+    "Andrea has earned her certification as an Internationally Recognized, AI Business Consultant. This combined with decades of real-world results, means you're not getting someone who just read about AI. You're getting someone who builds with it — every day.",
 } as const;
 
 export const SERVICES = {
@@ -198,8 +237,7 @@ export const SERVICES = {
   heading: "Five offers.",
   headingEm: "One human-first",
   headingSuffix: "philosophy.",
-  intro:
-    "Human First. AI Empowered. Each offer maps to a step in your AI journey — from ongoing growth partnership, to voice coverage, a full AI workforce, team readiness, and licensing the Gratitude™ methodology. Every engagement starts with your people.",
+  intro: "Human First. AI Second. Each offer maps to a step in your AI journey — from ongoing AI and Marketing growth partnerships, to AI voice coverage, a full AI workforce, AI team training/readiness, and AI content engines/development. Every engagement starts with your people: your people, your customer, your goals, We bring the strategy, You keep the soul of your business.",
   items: SERVICE_ITEMS,
 } as const;
 
@@ -211,85 +249,34 @@ export const INDUSTRIES = {
     "We partner with purpose-driven organizations in the sectors where trust isn't optional — where the people you serve deserve genuine care, not just clever systems. We build marketing that honours that standard and AI that quietly supports it.",
   items: [
     {
-      title: "B2B & Professional Services",
+      title: "Service-Based Businesses",
       description:
-        "Your best clients chose you because of trust — not a campaign. We build systems around the relationships that drive real revenue, with AI working quietly behind the scenes.",
+        "Medispas, dental practices, insurance agencies, plumbers, electricians, and other local experts. Your work is excellent - your clients know it. We make sure the next right client can find you, and keep your phone ringing without adding more to your plate. We do this by setting up Voice AI Agents, that answer calls 24/7, 365 days a year. No more missed customer calls getting lost to the competition - saving you time and money.",
+      icon: "wrench",
+    },
+    {
+      title: "Business to Business and Direct to Consumer Companies",
+      description:
+        "Whether your buyer is a business or a person, they chose you because of trust - not a campaign. We build systems around relationships that drive real revenue, with AI working quietly in the background. We help you with AI Strategy, to maximize your marketing and business growth and also build AI Voice Agents and AI Agents/Employees - maximizing your sales and marketing efforts, and saving you time and money.",
       icon: "building",
     },
     {
-      title: "D2C Brands",
+      title: "Non-Profits",
       description:
-        "Your customers chose you because you felt real. We make sure growth never changes that — personalizing at scale while keeping your voice unmistakably yours.",
+        "Your mission deserves to move people, and your budget deserves to stretch further. We bring AI to extend your capacity - without ever making your outreach feel less human, We train AI Agents on your brand tone, personality, and guidelines - so you have consistent, effective marketing that gets results, and is on brand, while saving you time and money.",
       icon: "sprout",
     },
-    {
-      title: "Legal",
-      description:
-        "Clients come to you in their most vulnerable moments. We build compliant systems that honour that trust, so your team stays focused on what only a lawyer can do.",
-      icon: "scale",
-    },
-    {
-      title: "Financial",
-      description:
-        "Your clients aren't buying a product — they're placing their future in your hands. We help you build genuine authority and earn long-term trust, within every regulatory boundary.",
-      icon: "chart",
-    },
-    {
-      title: "Insurance",
-      description:
-        "Your clients stay because they feel genuinely looked after. We make sure every new prospect feels the same way — from the very first call to every renewal.",
-      icon: "shield",
-    },
-    {
-      title: "Service-Based Businesses",
-      description:
-        "Your work is excellent — your clients know it. We make sure the next right client can find you, and keep the phone ringing without adding more to your plate.",
-      icon: "wrench",
-    },
+
+
+
   ],
 } as const;
 
-export const WHY_GM = {
-  eyebrow: "Why Grateful Marketing™",
-  heading: "The difference is in the approach.",
-  points: [
-    {
-      number: "01",
-      title: "Human-First, AI-Powered",
-      description:
-        "We don't lead with the technology — we lead with you. Every strategy keeps authentic human connection at its core, then uses AI to scale it intelligently. Technology and humanity belong together, and we build like we believe it.",
-    },
-    {
-      number: "02",
-      title: "Founder-Led, Always",
-      description:
-        "You work directly with Andrea — a certified AI consultant and senior strategist. No junior handoffs, no account managers. Just direct, experienced thinking applied to your business.",
-    },
-    {
-      number: "03",
-      title: "Proprietary Gratitude™ System",
-      description:
-        "Our globally trademarked methodology wasn't borrowed from a textbook. It was built over 25+ years of real-world results, grounded in the belief that the best growth serves people first.",
-    },
-    {
-      number: "04",
-      title: "Regulated Industry Depth",
-      description:
-        "We bring particular expertise to legal, financial, and insurance sectors — where trust, compliance, and precision aren't features, they're requirements.",
-    },
-    {
-      number: "05",
-      title: "Results Over Hours",
-      description:
-        "We measure success by your growth, not by time spent. Every engagement is built around tangible outcomes: more of the right leads, better conversions, stronger teams, measurable ROI.",
-    },
-  ],
-} as const;
 
-export const TESTIMONIALS = {
-  eyebrow: "Testimonials",
-  heading: "Trusted by leaders who refuse to choose between",
-  headingEm: "growth and integrity.",
+export const CASE_STUDIES = {
+  eyebrow: "Client Case Studies",
+  heading: "Real results from",
+  headingEm: "real partnerships.",
 } as const;
 
 export const FOUNDER_QUOTE =
@@ -299,12 +286,30 @@ export const OUTCOMES = {
   eyebrow: "Outcomes",
   subhead: "What this means for you and your team.",
   items: [
-    "A brand voice that always sounds like you — consistent across every channel, created in a fraction of the time, so your team is freed for the work only people can do.",
-    "The right prospects, found and nurtured automatically — so your time goes to real relationships, not chasing cold leads.",
-    "Campaigns that keep getting smarter — continuously improving on real data, so your results compound while you sleep.",
-    "Reputation cared for, around the clock — automated, on-brand communication that builds trust even when you're off the clock.",
-    "Clarity at a glance — instant visibility into the metrics that actually drive your growth.",
-    "Privacy your clients can count on — North American data residency and privacy-first design, built for the trust legal, financial, and insurance clients require.",
+    {
+      title: "A brand voice that always sounds like you",
+      description: "— consistent across every channel, created in a fraction of the time, so your team is freed for the work only people can do.",
+    },
+    {
+      title: "The right prospects, found and nurtured automatically",
+      description: "— so your time goes to real relationships, not chasing cold leads.",
+    },
+    {
+      title: "Campaigns that keep getting smarter",
+      description: "— continuously improving on real data, so your results compound while you sleep.",
+    },
+    {
+      title: "Reputation cared for, around the clock",
+      description: "— automated, on-brand communication that builds trust even when you're off the clock.",
+    },
+    {
+      title: "Clarity at a glance",
+      description: "— instant visibility into the metrics that actually drive your growth.",
+    },
+    {
+      title: "Privacy your clients can count on",
+      description: "— North American data residency and privacy-first design, built for the trust legal, financial, and insurance clients require.",
+    },
   ],
 } as const;
 
@@ -338,7 +343,11 @@ export const PLATFORM = {
 } as const;
 
 export const FINAL_CTA = {
+  heading: "Your people are ready. Let's make sure your marketing is too.",
+  subheading: "One real conversation is where every one of these outcomes starts.",
+  buttonPrimary: "Get your AI Revenue Audit",
+  buttonSecondary: "Let's have a conversation",
   tagline: "Innovating · Creating · Leading™",
-  body: "North American digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based organizations — through the human-first, globally trademarked Gratitude™ methodology.",
-  ctaPrimary: "Book Your Strategy Session",
+  body: "North American digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based organizations — through the human-first, Gratitude™ trademarked Gratitude™ methodology.",
+  ctaPrimary: "Let's have a conversation",
 } as const;

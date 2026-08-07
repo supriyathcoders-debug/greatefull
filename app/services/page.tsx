@@ -21,7 +21,7 @@ export default function ServicesPage() {
         </p>
         <h1 className="font-heading text-[clamp(2.4rem,5vw,4rem)] font-semibold leading-[1.1] mb-6">
           Human First.{" "}
-          <em className="italic text-brand font-light">AI Empowered.</em>
+          <em className="italic text-brand font-light">AI Second.</em>
         </h1>
         <p className="max-w-[640px] text-base text-muted font-light leading-[1.86]">
           Each offer maps to a step in your AI journey. Order is intentional — start

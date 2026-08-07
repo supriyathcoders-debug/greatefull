@@ -63,9 +63,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${outfit.variable} ${cormorant.variable} ${playfair.variable} ${mono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
         <SiteShell>{children}</SiteShell>
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"

@@ -1,4 +1,5 @@
-import TestimonialsSection from "@/components/testimonials-section";
+import CaseStudiesSection from "@/components/case-studies-section";
+import { BOOKING_URL } from "@/lib/constants";
 
 export default function AIVoiceAgentsPage() {
   return (
@@ -27,10 +28,10 @@ export default function AIVoiceAgentsPage() {
 
           <div className="flex items-center justify-center gap-4 flex-wrap mb-16">
             <a
-              href="/pre-booking"
+              href={BOOKING_URL}
               className="inline-block no-underline bg-brand text-background font-semibold text-[0.77rem] tracking-[0.12em] uppercase px-10 py-4 border-2 border-brand transition-all hover:brightness-110"
             >
-              Book Free Strategy Session
+              Let&apos;s have a conversation
             </a>
           </div>
 
@@ -167,7 +168,7 @@ export default function AIVoiceAgentsPage() {
             </div>
 
             <a
-              href="/pre-booking"
+              href={BOOKING_URL}
               className="inline-block mt-8 text-[0.77rem] tracking-[0.12em] uppercase text-brand border border-brand/40 px-8 py-3 transition hover:bg-brand hover:text-background"
             >
               Let&apos;s Connect
@@ -217,7 +218,7 @@ export default function AIVoiceAgentsPage() {
           <em className="italic text-brand font-light">scale with voice AI.</em>
         </h2>
       </div>
-      <TestimonialsSection hideHeading categoryFilter="AI Voice Agents" />
+      <CaseStudiesSection hideHeading />
 
       <section className="py-24 section-shell bg-brand-soft border-t border-border text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-semibold mb-6">
@@ -228,10 +229,10 @@ export default function AIVoiceAgentsPage() {
           consultants can transform your business.
         </p>
         <a
-          href="/pre-booking"
+          href={BOOKING_URL}
           className="inline-block bg-brand text-background font-semibold text-[0.77rem] tracking-[0.12em] uppercase px-8 py-4 transition-transform hover:-translate-y-1"
         >
-          Book My Strategy Call
+          Let&apos;s have a conversation
         </a>
       </section>
     </div>
