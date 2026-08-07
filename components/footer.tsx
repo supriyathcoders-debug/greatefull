@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { OFFERS } from "@/lib/content/offers";
 
 export function Footer() {
   return (
@@ -25,26 +26,16 @@ export function Footer() {
         <div>
           <h4 className="text-[0.64rem] tracking-[0.2em] uppercase text-brand mb-5 font-normal">Services</h4>
           <ul className="list-none space-y-2.5">
-            <li>
-              <Link href="/#services" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-                AI Business Consulting
-              </Link>
-            </li>
-            <li>
-              <Link href="/#services" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-                Marketing Strategy &amp; Deployment
-              </Link>
-            </li>
-            <li>
-              <Link href="/#services" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-                AI Team Training &amp; Empowerment
-              </Link>
-            </li>
-            <li>
-              <Link href="/ai-voice-agents" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-                AI Voice Agents
-              </Link>
-            </li>
+            {OFFERS.map((offer) => (
+              <li key={offer.id}>
+                <Link
+                  href={offer.href ?? "/#services"}
+                  className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand"
+                >
+                  {offer.title.replace(/^The /, "")}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 

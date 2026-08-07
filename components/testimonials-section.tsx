@@ -10,14 +10,10 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { BrandImage } from "@/components/ui/brand-image";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { IMAGES, TESTIMONIALS } from "@/lib/content/home";
-
-const CATEGORIES = [
-  "AI Voice Agents",
-  "AI Business Consulting",
-  "AI Marketing Strategy & Deployment",
-  "AI Team Training & Empowerment",
-  "Integrated Solutions",
-];
+import {
+  getOfferFilterTabs,
+  getTestimonialOfferIndex,
+} from "@/lib/content/offers";
 
 type Props = {
   hideHeading?: boolean;
@@ -25,16 +21,32 @@ type Props = {
 };
 
 export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
-  const [activeCategory, setActiveCategory] = useState<string | null>(
-    categoryFilter ?? null,
-  );
+  const filterTabs = getOfferFilterTabs();
+  const [activeOfferId, setActiveOfferId] = useState<string | null>(() => {
+    if (!categoryFilter) return null;
+    return (
+      filterTabs.find((tab) => tab.categories.includes(categoryFilter))
+        ?.offerId ?? null
+    );
+  });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
   const filtered = useMemo(() => {
-    if (!activeCategory) return testimonialsData;
-    return testimonialsData.filter((t) => t.category === activeCategory);
-  }, [activeCategory]);
+    const activeTab = filterTabs.find((tab) => tab.offerId === activeOfferId);
+    const items =
+      activeTab == null
+        ? [...testimonialsData].sort(
+            (a, b) =>
+              getTestimonialOfferIndex(a.category) -
+              getTestimonialOfferIndex(b.category),
+          )
+        : testimonialsData.filter((t) =>
+            activeTab.categories.includes(t.category),
+          );
+
+    return items;
+  }, [activeOfferId, filterTabs]);
 
   const [slidesPerView, setSlidesPerView] = useState(1);
 
@@ -53,7 +65,7 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
 
   useEffect(() => {
     setCurrentIndex(0);
-  }, [activeCategory]);
+  }, [activeOfferId]);
 
   const goTo = useCallback(
     (next: number) => {
@@ -121,31 +133,33 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
           >
             <button
               role="tab"
-              aria-selected={activeCategory === null}
-              onClick={() => setActiveCategory(null)}
+              aria-selected={activeOfferId === null}
+              onClick={() => setActiveOfferId(null)}
               className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
-                activeCategory === null
+                activeOfferId === null
                   ? "bg-brand text-background border-brand"
                   : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
               }`}
             >
               All
             </button>
-            {CATEGORIES.map((c) => (
+            {filterTabs.map((tab) => (
               <button
-                key={c}
+                key={tab.offerId}
                 role="tab"
-                aria-selected={activeCategory === c}
+                aria-selected={activeOfferId === tab.offerId}
                 onClick={() =>
-                  setActiveCategory((s) => (s === c ? null : c))
+                  setActiveOfferId((current) =>
+                    current === tab.offerId ? null : tab.offerId,
+                  )
                 }
                 className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
-                  activeCategory === c
+                  activeOfferId === tab.offerId
                     ? "bg-brand text-background border-brand"
                     : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
                 }`}
               >
-                {c === "AI Voice Agents" ? "AI Voice Agents" : c.replace("AI ", "")}
+                {tab.label}
               </button>
             ))}
           </div>
@@ -155,7 +169,7 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
         <div className="relative">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
-              key={`${activeCategory}-${currentIndex}`}
+              key={`${activeOfferId}-${currentIndex}`}
               custom={direction}
               initial={{ opacity: 0, x: direction >= 0 ? 40 : -40 }}
               animate={{ opacity: 1, x: 0 }}
