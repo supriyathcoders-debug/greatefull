@@ -46,7 +46,7 @@ function PillarMarqueeCard({
 
 export function ServicesSection() {
   const offers = getOffersInOrder();
-  
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
@@ -108,24 +108,22 @@ export function ServicesSection() {
           </StaggerItem>
         </StaggerReveal>
 
-        <div className="flex flex-wrap items-center gap-2 mb-10 pb-2">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 mb-10">
           {offers.map((offer, index) => {
             let tabLabel = offer.title;
-            if (tabLabel === "Grateful Growth AI and Marketing Retainer") tabLabel = "AI Growth Retainer";
-            if (tabLabel === 'AI Agents / "AI Employees"') tabLabel = "AI Agents";
-            if (tabLabel === "AI Content Development & Systems") tabLabel = "AI Content & Systems";
-            
+            if (tabLabel === 'The AI Agent/Employee') tabLabel = "The AI Agent";
+            if (tabLabel === "The AI Content Development & Systems") tabLabel = "The AI Content & Systems";
+
             const isActive = index === currentIndex;
-            
+
             return (
               <button
                 key={offer.id}
                 onClick={() => goTo(index)}
-                className={`whitespace-nowrap px-5 py-2.5 rounded-none text-[0.85rem] font-medium transition-all duration-300 ${
-                  isActive
+                className={`w-full sm:w-auto whitespace-normal sm:whitespace-nowrap px-5 py-3 sm:py-2.5 rounded-none text-[0.85rem] font-medium transition-all duration-300 ${isActive
                     ? "bg-brand text-background shadow-lg shadow-brand/25 border-transparent"
                     : "bg-surface/50 text-muted border border-border-subtle hover:border-brand/40 hover:text-foreground"
-                }`}
+                  }`}
               >
                 {tabLabel}
               </button>
@@ -162,7 +160,7 @@ export function ServicesSection() {
                     <p className="text-[0.88rem] text-muted leading-[1.85] font-light mb-4 whitespace-pre-line">
                       {offer.description}
                     </p>
-                    
+
                     <div className="flex flex-col gap-3 mb-6 flex-1">
                       {offer.result && (
                         <p className="text-[0.88rem] text-muted leading-[1.6] font-light">
@@ -220,11 +218,10 @@ export function ServicesSection() {
                     key={i}
                     onClick={() => goTo(i)}
                     aria-label={`Go to slide ${i + 1}`}
-                    className={`h-1 transition-all duration-300 ${
-                      i === currentIndex
+                    className={`h-1 transition-all duration-300 ${i === currentIndex
                         ? "w-8 bg-brand"
                         : "w-4 bg-border-subtle hover:bg-brand/40"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>

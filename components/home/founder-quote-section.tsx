@@ -4,6 +4,7 @@ import { BrandImage } from "@/components/ui/brand-image";
 import { DiamondDivider } from "@/components/ui/icons";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { FOUNDER_QUOTE, IMAGES } from "@/lib/content/home";
+import { BOOKING_URL } from "@/lib/constants";
 import { PremiumButton } from "@/components/ui/premium-button";
 export function FounderQuoteSection() {
   return (
@@ -44,7 +45,7 @@ export function FounderQuoteSection() {
                   <p className="text-[0.85rem] text-muted font-light">
                     This is the philosophy behind every strategy call.
                   </p>
-                  <PremiumButton href="/pre-booking" variant="primary">
+                  <PremiumButton href={BOOKING_URL} variant="primary">
                     Let&apos;s have a conversation &rarr;
                   </PremiumButton>
                 </div>

@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
     "localhost:3000",
     "fascism-bullseye-perjury.ngrok-free.dev",
     "duke-pauper-overbid.ngrok-free.dev",
+    "spirits-shanty-persuader.ngrok-free.dev",
   ],
 };
 

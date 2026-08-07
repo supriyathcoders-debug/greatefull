@@ -24,45 +24,6 @@ export type CaseStudyCategory = (typeof CASE_STUDY_CATEGORIES)[number];
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: "cs-jumpsmart",
-    category: "Digital Marketing Management",
-    client: "JumpSMART Digital Marketing Inc.",
-    industry: "Digital Marketing Agency",
-    services: "Digital Marketing Management · Project Management",
-    challenge:
-      "As Co-Founder, the challenge was operational as much as strategic: run digital marketing management across more than 20 concurrent client accounts and industries, without any one account’s delivery quality slipping.",
-    approach: [
-      "Built and ran the agency’s campaign operations function, pairing hands-on digital channel management with structured project management across the full client roster:",
-      "Directed integrated marketing campaigns across Google Ads, LinkedIn, and Meta Ads, coordinating media planning, buying, and budget with external agency partners.",
-      "Ran structured A/B testing on creative, landing pages, and audience segments to lift conversion and engagement performance.",
-      "Project managed multiple concurrent client workstreams, partnering with creative, media, and client-success teams to keep every account on schedule and on strategy.",
-      "Led thought-leadership and demand-generation event programs end to end — timelines, asset coordination, promotion, and post-event analysis.",
-    ],
-    impact:
-      "Years of running digital execution and project delivery in parallel across a large, varied client base — the direct precursor to the multi-workstream discipline Grateful Marketing™ applies today.",
-    capabilities:
-      "Paid digital campaign management (Google/LinkedIn/Meta), dashboard reporting, multi-account project management, event program management.",
-  },
-  {
-    id: "cs-roche",
-    category: "Marketing Management",
-    client: "Roche",
-    industry: "Healthcare & Pharmaceutical",
-    services: "Marketing Management · Project Management",
-    challenge:
-      "Roche needed marketing management that could hold up inside a highly regulated, multi-stakeholder environment — where campaign scope, budget, and timeline all had to move in lockstep with internal compliance review.",
-    approach: [
-      "The engagement paired marketing management with disciplined project management, built around the review cycles healthcare marketing requires:",
-      "Owned integrated marketing management — scope, budget, and delivery timelines — across paid digital, social, affiliate, print, and content channels.",
-      "Applied project management discipline to coordinate campaign scopes, timelines, and internal review cycles across multiple stakeholder groups.",
-      "Adapted messaging and content workflows to meet the accuracy and sensitivity standards required for healthcare audiences.",
-    ],
-    impact:
-      "Demonstrated the ability to hold marketing management and project governance steady inside one of the most compliance-sensitive environments in enterprise marketing.",
-    capabilities:
-      "Integrated campaign scope & budget ownership, review-cycle project management, healthcare-compliant marketing management.",
-  },
-  {
     id: "cs-cnib",
     category: "Digital Marketing Management",
     client: "CNIB",
@@ -81,6 +42,26 @@ export const caseStudies: CaseStudy[] = [
     capabilities:
       "Social platform management, CMS/website management, editorial calendar & analytics ownership, accessibility-conscious marketing management.",
   },
+  {
+    id: "cs-cibc",
+    category: "Marketing Management",
+    client: "CIBC",
+    industry: "Financial Services",
+    services: "Marketing Management · Digital Marketing Management · Project Management",
+    challenge:
+      "CIBC needed marketing management and digital execution that could move at enterprise pace while meeting the scrutiny financial services communications require.",
+    approach: [
+      "The mandate combined marketing management, hands-on digital channel oversight, and project management across a regulated stakeholder environment:",
+      "Led a research initiative, across teams.",
+      "Applied project management rigor to coordinate campaign scopes and internal review cycles across finance-sector stakeholder groups.",
+      "Presented marketing campaign strategy for a special digital project launch and performance to senior stakeholders, building consensus on marketing management priorities and investment.",
+    ],
+    impact:
+      "A reference point for the marketing management and project discipline Grateful Marketing™ brings to any client operating in a regulated or high-scrutiny industry.",
+    capabilities:
+      "Integrated marketing management, digital channel oversight, review-cycle project management, financial-services stakeholder communication.",
+  },
+
   {
     id: "cs-telus",
     category: "Project Management", // Kept original category, although the text says "Marketing Management · Project Management".
@@ -101,23 +82,23 @@ export const caseStudies: CaseStudy[] = [
       "Enterprise marketing management, scope/timeline project management, executive stakeholder alignment.",
   },
   {
-    id: "cs-cibc",
+    id: "cs-roche",
     category: "Marketing Management",
-    client: "CIBC",
-    industry: "Financial Services",
-    services: "Marketing Management · Digital Marketing Management · Project Management",
+    client: "Roche",
+    industry: "Healthcare & Pharmaceutical",
+    services: "Marketing Management · Project Management",
     challenge:
-      "CIBC needed marketing management and digital execution that could move at enterprise pace while meeting the scrutiny financial services communications require.",
+      "Roche needed marketing management that could hold up inside a highly regulated, multi-stakeholder environment — where campaign scope, budget, and timeline all had to move in lockstep with internal compliance review.",
     approach: [
-      "The mandate combined marketing management, hands-on digital channel oversight, and project management across a regulated stakeholder environment:",
-      "Led a research initiative, across teams.",
-      "Applied project management rigor to coordinate campaign scopes and internal review cycles across finance-sector stakeholder groups.",
-      "Presented marketing campaign strategy for a special digital project launch and performance to senior stakeholders, building consensus on marketing management priorities and investment.",
+      "The engagement paired marketing management with disciplined project management, built around the review cycles healthcare marketing requires:",
+      "Owned integrated marketing management — scope, budget, and delivery timelines — across paid digital, social, affiliate, print, and content channels.",
+      "Applied project management discipline to coordinate campaign scopes, timelines, and internal review cycles across multiple stakeholder groups.",
+      "Adapted messaging and content workflows to meet the accuracy and sensitivity standards required for healthcare audiences.",
     ],
     impact:
-      "A reference point for the marketing management and project discipline Grateful Marketing™ brings to any client operating in a regulated or high-scrutiny industry.",
+      "Demonstrated the ability to hold marketing management and project governance steady inside one of the most compliance-sensitive environments in enterprise marketing.",
     capabilities:
-      "Integrated marketing management, digital channel oversight, review-cycle project management, financial-services stakeholder communication.",
+      "Integrated campaign scope & budget ownership, review-cycle project management, healthcare-compliant marketing management.",
   },
   {
     id: "cs-ai",

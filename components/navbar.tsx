@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { BOOKING_URL } from "@/lib/constants";
 
 const navItems = [
   { href: "/#gratitude", label: "GRATITUDE" },
@@ -10,7 +11,7 @@ const navItems = [
   { href: "/#services", label: "Services" },
   { href: "/#industries", label: "Industries" },
   { href: "/#platform", label: "Platform" },
-  { href: "/ai-voice-agents", label: "Voice Agents" },
+  { href: "/ai-voice-agents", label: "Voice Agent" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/contact", label: "Contact" },
 ];
@@ -71,7 +72,7 @@ export function Navbar() {
           </ul>
           
           <a 
-            href="https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS" 
+            href={BOOKING_URL} 
             className="hidden lg:inline-block text-[0.73rem] font-medium tracking-[0.12em] uppercase text-brand bg-transparent border border-brand px-6 py-2.5 no-underline transition-all hover:bg-brand hover:text-background"
           >
             Let&apos;s have a conversation
@@ -129,7 +130,7 @@ export function Navbar() {
         
         <div className="w-full px-12 mt-auto">
           <a 
-            href="https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS" 
+            href={BOOKING_URL} 
             className="block w-full text-sm font-semibold tracking-widest uppercase text-background bg-brand px-8 py-5 no-underline shadow-2xl text-center font-sans mobile-nav-link"
           >
             Let&apos;s have a conversation

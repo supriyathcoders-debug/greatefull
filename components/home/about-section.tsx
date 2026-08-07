@@ -68,7 +68,7 @@ export function AboutSection() {
         <StaggerReveal>
           <StaggerItem>
             <Marquee speed={45} className="py-8 [mask-image:none] [-webkit-mask-image:none]">
-              {[1, 2, 3, 4].map((num) => (
+              {[1, 4].map((num) => (
                 <div key={num} className="h-[220px] md:h-[280px] lg:h-[320px] shrink-0 relative mx-6 lg:mx-10 group flex items-center justify-center">
                   <img
                     src={`/${num}.jpeg`}

@@ -10,7 +10,7 @@ export const HERO = {
   supporting: "Leads go unanswered. Teams drown in repetitive tasks. Growth stalls because there’s no real AI strategy — just guesswork. Grateful Marketing™️ fixes this for Direct to Consumer Businesses, Business to Business Companies, Service-Based Businesses, and Non-Profits - with AI Voice Agents that capture every lead, an AI Growth Retainer that pairs strategy with execution, AI Employees  and AI Marketing Content Engines that handle the busywork— so your team can focus on what actually grows the business.",
   ctaPrimary: "Let's have a conversation",
   ctaSecondary: "See How We Work",
-  ctaSecondaryHref: "#gratitude",
+  ctaSecondaryHref: "#about",
 } as const;
 
 export const STATS = {
@@ -49,7 +49,7 @@ export const PROBLEM = {
       title: "The Non-Profit Leader",
       description:
         "Carries a mission that deserves to move people — and a marketing budget that doesn't. They need AI to extend their capacity. But every agency they've tried has been too expensive, too generic, or too focused on what the technology can do rather than who the organization is here to serve.",
-      howWeHelp: "We help build the AI Employee and Agent, that knows your brand, business to maximize your outputs with Sales, Operations and Marketing - saving you time and money. We also offer the AI Team Training Intensive - for Sales & Marketing - so your team can comfortably use AI, to maximize their outputs with effectiveness and efficiency!",
+      howWeHelp: "We help build the AI Employee and Agent, that knows your brand and business - to maximize your outputs with Sales, Operations and Marketing - saving you time and money. We also offer the AI Team Training Intensive - for Sales & Marketing - so your team can comfortably use AI, to maximize their outputs with effectiveness and efficiency!",
     },
     {
       title: "The Service-Based Business",
@@ -229,7 +229,7 @@ export const ABOUT = {
   expertEnterprise:
     "She has worked with enterprise organizations including Roche, CNIB, Telus, CIBC, and leading marketing agencies — bringing the same human-first lens to every engagement, regardless of scale.",
   expertCredential:
-    "Her International Certified AI Business Consultant credential, combined with decades of real-world results, means you're not getting someone who read about AI. You're getting someone who builds with it — every day.",
+    "Andrea has earned her certification as an Internationally Recognized, AI Business Consultant. This combined with decades of real-world results, means you're not getting someone who just read about AI. You're getting someone who builds with it — every day.",
 } as const;
 
 export const SERVICES = {

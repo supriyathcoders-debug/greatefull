@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { PremiumButton } from "@/components/ui/premium-button";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { PROBLEM } from "@/lib/content/home";
-import { REVENUE_AUDIT_URL } from "@/lib/constants";
+import { REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
 
 export function ProblemWeSolveSection() {
   return (
@@ -50,30 +50,51 @@ export function ProblemWeSolveSection() {
               {PROBLEM.subIntro}
             </p>
           </StaggerItem>
-          <div className="grid grid-cols-1 gap-8">
-            {PROBLEM.personas.map((persona) => (
-              <StaggerItem key={persona.title} className="w-full">
-                <article className="card-modern p-6 md:p-10 flex flex-col md:flex-row gap-8 md:gap-12 group">
-                  <div className="flex-1">
-                    <h4 className="font-heading text-[1.2rem] font-semibold text-foreground mb-4">
-                      {persona.title}
-                    </h4>
-                    <p className="text-[0.95rem] text-muted leading-[1.82] font-light">
-                      {persona.description}
-                    </p>
+          <StaggerItem>
+            <div className="card-modern overflow-hidden">
+              {/* Desktop Header */}
+              <div className="hidden lg:grid grid-cols-12 gap-6 border-b border-brand/20 bg-brand/5 py-5 px-6">
+                <div className="col-span-3 font-heading text-sm font-bold text-foreground uppercase tracking-wider">
+                  Industry
+                </div>
+                <div className="col-span-4 font-heading text-sm font-bold text-foreground uppercase tracking-wider">
+                  Problem
+                </div>
+                <div className="col-span-5 font-heading text-sm font-bold text-brand uppercase tracking-wider">
+                  How Grateful Marketing Helps
+                </div>
+              </div>
+              
+              {/* Rows */}
+              <div className="divide-y divide-border-subtle/50">
+                {PROBLEM.personas.map((persona) => (
+                  <div key={persona.title} className="group hover:bg-surface-light/30 transition-colors p-6 flex flex-col lg:grid lg:grid-cols-12 lg:gap-6">
+                    {/* Industry */}
+                    <div className="lg:col-span-3 mb-5 lg:mb-0">
+                      <span className="lg:hidden text-[0.7rem] font-bold uppercase tracking-wider text-muted block mb-1">Industry</span>
+                      <h4 className="font-heading text-[1.05rem] font-semibold text-foreground">
+                        {persona.title}
+                      </h4>
+                    </div>
+                    {/* Problem */}
+                    <div className="lg:col-span-4 mb-5 lg:mb-0">
+                      <span className="lg:hidden text-[0.7rem] font-bold uppercase tracking-wider text-muted block mb-1">Problem</span>
+                      <p className="text-[0.95rem] text-muted leading-[1.7] font-light">
+                        {persona.description}
+                      </p>
+                    </div>
+                    {/* How We Help */}
+                    <div className="lg:col-span-5">
+                      <span className="lg:hidden text-[0.7rem] font-bold uppercase tracking-wider text-brand block mb-1">How Grateful Marketing Helps</span>
+                      <p className="text-[0.95rem] text-foreground/90 leading-[1.7] font-light">
+                        {persona.howWeHelp}
+                      </p>
+                    </div>
                   </div>
-                  <div className="md:w-[45%] md:border-l md:border-t-0 md:pl-12 border-t border-brand/15 pt-8 md:pt-0 flex flex-col justify-center">
-                    <p className="text-[0.8rem] text-brand font-bold uppercase tracking-wider mb-3">
-                      How Grateful Marketing Helps
-                    </p>
-                    <p className="text-[0.95rem] text-foreground/90 leading-[1.82] font-light">
-                      {persona.howWeHelp}
-                    </p>
-                  </div>
-                </article>
-              </StaggerItem>
-            ))}
-          </div>
+                ))}
+              </div>
+            </div>
+          </StaggerItem>
         </StaggerReveal>
 
         {/* Insight */}
@@ -151,7 +172,7 @@ export function ProblemWeSolveSection() {
               <PremiumButton href={REVENUE_AUDIT_URL} external>
                 Get your AI Revenue Audit
               </PremiumButton>
-              <PremiumButton href="/pre-booking" variant="secondary">
+              <PremiumButton href={BOOKING_URL} variant="secondary">
                 Let&apos;s have a conversation
               </PremiumButton>
             </div>

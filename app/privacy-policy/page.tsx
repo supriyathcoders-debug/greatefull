@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
       <Section 
         eyebrow="Privacy"
         title="Privacy Policy"
-        description="Effective Date: [INSERT DATE] | Last Updated: [INSERT DATE]"
+        description="Effective Date: August 3, 2026 | Last Updated: August 3, 2026"
         className="max-w-4xl mx-auto"
       >
         <div className="prose prose-invert max-w-none mt-8 text-muted font-light leading-relaxed prose-headings:text-foreground prose-a:text-brand prose-a:no-underline hover:prose-a:text-brand-light prose-h1:text-2xl prose-h1:font-semibold prose-h1:font-heading prose-h1:mt-10 prose-h1:mb-4 prose-h2:text-xl prose-h2:font-semibold prose-h2:font-heading prose-h2:mt-8 prose-h2:mb-4">
@@ -35,12 +35,15 @@ export default function PrivacyPolicyPage() {
             Grateful Marketing is the data controller (GDPR) and organization accountable (PIPEDA) for the personal information described in this policy.
           </p>
           <p className="bg-brand-soft p-6 border border-border mt-4 mb-4">
-            [INSERT: Legal business name, registered business address, jurisdiction of incorporation]
+            Grateful Marketing Inc. Business Address: 601 - 5 Hamilton St N, Waterdown, On, L8B 2A8. Incorporated in Ontario and Canada.
           </p>
           <p><strong>Contact for privacy matters:</strong></p>
-          <p className="bg-brand-soft p-6 border border-border mt-4 mb-4">
-            [INSERT: Privacy Officer name, email, phone number, and mailing address]
-          </p>
+          <div className="bg-brand-soft p-6 border border-border mt-4 mb-4 space-y-2">
+            <p className="m-0">Andrea Gureckas</p>
+            <p className="m-0">Clientservices@grateful-marketing.com</p>
+            <p className="m-0">226-332-9712</p>
+            <p className="m-0">601 - 5 Hamilton St N, Waterdown, On, L8B 2A8, Canada.</p>
+          </div>
           <p>
             For residents of the European Union or United Kingdom, we can be reached at the contact details above. If you require a local representative under Article 27 GDPR, please contact us to request current representative details.
           </p>
@@ -195,9 +198,7 @@ export default function PrivacyPolicyPage() {
           <p>
             For Canadian clients, certain service providers may store or process personal information outside of Canada. In accordance with PIPEDA, we remain accountable for personal information transferred to service providers and require them to maintain equivalent levels of protection.
           </p>
-          <p className="bg-brand-soft p-6 border border-border mt-4 mb-4">
-            [Server hosting note: Once Growth Hub 365’s Canadian server hosting is confirmed, this section will be updated to reflect Canadian data residency for regulated and data-sovereignty-sensitive clients.]
-          </p>
+
 
           <h1 id="8-cookies-and-tracking-technologies">8. Cookies and Tracking Technologies</h1>
           <p>
@@ -332,10 +333,10 @@ export default function PrivacyPolicyPage() {
           </p>
           <div className="bg-brand-soft p-6 border border-border mt-4 mb-8 space-y-2">
             <p className="font-semibold text-foreground m-0">Grateful Marketing — Privacy Officer</p>
-            <p className="m-0">[INSERT: Privacy Officer name]</p>
-            <p className="m-0">[INSERT: Email address — e.g., privacy@gratefulmarketing.com]</p>
-            <p className="m-0">[INSERT: Mailing address]</p>
-            <p className="m-0">[INSERT: Phone number]</p>
+            <p className="m-0">Andrea Gureckas</p>
+            <p className="m-0">Clientservices@grateful-marketing.com</p>
+            <p className="m-0">601 - 5 Hamilton St N, Waterdown, On, L8B 2A8</p>
+            <p className="m-0">226-332-9712</p>
           </div>
           
           <h2 id="regulatory-authorities">Regulatory Authorities</h2>

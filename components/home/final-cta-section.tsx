@@ -23,7 +23,7 @@ export function FinalCtaSection() {
                 <PremiumButton href={REVENUE_AUDIT_URL} external className="!px-6 flex-1 text-center whitespace-nowrap">
                   {FINAL_CTA.buttonPrimary}
                 </PremiumButton>
-                <PremiumButton href="/pre-booking" variant="secondary" className="!px-6 flex-1 text-center whitespace-nowrap">
+                <PremiumButton href={BOOKING_URL} variant="secondary" className="!px-6 flex-1 text-center whitespace-nowrap">
                   {FINAL_CTA.buttonSecondary}
                 </PremiumButton>
               </div>

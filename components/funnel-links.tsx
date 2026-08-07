@@ -1,5 +1,5 @@
 import { CtaButton } from "@/components/ui/cta-button";
-import { REVENUE_AUDIT_URL } from "@/lib/constants";
+import { REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
 
 const funnelLinks = [
   {
@@ -16,7 +16,7 @@ const funnelLinks = [
   },
   {
     title: "Let's have a conversation",
-    href: "/pre-booking",
+    href: BOOKING_URL,
   },
 ];
 
