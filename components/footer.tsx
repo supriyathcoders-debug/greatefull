@@ -19,7 +19,7 @@ export function Footer() {
             Innovating · Creating · Leading
           </div>
           <p className="text-sm text-muted leading-[1.82] font-light max-w-[325px]">
-            North American digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based organizations — through the human-first, Gratitude™ trademarked Gratitude&#8482; methodology.
+            North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer, and service-based organizations — through the human-first, Gratitude™ trademarked Gratitude&#8482; methodology.
           </p>
         </div>
 

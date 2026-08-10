@@ -348,6 +348,6 @@ export const FINAL_CTA = {
   buttonPrimary: "Get your AI Revenue Audit",
   buttonSecondary: "Let's have a conversation",
   tagline: "Innovating · Creating · Leading™",
-  body: "North American digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based organizations — through the human-first, Gratitude™ trademarked Gratitude™ methodology.",
+  body: "North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer and service-based organizations — through the human-first, Gratitude™ trademarked Gratitude™ methodology.",
   ctaPrimary: "Let's have a conversation",
 } as const;
