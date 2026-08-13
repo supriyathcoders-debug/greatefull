@@ -54,7 +54,7 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      <CaseStudiesSection hideHeading />
+      <CaseStudiesSection hideHeading hideTabs />
 
       <section className="py-12 md:py-20 border-t border-border mt-12">
         <div className="mx-auto w-full max-w-[1200px] px-6">

@@ -7,7 +7,7 @@ export const HERO = {
   eyebrow: "North American AI Marketing Consultancy · Est. 2022",
   headline: "Here's the",
   headlineEm: "Problem.",
-  supporting: "Leads go unanswered. Teams drown in repetitive tasks. Growth stalls because there’s no real AI strategy — just guesswork. Grateful Marketing™️ fixes this for Direct to Consumer Businesses, Business to Business Companies, Service-Based Businesses, and Non-Profits - with AI Voice Agents that capture every lead, an AI Growth Retainer that pairs strategy with execution, AI Employees  and AI Marketing Content Engines that handle the busywork— so your team can focus on what actually grows the business.",
+  supporting: "Leads go unanswered. Teams drown in repetitive tasks. Growth stalls because there’s no real AI strategy — just guesswork. Grateful Marketing™ fixes this for Direct to Consumer Businesses, Business to Business Companies, Service-Based Businesses, and Non-Profits — with AI Voice Agents that capture every lead, an AI Growth Retainer that pairs strategy with execution, AI Employees  and AI Marketing Content Engines that handle the busywork — so your team can focus on what actually grows the business.",
   ctaPrimary: "Let's have a conversation",
   ctaSecondary: "See How We Work",
   ctaSecondaryHref: "#about",
@@ -25,37 +25,37 @@ export const STATS = {
 export const PROBLEM = {
   eyebrow: "The Problem We Solve",
   mainHeading: "The World Has Plenty of AI. It's Starving for Humanity.",
-  mainDescription: "Something quietly broke in the marketing world - and most organizations can feel it, even if they haven't name it yet.\n\nThe tools got smarter. The dashboards got bigger. The content got faster. And somehow - despite of all of it - most organizations feel more disconnected from their audience then ever before.",
+  mainDescription: "Something quietly broke in the marketing world — and most organizations can feel it, even if they haven't named it yet.\n\nThe tools got smarter. The dashboards got bigger. The content got faster. And somehow — despite of all of it — most organizations feel more disconnected from their audience than ever before.",
 
   pullQuote:
     "When everyone sounds like AI, the rarest thing a brand can offer is a human voice.",
   subheading: "It's Not a Technology Problem. It's a Human One.",
   subIntro:
-    "Every week, we talk to leaders across Business to Business, Direct to Consumer and Non-Profit Businesses - who are running into the same wall - just from different directions.",
+    "Every week, we talk to leaders across Business to Business, Direct to Consumer and Non-Profit Businesses — who are running into the same wall — just from different directions.",
   personas: [
     {
       title: "The Business to Business Leader",
       description:
         "Buried under a stack of AI tools their team doesn't know how to use, a CRM that doesn't reflect their real pipeline, and a content strategy that feels like shouting into a void. They know AI is important. They just don't have a guide they trust.",
-      howWeHelp: "We help guide businesses on how to use AI strategically with the Grateful Growth Retainer. We also offer the AI Voice Agent to support your Sales and Customer Service team, 24/7, 365 days a year - so you can respond to your leads quickly, and never lose a customer to the competition again! We also build the AI Agent/Employee for your business, to maximize your outputs in Sales, Operations and Marketing - saving you time and money!",
+      howWeHelp: "The Grateful Growth Retainer gives your team a clear AI roadmap and hands-on strategic guidance — no more guessing which tool to try next. Our AI Voice Agent covers your sales and customer service lines around the clock, so qualified leads get an instant response instead of a missed call. And our AI Agent/Employee takes over the repetitive work in sales, operations, and marketing, freeing your team to focus on closing deals and building the pipeline.",
     },
     {
       title: "The Direct to Consumer Business",
       description:
         "Built something real — a product they believe in, a community that genuinely cares. But somewhere along the way, their brand started sounding like everyone else's. Polished. Generic. Algorithm-optimized. Human-optional. And the numbers are starting to show it.",
-      howWeHelp: "We help guide businesses on how to use AI strategically with the Grateful Growth Retainer. We also help you build the AI Voice Agent, to support your Sales and Customer Service team, 24/7, 365 days a year - so you can respond to your leads quickly, and never lose a customer to the competition again! We also build the AI Agent/Employee for your business, to maximize your outputs in Sales, Operations and Marketing - saving you time and money!",
+      howWeHelp: "The Grateful Growth Retainer helps you use AI to sharpen your brand voice instead of diluting it, with strategic guidance on where AI belongs in your funnel — and where it doesn't. Our AI Voice Agent keeps customer conversations warm and responsive at any hour, and our AI Agent/Employee handles the repetitive operational work behind the scenes, so your team can spend its time on the creative and community work that made your brand distinct in the first place.",
     },
     {
       title: "The Non-Profit Leader",
       description:
         "Carries a mission that deserves to move people — and a marketing budget that doesn't. They need AI to extend their capacity. But every agency they've tried has been too expensive, too generic, or too focused on what the technology can do rather than who the organization is here to serve.",
-      howWeHelp: "We help build the AI Employee and Agent, that knows your brand and business - to maximize your outputs with Sales, Operations and Marketing - saving you time and money. We also offer the AI Team Training Intensive - for Sales & Marketing - so your team can comfortably use AI, to maximize their outputs with effectiveness and efficiency!",
+      howWeHelp: "We build an AI Employee and Agent trained on your brand voice and mission, so your outreach stays consistent across sales, operations, and marketing without adding headcount. Our AI Team Training Intensive then gets your staff comfortable putting these tools to work themselves, so the capacity you gain today keeps compounding long after the engagement ends.",
     },
     {
       title: "The Service-Based Business",
       description:
-        "Has a business that requires excellent customer service and speed to lead is very important. If a call is missed, then the customer will be lost to the competition.",
-      howWeHelp: "We help build and install the AI Voice AI Agent that answers calls 24/7, 365 days a year - so you respond to customers and leads quickly, so you never miss a customer to your competition again!",
+        "Runs a business where excellent customer service and fast lead response are critical. If a call is missed, then the customer will be lost to the competition.",
+      howWeHelp: "We install an AI Voice Agent that picks up every call, day or night, so a busy afternoon or an after-hours emergency never means a lost customer. Your team responds to real leads and real clients — the AI handles the phone.",
     },
   ],
   insight:
@@ -204,7 +204,7 @@ export const WHY_GM = {
     {
       number: "04",
       title: "Regulated Industry Depth",
-      description: "— We bring particular expertise to legal, financial, and insurance sectors — where trust, compliance, and precision aren't features, they're requirements."
+      description: "— We bring particular expertise to legal, healthcare, financial, and insurance sectors — where trust, compliance, and precision aren't features, they're requirements."
     },
     {
       number: "05",
@@ -219,9 +219,9 @@ export const ABOUT = {
   heading: "Where genuine purpose meets",
   headingEm: "cutting-edge technology.",
   paragraphs: [
-    "Grateful Marketing™ is a North American digital marketing consultancy founded by Andrea — a strategic leader with 25+ years across technology, business consulting, and marketing.",
+    "Grateful Marketing™ is a North American digital marketing consultancy founded by Andrea — A certified AI business consultant, strategist, and speaker helping organizations apply AI to drive innovation, efficiency, and growth",
     "We believe the most powerful marketing isn't just smart — it's grateful. Grateful to customers. Grateful to communities. Driven by a genuine desire to do good in the world.",
-    "That belief led to our Gratitude™ trademarked Gratitude™ methodology: not just a framework, but a lens for building organizations that grow with intention, serve with excellence, and lead with integrity. AI makes it scalable. People make it matter.",
+    "That belief led to our Gratitude™ trademarked methodology: not just a framework, but a lens for building organizations that grow with intention, serve with excellence, and lead with integrity. AI makes it scalable. People make it matter.",
   ],
   expertHeading: "Meet Your Expert — Andrea",
   expertBio:
@@ -229,7 +229,7 @@ export const ABOUT = {
   expertEnterprise:
     "She has worked with enterprise organizations including Roche, CNIB, Telus, CIBC, and leading marketing agencies — bringing the same human-first lens to every engagement, regardless of scale.",
   expertCredential:
-    "Andrea has earned her certification as an Internationally Recognized, AI Business Consultant. This combined with decades of real-world results, means you're not getting someone who just read about AI. You're getting someone who builds with it — every day.",
+    "Andrea has earned her certification as an Internationally Recognized AI Business Consultant. This, combined with decades of real-world results, means you're not getting someone who just read about AI. You're getting someone who builds with it — every day.",
 } as const;
 
 export const SERVICES = {
@@ -237,7 +237,7 @@ export const SERVICES = {
   heading: "Five offers.",
   headingEm: "One human-first",
   headingSuffix: "philosophy.",
-  intro: "Human First. AI Second. Each offer maps to a step in your AI journey — from ongoing AI and Marketing growth partnerships, to AI voice coverage, a full AI workforce, AI team training/readiness, and AI content engines/development. Every engagement starts with your people: your people, your customer, your goals, We bring the strategy, You keep the soul of your business.",
+  intro: "Human First. AI Second. Each offer maps to a step in your AI journey — from ongoing AI and Marketing growth partnerships, to AI voice coverage, a full AI workforce, AI team training/readiness, and AI content engines/development. Every engagement starts with your people: your customers, your goals. We bring the strategy. You keep the soul of your business.",
   items: SERVICE_ITEMS,
 } as const;
 
@@ -251,19 +251,19 @@ export const INDUSTRIES = {
     {
       title: "Service-Based Businesses",
       description:
-        "Medispas, dental practices, insurance agencies, plumbers, electricians, and other local experts. Your work is excellent - your clients know it. We make sure the next right client can find you, and keep your phone ringing without adding more to your plate. We do this by setting up Voice AI Agents, that answer calls 24/7, 365 days a year. No more missed customer calls getting lost to the competition - saving you time and money.",
+        "Medispas, dental practices, insurance agencies, plumbers, electricians, and other local experts. Your work is excellent — your clients know it. We make sure the next right client can find you, and keep your phone ringing without adding more to your plate. We do this by setting up Voice AI Agents, that answer calls 24/7, 365 days a year. No more missed customer calls getting lost to the competition — saving you time and money.",
       icon: "wrench",
     },
     {
       title: "Business to Business and Direct to Consumer Companies",
       description:
-        "Whether your buyer is a business or a person, they chose you because of trust - not a campaign. We build systems around relationships that drive real revenue, with AI working quietly in the background. We help you with AI Strategy, to maximize your marketing and business growth and also build AI Voice Agents and AI Agents/Employees - maximizing your sales and marketing efforts, and saving you time and money.",
+        "Whether your buyer is a business or a person, they chose you because of trust — not a campaign. We build systems around relationships that drive real revenue, with AI working quietly in the background. We help you with AI Strategy, to maximize your marketing and business growth and also build AI Voice Agents and AI Agents/Employees — maximizing your sales and marketing efforts, and saving you time and money.",
       icon: "building",
     },
     {
       title: "Non-Profits",
       description:
-        "Your mission deserves to move people, and your budget deserves to stretch further. We bring AI to extend your capacity - without ever making your outreach feel less human, We train AI Agents on your brand tone, personality, and guidelines - so you have consistent, effective marketing that gets results, and is on brand, while saving you time and money.",
+        "Your mission deserves to move people, and your budget deserves to stretch further. We bring AI to extend your capacity — without ever making your outreach feel less human, We train AI Agents on your brand tone, personality, and guidelines — so you have consistent, effective marketing that gets results, and is on brand, while saving you time and money.",
       icon: "sprout",
     },
 
@@ -288,15 +288,15 @@ export const OUTCOMES = {
   items: [
     {
       title: "A brand voice that always sounds like you",
-      description: "— consistent across every channel, created in a fraction of the time, so your team is freed for the work only people can do.",
+      description: "— Hours given back every week — the content, follow-up, and admin work that used to eat your afternoons, now handled automatically.",
     },
     {
       title: "The right prospects, found and nurtured automatically",
-      description: "— so your time goes to real relationships, not chasing cold leads.",
+      description: "— Faster answers, every time — clients and prospects get a response in minutes, not days.",
     },
     {
       title: "Campaigns that keep getting smarter",
-      description: "— continuously improving on real data, so your results compound while you sleep.",
+      description: "— One team, working as one — your AI tools and your people pulling in the same direction, instead of fighting each other.",
     },
     {
       title: "Reputation cared for, around the clock",
@@ -308,7 +308,7 @@ export const OUTCOMES = {
     },
     {
       title: "Privacy your clients can count on",
-      description: "— North American data residency and privacy-first design, built for the trust legal, financial, and insurance clients require.",
+      description: "— North American data residency and privacy-first design, built for the trust that legal, financial, and insurance clients require.",
     },
   ],
 } as const;
@@ -347,7 +347,7 @@ export const FINAL_CTA = {
   subheading: "One real conversation is where every one of these outcomes starts.",
   buttonPrimary: "Get your AI Revenue Audit",
   buttonSecondary: "Let's have a conversation",
-  tagline: "Innovating · Creating · Leading™",
-  body: "North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer and service-based organizations — through the human-first, Gratitude™ trademarked Gratitude™ methodology.",
+  tagline: "Innovating · Creating · Leading",
+  body: "North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer and service-based organizations — through the human-first, Gratitude™ trademarked methodology.",
   ctaPrimary: "Let's have a conversation",
 } as const;

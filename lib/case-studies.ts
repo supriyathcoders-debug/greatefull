@@ -33,7 +33,7 @@ export const caseStudies: CaseStudy[] = [
       "CNIB needed a digital presence — social channels and website alike — that was managed consistently, accurately, and accessibly. They also needed to build an accessibility training program.",
     approach: [
       "This portfolio combines direct digital marketing management with broader marketing management responsibility:",
-      "Developed an accessibility training program to teach business businesses about accessibility, on the Internet and other channels, according to AODA.",
+      "Developed an accessibility training program to teach business about accessibility, on the Internet and other channels, according to AODA.",
       "Managed CMS website content and page updates directly, ensuring digital properties stayed accurate and accessible.",
       "Adapted web and social media messaging for accessibility, healthcare, and inclusion-focused audiences, keeping communications aligned with organizational guidelines.",
     ],
@@ -41,6 +41,21 @@ export const caseStudies: CaseStudy[] = [
       "A digital marketing management relationship built on consistency — accessible, accurate content delivered on schedule, with governance that never lapsed.",
     capabilities:
       "Social platform management, CMS/website management, editorial calendar & analytics ownership, accessibility-conscious marketing management.",
+  },
+  {
+    id: "cs-healthcare-clinic",
+    category: "AI Strategy & Deployment",
+    client: "Healthcare Clinic",
+    industry: "Healthcare / Service-Based Business",
+    services: "Voice AI Deployment",
+    challenge:
+      "Front-desk staff were buried in paperwork and follow-up calls, and after-hours inquiries were going straight to voicemail — costing the clinic new patient bookings.",
+    approach: [
+      "Deployed an AI Voice Agent to answer calls 24/7, confirm appointments, and handle routine follow-up — freeing the front-desk team to focus on patients in the room.",
+    ],
+    impact:
+      "Cut time spent on paperwork and follow-up in half and increased bookings by 40% within 30 days.",
+    capabilities: "24/7 call handling, appointment confirmation, automated follow-up.",
   },
   {
     id: "cs-cibc",

@@ -218,15 +218,14 @@ export default function AIVoiceAgentsPage() {
           <em className="italic text-brand font-light">scale with voice AI.</em>
         </h2>
       </div>
-      <CaseStudiesSection hideHeading />
+      <CaseStudiesSection hideHeading hideTabs excludeIds={["cs-cnib"]} />
 
       <section className="py-24 section-shell bg-brand-soft border-t border-border text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-semibold mb-6">
           And finally <em className="italic text-brand font-light">scale smarter?</em>
         </h2>
         <p className="text-base text-muted leading-relaxed font-light max-w-2xl mx-auto mb-12">
-          Book your complimentary strategy call today to see how our certified AI
-          consultants can transform your business.
+          Book your complimentary strategy call today to see how our certified AI consultant can transform your business.
         </p>
         <a
           href={BOOKING_URL}

@@ -19,7 +19,7 @@ export function Footer() {
             Innovating · Creating · Leading
           </div>
           <p className="text-sm text-muted leading-[1.82] font-light max-w-[325px]">
-            North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer, and service-based organizations — through the human-first, Gratitude™ trademarked Gratitude&#8482; methodology.
+            North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer, and service-based organizations — through the human-first, Gratitude™ trademarked methodology.
           </p>
         </div>
 
@@ -68,8 +68,8 @@ export function Footer() {
       </div>
 
       <div className="flex items-center justify-between text-[0.68rem] text-foreground/40 flex-wrap gap-2 pt-2 relative z-10">
-        <span>&copy; {new Date().getFullYear()} Grateful Marketing&#8482;. All rights reserved. North America.</span>
-        <span className="text-brand/50">Gratitude&#8482; is a globally registered trademark of Grateful Marketing&#8482;.</span>
+        <span>&copy; {new Date().getFullYear()} Grateful Marketing&#8482;. All rights reserved. North America. Gratitude™ is a globally registered trademark of Grateful Marketing™</span>
+        {/* <span className="text-brand/50">Gratitude&#8482; is a globally registered trademark of Grateful Marketing&#8482;.</span> */}
       </div>
     </footer>
   );
