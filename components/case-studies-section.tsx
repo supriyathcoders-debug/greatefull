@@ -13,17 +13,25 @@ import { CASE_STUDIES } from "@/lib/content/home";
 type Props = {
   hideHeading?: boolean;
   categoryFilter?: CaseStudyCategory;
+  excludeIds?: string[];
+  hideTabs?: boolean;
 };
 
-export function CaseStudiesSection({ hideHeading, categoryFilter }: Props) {
+export function CaseStudiesSection({ hideHeading, categoryFilter, excludeIds, hideTabs }: Props) {
   const [activeCategory, setActiveCategory] = useState<CaseStudyCategory | null>(categoryFilter ?? null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
   const filtered = useMemo(() => {
-    if (!activeCategory) return caseStudiesData;
-    return caseStudiesData.filter((t) => t.category === activeCategory);
-  }, [activeCategory]);
+    let result = caseStudiesData;
+    if (activeCategory) {
+      result = result.filter((t) => t.category === activeCategory);
+    }
+    if (excludeIds && excludeIds.length > 0) {
+      result = result.filter((t) => !excludeIds.includes(t.id));
+    }
+    return result;
+  }, [activeCategory, excludeIds]);
 
   const [slidesPerView, setSlidesPerView] = useState(1);
 
@@ -91,7 +99,7 @@ export function CaseStudiesSection({ hideHeading, categoryFilter }: Props) {
         )}
 
         <ScrollReveal delay={0.1}>
-          {!categoryFilter && (
+          {!categoryFilter && !hideTabs && (
           <div
             role="tablist"
             aria-label="Case Study Categories"

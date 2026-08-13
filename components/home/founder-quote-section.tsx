@@ -4,7 +4,7 @@ import { BrandImage } from "@/components/ui/brand-image";
 import { DiamondDivider } from "@/components/ui/icons";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { FOUNDER_QUOTE, IMAGES } from "@/lib/content/home";
-import { BOOKING_URL } from "@/lib/constants";
+
 import { PremiumButton } from "@/components/ui/premium-button";
 export function FounderQuoteSection() {
   return (
@@ -45,8 +45,8 @@ export function FounderQuoteSection() {
                   <p className="text-[0.85rem] text-muted font-light">
                     This is the philosophy behind every strategy call.
                   </p>
-                  <PremiumButton href={BOOKING_URL} variant="primary">
-                    Let&apos;s have a conversation &rarr;
+                  <PremiumButton href="https://api.growthhub365.com/widget/bookings/ai-audit-calendar-3ttpow-79caa778-4b01-49b0-a035-ace978ef81de-51a69f4d-0a01-4198-b17b-201bdf1d1031-8eef8d1b-02a3-43d9-b33f-7c850af15489" variant="primary">
+                    Book a Strategy call &rarr;
                   </PremiumButton>
                 </div>
               </footer>
