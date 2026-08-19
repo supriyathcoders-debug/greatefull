@@ -106,6 +106,9 @@ export function ProblemWeSolveSection() {
           </StaggerItem>
         </StaggerReveal>
 
+        {/* Hidden sections as per user request */}
+        {false && (
+          <>
         {/* Five Cracks */}
         <StaggerReveal className="mb-20">
           <StaggerItem>
@@ -178,6 +181,8 @@ export function ProblemWeSolveSection() {
             </div>
           </StaggerItem>
         </StaggerReveal>
+          </>
+        )}
       </div>
     </section>
   );

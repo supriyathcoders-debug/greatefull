@@ -147,7 +147,7 @@ export const caseStudies: CaseStudy[] = [
       "LaCoupe (Beauty) — Planned and published social content and managed community engagement for a beauty-sector client, keeping brand voice consistent across fast-turnaround content cycles.",
       "Body Worlds 2 — Ontario Science Centre — Managed the marketing including digital marketing, partnership marketing, PR, advertising for a major cultural-institution exhibit, adapting messaging for a broad public audience. The exhibition had half a million visitors, in less then 6 months.",
       "CDA — Managed social channels for major special events, and content calendars, monitoring community engagement and reporting performance to stakeholders.",
-      "Community Spotlight: Indigenous Retreat Centre, Northern Ontario — As a volunteer Marketing Advisor, provided informal marketing management guidance to an Indigenous community retreat centre — pro bono, reflecting Grateful Marketing™’s purpose-driven roots.",
+      "Community Spotlight: Habitat for Humanity — As a volunteer Marketing Advisor, provided informal marketing guidance sitting on the Marketing Board and also helped to build homes for the homeless — pro bono, reflecting Grateful Marketing™’s purpose-driven roots.",
     ],
     impact: "",
     capabilities: "Community engagement, pro-bono marketing advisory.",
