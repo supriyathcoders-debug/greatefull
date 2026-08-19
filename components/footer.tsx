@@ -16,10 +16,10 @@ export function Footer() {
             />
           </Link>
           <div className="text-[0.66rem] tracking-[0.2em] uppercase text-brand/60 mb-3">
-            Innovating · Creating · Leading
+            Innovating · Creating · Leading™
           </div>
           <p className="text-sm text-muted leading-[1.82] font-light max-w-[325px]">
-            North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer, and service-based organizations — through the human-first, Gratitude™ trademarked methodology.
+            north american, digital marketing consultancy, serving service-based businesses, business to business, direct to consumer and non-profit organizations - through the human-first, gratitude™ trademarked methodology.
           </p>
         </div>
 

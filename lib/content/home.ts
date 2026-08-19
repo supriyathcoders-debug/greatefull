@@ -219,17 +219,17 @@ export const ABOUT = {
   heading: "Where genuine purpose meets",
   headingEm: "cutting-edge technology.",
   paragraphs: [
-    "Grateful Marketing™ is a North American digital marketing consultancy founded by Andrea — A certified AI business consultant, strategist, and speaker helping organizations apply AI to drive innovation, efficiency, and growth",
+    "Grateful Marketing™ is a digital marketing consultancy founded by Andrea, a 25+ year marketing and AI strategist, helping organizations to apply AI to drive innovation, efficiency and growth.",
     "We believe the most powerful marketing isn't just smart — it's grateful. Grateful to customers. Grateful to communities. Driven by a genuine desire to do good in the world.",
     "That belief led to our Gratitude™ trademarked methodology: not just a framework, but a lens for building organizations that grow with intention, serve with excellence, and lead with integrity. AI makes it scalable. People make it matter.",
   ],
   expertHeading: "Meet Your Expert — Andrea",
   expertBio:
-    "Andrea is the Founder & CEO of Grateful Marketing™ — a strategist, certified AI business consultant, and speaker with 25+ years across technology, business consulting, and digital marketing.",
+    "Andrea is the Founder and CEO of Grateful Marketing™ - A Strategist and Internationally Recognized AI Business Consultant, with 25+ years of experience, across technology, business consulting, and digital marketing.",
   expertEnterprise:
     "She has worked with enterprise organizations including Roche, CNIB, Telus, CIBC, and leading marketing agencies — bringing the same human-first lens to every engagement, regardless of scale.",
   expertCredential:
-    "Andrea has earned her certification as an Internationally Recognized AI Business Consultant. This, combined with decades of real-world results, means you're not getting someone who just read about AI. You're getting someone who builds with it — every day.",
+    "Andrea has earned her BCOMM degree - Bachelor of Commerce - Marketing Management, from Ryerson University and her certification as an Internationally Recognized AI Business Consultant and AI Agent Builder. This, combined with decades of real-world results, means you’re not getting someone who just read about AI. You are getting someone who builds with it - every day.",
 } as const;
 
 export const SERVICES = {
@@ -308,7 +308,7 @@ export const OUTCOMES = {
     },
     {
       title: "Privacy your clients can count on",
-      description: "— North American data residency and privacy-first design, built for the trust that legal, financial, and insurance clients require.",
+      description: "— North American data residency and privacy-first design, built for the trust that healthcare, legal, financial, and insurance clients require.",
     },
   ],
 } as const;
@@ -324,7 +324,7 @@ export const PLATFORM = {
     {
       title: "North American Data Residency",
       description:
-        "Secure storage · Fully compliant · Built for legal, financial, and insurance industries",
+        "Secure storage · Fully compliant · Built for healthcare, legal, financial, and insurance industries",
       icon: "globe",
     },
     {
@@ -334,9 +334,9 @@ export const PLATFORM = {
       icon: "platform",
     },
     {
-      title: "Certified AI Consultancy",
+      title: "Internationally Recognized AI Business Consultancy",
       description:
-        "Certified AI Business Consultant · Trained on the latest tools, strategies, and methodologies",
+        "Internationally Recognized AI Business Consultant and AI Agent Builder - trained on the latest tools, strategies and methodologies.",
       icon: "certificate",
     },
   ],
