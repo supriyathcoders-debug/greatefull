@@ -6,14 +6,11 @@ import { usePathname } from "next/navigation";
 import { BOOKING_URL } from "@/lib/constants";
 
 const navItems = [
-  { href: "/#gratitude", label: "GRATITUDE" },
-  { href: "/#about", label: "About" },
-  { href: "/#services", label: "Services" },
-  { href: "/#industries", label: "Industries" },
-  { href: "/#platform", label: "Platform" },
-  { href: "/ai-voice-agents", label: "Voice Agent" },
-  { href: "/case-studies", label: "Case Studies" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#about", label: "About Us" },
+  { href: "/#services", label: "Our Services" },
+  { href: "/#industries", label: "Industries We Serve" },
+  { href: "/case-studies", label: "Our Case Studies" },
+  { href: "/contact", label: "Contact Us Today" },
 ];
 
 export function Navbar() {

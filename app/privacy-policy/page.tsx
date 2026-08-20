@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
           
           <h1 id="1-introduction">1. Introduction</h1>
           <p>
-            Grateful Marketing™ (“we,” “us,” “our,” or “Grateful Marketing”) is a Canadian AI-powered digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based businesses. We are deeply committed to protecting the privacy and personal information of our clients, website visitors, email subscribers, and prospects.
+            Grateful Marketing® (“we,” “us,” “our,” or “Grateful Marketing”) is a Canadian AI-powered digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based businesses. We are deeply committed to protecting the privacy and personal information of our clients, website visitors, email subscribers, and prospects.
           </p>
           <p>
             This Privacy Policy explains how we collect, use, disclose, store, and protect personal information. It also outlines your rights and choices regarding your personal information.
@@ -107,7 +107,7 @@ export default function PrivacyPolicyPage() {
           <h2 id="4-3-to-operate-and-improve-our-business">4.3 To Operate and Improve Our Business</h2>
           <ul className="list-disc pl-6 space-y-2 mb-2">
             <li>Analyze website performance and user behavior</li>
-            <li>Improve our services, content, and methodology (including the Gratitude™ methodology)</li>
+            <li>Improve our services, content, and methodology (including the Gratitude methodology)</li>
             <li>Conduct market research and competitive analysis</li>
             <li>Train and refine our internal AI agents using properly anonymized or authorized data</li>
           </ul>
@@ -359,7 +359,7 @@ export default function PrivacyPolicyPage() {
           </p>
           
           <p className="text-xl font-heading font-semibold text-brand italic mt-12 text-center">
-            Thank you for trusting Grateful Marketing™.<br/>Your privacy is part of our gratitude. <span className="text-brand font-bold">GM</span>
+            Thank you for trusting Grateful Marketing®.<br/>Your privacy is part of our gratitude. <span className="text-brand font-bold">GM</span>
           </p>
 
         </div>

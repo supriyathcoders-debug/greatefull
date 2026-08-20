@@ -7,7 +7,7 @@ export const HERO = {
   eyebrow: "North American AI Marketing Consultancy · Est. 2022",
   headline: "Here's the",
   headlineEm: "Problem.",
-  supporting: "Leads go unanswered. Teams drown in repetitive tasks. Growth stalls because there’s no real AI strategy — just guesswork. Grateful Marketing™ fixes this for Direct to Consumer Businesses, Business to Business Companies, Service-Based Businesses, and Non-Profits — with AI Voice Agents that capture every lead, an AI Growth Retainer that pairs strategy with execution, AI Employees  and AI Marketing Content Engines that handle the busywork — so your team can focus on what actually grows the business.",
+  supporting: "Leads go unanswered. Teams drown in repetitive tasks. Growth stalls because there’s no real AI strategy — just guesswork. Grateful Marketing® fixes this for Direct to Consumer Businesses, Business to Business Companies, Service-Based Businesses, and Non-Profits — with AI Voice Agents that capture every lead, an AI Growth Retainer that pairs strategy with execution, AI Employees  and AI Marketing Content Engines that handle the busywork — so your team can focus on what actually grows the business.",
   ctaPrimary: "Let's have a conversation",
   ctaSecondary: "See How We Work",
   ctaSecondaryHref: "#about",
@@ -18,7 +18,7 @@ export const STATS = {
     { number: "25+", label: "Years partnering with real businesses" },
     { number: "50+", label: "Brands and Businesses served" },
     { number: "∞", label: "People served with intention" },
-    { number: "™", label: "Gratitude™ trademarked methodology" },
+    { number: "®", label: "Grateful Marketing® registered trademark" },
   ],
 } as const;
 
@@ -108,12 +108,12 @@ export const PROBLEM = {
 
 export const GRATITUDE = {
   eyebrow: "Our Methodology",
-  heading: "The Gratitude™ Framework",
-  subhead: "Gratitude™ trademarked · Built for people, scaled by AI",
+  heading: "Gratitude Methodology",
+  subhead: "Built for people, scaled by AI",
   intro:
     "Most agencies start with the technology. We start with you — your people, your customers, your purpose. Then we bring AI in to amplify what already makes you worth choosing. Every letter of GRATITUDE keeps a human at the center and a measurable result at the finish line.",
   personalStory:
-    "Andrea's embrace of AI didn't come from a boardroom. It came from necessity. After surviving two motor vehicle accidents that forced her to rebuild from the ground up, she discovered that the combination of human resilience and smart technology wasn't just possible — it was the only way forward. That's the origin of Grateful Marketing™: not a clever business idea, but a lived philosophy. If she could rebuild her own life with gratitude as the compass, she could help organizations do the same.",
+    "Andrea's embrace of AI didn't come from a boardroom. It came from necessity. After surviving two motor vehicle accidents that forced her to rebuild from the ground up, she discovered that the combination of human resilience and smart technology wasn't just possible — it was the only way forward. That's the origin of Grateful Marketing®: not a clever business idea, but a lived philosophy. If she could rebuild her own life with gratitude as the compass, she could help organizations do the same.",
 } as const;
 
 export const GRATITUDE_PILLARS = [
@@ -183,7 +183,7 @@ export const GRATITUDE_PILLARS = [
 ] as const;
 
 export const WHY_GM = {
-  eyebrow: "Why Grateful Marketing™",
+  eyebrow: "Why Grateful Marketing®",
   heading: "The difference is in the approach.",
   items: [
     {
@@ -198,8 +198,8 @@ export const WHY_GM = {
     },
     {
       number: "03",
-      title: "Proprietary Gratitude™ System",
-      description: "— Our Gratitude™ trademarked methodology wasn't borrowed from a textbook. It was built over 25+ years of real-world results, grounded in the belief that the best growth serves people first."
+      title: "Proprietary Gratitude System",
+      description: "— Our Gratitude methodology wasn't borrowed from a textbook. It was built over 25+ years of real-world results, grounded in the belief that the best growth serves people first."
     },
     {
       number: "04",
@@ -215,17 +215,17 @@ export const WHY_GM = {
 } as const;
 
 export const ABOUT = {
-  eyebrow: "About Grateful Marketing™",
+  eyebrow: "About Grateful Marketing®",
   heading: "Where genuine purpose meets",
   headingEm: "cutting-edge technology.",
   paragraphs: [
-    "Grateful Marketing™ is a digital marketing consultancy founded by Andrea, a 25+ year marketing and AI strategist, helping organizations to apply AI to drive innovation, efficiency and growth.",
+    "Grateful Marketing® is a digital marketing consultancy founded by Andrea, a 25+ year marketing and AI strategist, helping organizations to apply AI to drive innovation, efficiency and growth.",
     "We believe the most powerful marketing isn't just smart — it's grateful. Grateful to customers. Grateful to communities. Driven by a genuine desire to do good in the world.",
-    "That belief led to our Gratitude™ trademarked methodology: not just a framework, but a lens for building organizations that grow with intention, serve with excellence, and lead with integrity. AI makes it scalable. People make it matter.",
+    "That belief led to our Gratitude methodology: not just a framework, but a lens for building organizations that grow with intention, serve with excellence, and lead with integrity. AI makes it scalable. People make it matter.",
   ],
   expertHeading: "Meet Your Expert — Andrea",
   expertBio:
-    "Andrea is the Founder and CEO of Grateful Marketing™ - A Strategist and Internationally Recognized AI Business Consultant, with 25+ years of experience, across technology, business consulting, and digital marketing.",
+    "Andrea is the Founder and CEO of Grateful Marketing® - A Strategist and Internationally Recognized AI Business Consultant, with 25+ years of experience, across technology, business consulting, and digital marketing.",
   expertEnterprise:
     "She has worked with enterprise organizations including Roche, CNIB, Telus, CIBC, and leading marketing agencies — bringing the same human-first lens to every engagement, regardless of scale.",
   expertCredential:
@@ -348,6 +348,6 @@ export const FINAL_CTA = {
   buttonPrimary: "Get your AI Revenue Audit",
   buttonSecondary: "Let's have a conversation",
   tagline: "Innovating · Creating · Leading",
-  body: "North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer and service-based organizations — through the human-first, Gratitude™ trademarked methodology.",
+  body: "North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer and service-based organizations — through the human-first, Gratitude methodology.",
   ctaPrimary: "Let's have a conversation",
 } as const;

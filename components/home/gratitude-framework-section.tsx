@@ -16,7 +16,7 @@ export function GratitudeFrameworkSection() {
             <StaggerItem>
               <BrandImage
                 src={IMAGES.heartCircuitGratitude}
-                alt="The heart of Gratitude™ — human connection powered by AI"
+                alt="The heart of Gratitude — human connection powered by AI"
                 className="max-w-[520px] mx-auto lg:mx-0"
               />
             </StaggerItem>

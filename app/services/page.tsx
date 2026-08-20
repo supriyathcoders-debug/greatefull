@@ -6,7 +6,7 @@ import { BOOKING_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Five human-first AI offers from Grateful Marketing™ — in official funnel order.",
+    "Five human-first AI offers from Grateful Marketing® — in official funnel order.",
 };
 
 export default function ServicesPage() {
