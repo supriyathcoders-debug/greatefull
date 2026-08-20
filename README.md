@@ -1,6 +1,6 @@
-# Grateful Marketing™ Website
+# Grateful Marketing® Website
 
-Marketing website for **Grateful Marketing™** — a North American, human-first AI marketing consultancy. Built with Next.js, Tailwind CSS v4, and Framer Motion.
+Marketing website for **Grateful Marketing®** — a North American, human-first AI marketing consultancy. Built with Next.js, Tailwind CSS v4, and Framer Motion.
 
 **Live preview (latest deploy):** [new-website-seven-blond.vercel.app](https://new-website-seven-blond.vercel.app)
 
@@ -74,7 +74,7 @@ public/images/brand/       # Client handoff brand images (15+ assets)
 The homepage follows the client visual map in this order:
 
 1. **Hero** — Full-viewport background, headline, CTAs  
-2. **Gratitude™ Framework** — 9-pillar methodology with heart-circuit visual  
+2. **Gratitude Methodology** — 9-pillar methodology with heart-circuit visual  
 3. **About** — Founder-led agency story  
 4. **Services** — Four pillars of purpose-driven growth  
 5. **Testimonials** — Filterable carousel by service category  
@@ -443,4 +443,4 @@ Then run `npm run build` and fix any import/path differences in the other projec
 
 ## License
 
-Private — Grateful Marketing™ client project.
+Private — Grateful Marketing® client project.

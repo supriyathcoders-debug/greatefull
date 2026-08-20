@@ -6,7 +6,7 @@ import { REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Grateful Marketing™ and book a strategy call.",
+  description: "Contact Grateful Marketing® and book a strategy call.",
 };
 
 export default function ContactPage() {
@@ -26,12 +26,12 @@ export default function ContactPage() {
 
       {/* Contact details block removed per client request */}
 
-      <Section title="Prefer to Talk Live?">
+      <Section title="Let's have a conversation">
         <div className="flex flex-wrap gap-3">
           <CtaButton href={REVENUE_AUDIT_URL}>Get Your AI Revenue Audit</CtaButton>
           <CtaButton href={BOOKING_URL}>Let&apos;s have a conversation</CtaButton>
           <CtaButton href="https://app.growthhub365.com/v2/preview/QAuss4a9CGC8EExSO5WE" variant="secondary">
-            See Demo
+            Book your &quot;Voice AI Agent&quot; demo
           </CtaButton>
         </div>
       </Section>

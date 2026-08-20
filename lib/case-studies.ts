@@ -72,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
       "Presented marketing campaign strategy for a special digital project launch and performance to senior stakeholders, building consensus on marketing management priorities and investment.",
     ],
     impact:
-      "A reference point for the marketing management and project discipline Grateful Marketing™ brings to any client operating in a regulated or high-scrutiny industry.",
+      "A reference point for the marketing management and project discipline Grateful Marketing® brings to any client operating in a regulated or high-scrutiny industry.",
     capabilities:
       "Integrated marketing management, digital channel oversight, review-cycle project management, financial-services stakeholder communication.",
   },
@@ -92,7 +92,7 @@ export const caseStudies: CaseStudy[] = [
       "Presented SEO/SEM campaign strategy, performance, and recommendations directly to senior stakeholders, driving consensus on marketing management priorities.",
     ],
     impact:
-      "Reinforced a capability that carries through every Grateful Marketing™ engagement today: translating marketing management recommendations into terms senior stakeholders can act on with confidence.",
+      "Reinforced a capability that carries through every Grateful Marketing® engagement today: translating marketing management recommendations into terms senior stakeholders can act on with confidence.",
     capabilities:
       "Enterprise marketing management, scope/timeline project management, executive stakeholder alignment.",
   },
@@ -122,15 +122,15 @@ export const caseStudies: CaseStudy[] = [
     industry: "AI Strategy & Deployment",
     services: "Capability Spotlight",
     challenge:
-      "Where It Is Today Early adoption has grown into a full AI strategy and deployment practice at Grateful Marketing™:",
+      "Where It Is Today Early adoption has grown into a full AI strategy and deployment practice at Grateful Marketing®:",
     approach: [
       "Holds the International Certified AI Business Consultant designation, alongside AI Consultant and AI Agents training certifications.",
       "Uses AI daily — Claude and ChatGPT — for research, content development, and campaign analysis across every client deliverable.",
-      "Built and operates a full AI team and advisory committee, spanning strategy, sales, client success, marketing, and delivery functions, run on the Gratitude™ methodology.",
+      "Built and operates a full AI team and advisory committee, spanning strategy, sales, client success, marketing, and delivery functions, run on the Gratitude methodology.",
       "Trains client teams directly on AI adoption and workflow integration as part of engagement delivery.",
     ],
     impact:
-      "The Offer this experience now underpins Grateful Marketing's AI service lines including the Grateful™ Growth Retainer, The AI Voice Agent, The AI Agent, The AI Team Intensive for Sales and Marketing, and The AI Content Engine — helping clients move from AI curiosity to AI-empowered delivery.",
+      "The Offer this experience now underpins Grateful Marketing®'s AI service lines including the AI Growth Retainer, The AI Voice Agent, The AI Agent, The AI Team Intensive for Sales and Marketing, and The AI Content Engine — helping clients move from AI curiosity to AI-empowered delivery.",
     capabilities:
       "AI-assisted content & workflow design, AI team/agent architecture, prompt engineering, client AI training & change management.",
   },
@@ -147,7 +147,7 @@ export const caseStudies: CaseStudy[] = [
       "LaCoupe (Beauty) — Planned and published social content and managed community engagement for a beauty-sector client, keeping brand voice consistent across fast-turnaround content cycles.",
       "Body Worlds 2 — Ontario Science Centre — Managed the marketing including digital marketing, partnership marketing, PR, advertising for a major cultural-institution exhibit, adapting messaging for a broad public audience. The exhibition had half a million visitors, in less then 6 months.",
       "CDA — Managed social channels for major special events, and content calendars, monitoring community engagement and reporting performance to stakeholders.",
-      "Community Spotlight: Habitat for Humanity — As a volunteer Marketing Advisor, provided informal marketing guidance sitting on the Marketing Board and also helped to build homes for the homeless — pro bono, reflecting Grateful Marketing™’s purpose-driven roots.",
+      "Community Spotlight: Habitat for Humanity — As a volunteer Marketing Advisor, provided informal marketing guidance sitting on the Marketing Board and also helped to build homes for the homeless — pro bono, reflecting Grateful Marketing®’s purpose-driven roots.",
     ],
     impact: "",
     capabilities: "Community engagement, pro-bono marketing advisory.",

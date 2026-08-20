@@ -587,7 +587,7 @@ export default function AiRevenueAuditPage() {
         </div>
 
         <footer className="mt-16 text-center text-[0.65rem] uppercase tracking-[0.2em] text-muted font-light">
-          Powered by the <strong className="text-brand font-bold">Gratitude™</strong> methodology &middot; Est. 2022
+          Powered by the <strong className="text-brand font-bold">Gratitude</strong> methodology &middot; Est. 2022
         </footer>
       </div>
     </div>
