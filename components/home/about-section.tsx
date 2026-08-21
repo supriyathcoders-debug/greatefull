@@ -72,7 +72,7 @@ export function AboutSection() {
                 <div key={num} className="h-[220px] md:h-[280px] lg:h-[320px] shrink-0 relative mx-6 lg:mx-10 group flex items-center justify-center">
                   <img
                     src={`/${num}.jpeg`}
-                    alt={`Grateful Marketing Credential ${num}`}
+                    alt={`Grateful Marketing®️Credential ${num}`}
                     className="h-full w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_20px_40px_rgba(200,169,81,0.15)] drop-shadow-xl"
                   />
                 </div>

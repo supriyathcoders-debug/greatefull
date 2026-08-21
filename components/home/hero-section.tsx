@@ -53,7 +53,7 @@ function HeroMobile() {
       <div className="bg-[#12082a] pt-20">
         <img
           src={IMAGES.heroGoldSilhouette}
-          alt="Human First. AI Second. — Grateful Marketing"
+          alt="Human First. AI Second. — Grateful Marketing®️"
           className="block w-full h-auto"
           draggable={false}
         />

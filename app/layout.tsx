@@ -30,23 +30,23 @@ const mono = Outfit({
 
 // export const metadata: Metadata = {
 //   title: {
-//     default: "Grateful Marketing® | AI Automation Agency",
-//     template: "%s | Grateful Marketing®",
+//     default: "Grateful Marketing®️ | AI Automation Agency",
+//     template: "%s | Grateful Marketing®️",
 //   },
 //   description:
 //     "Premium AI automation agency helping service businesses capture, qualify, and convert more leads with AI revenue systems.",
 // };
 export const metadata: Metadata = {
   title: {
-    default: "Grateful Marketing® | Human-First AI Consultancy",
-    template: "%s | Grateful Marketing®",
+    default: "Grateful Marketing®️ | Human-First AI Consultancy",
+    template: "%s | Grateful Marketing®️",
   },
 
   description:
     "Premium human-first AI consultancy. Built around your people, powered by AI. Gratitude methodology, AI business consulting, marketing strategy, team training, and voice agents for North American enterprises.",
 
   openGraph: {
-    title: "Grateful Marketing® | Human-First AI Consultancy",
+    title: "Grateful Marketing®️ | Human-First AI Consultancy",
     description:
       "Built around your people. Powered by AI. Premium AI marketing consultancy serving legal, financial, insurance, B2B, and service-based businesses.",
   },

@@ -61,7 +61,7 @@ export function ProblemWeSolveSection() {
                   Problem
                 </div>
                 <div className="col-span-5 font-heading text-sm font-bold text-brand uppercase tracking-wider">
-                  How Grateful Marketing Helps
+                  How Grateful Marketing®️Helps
                 </div>
               </div>
               
@@ -85,7 +85,7 @@ export function ProblemWeSolveSection() {
                     </div>
                     {/* How We Help */}
                     <div className="lg:col-span-5">
-                      <span className="lg:hidden text-[0.7rem] font-bold uppercase tracking-wider text-brand block mb-1">How Grateful Marketing Helps</span>
+                      <span className="lg:hidden text-[0.7rem] font-bold uppercase tracking-wider text-brand block mb-1">How Grateful Marketing®️Helps</span>
                       <p className="text-[0.95rem] text-foreground/90 leading-[1.7] font-light">
                         {persona.howWeHelp}
                       </p>

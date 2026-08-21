@@ -14,7 +14,7 @@ export function FounderQuoteSection() {
           <StaggerItem className="h-full">
             <BrandImage
               src={IMAGES.founderStrategicReflection}
-              alt="Strategic reflection — Andrea, Founder of Grateful Marketing"
+              alt="Strategic reflection — Andrea, Founder of Grateful Marketing®️"
               className="h-full"
               fillHeight
             />
@@ -38,7 +38,7 @@ export function FounderQuoteSection() {
                 <cite className="not-italic">
                   <div className="text-sm font-medium text-foreground">Andrea</div>
                   <div className="text-[0.72rem] text-muted mt-1 font-light">
-                    Founder & CEO, Grateful Marketing®
+                    Founder & CEO, Grateful Marketing®️
                   </div>
                 </cite>
                 <div className="mt-8 pt-8 border-t border-brand/10 flex flex-col items-start gap-4">

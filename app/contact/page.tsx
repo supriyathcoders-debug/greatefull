@@ -6,7 +6,7 @@ import { REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Grateful Marketing® and book a strategy call.",
+  description: "Contact Grateful Marketing®️ and book a strategy call.",
 };
 
 export default function ContactPage() {

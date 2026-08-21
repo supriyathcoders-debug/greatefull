@@ -52,7 +52,7 @@ export function Navbar() {
           <Link href="/" className="relative z-[10001] flex items-center">
             <img 
               src="/logo.png" 
-              alt="Grateful Marketing Logo" 
+              alt="Grateful Marketing®️Logo" 
               className="h-10 w-auto object-contain"
             />
           </Link>

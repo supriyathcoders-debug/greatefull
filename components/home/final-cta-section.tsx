@@ -42,7 +42,7 @@ export function FinalCtaSection() {
           <StaggerItem>
             <BrandImage
               src={IMAGES.writingNextChapter}
-              alt="Writing the next chapter — begin your Grateful Marketing journey"
+              alt="Writing the next chapter — begin your Grateful Marketing®️journey"
               className="max-w-[520px] mx-auto lg:ml-auto"
             />
           </StaggerItem>

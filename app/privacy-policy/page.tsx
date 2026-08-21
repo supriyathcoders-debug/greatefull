@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
           
           <h1 id="1-introduction">1. Introduction</h1>
           <p>
-            Grateful Marketing® (“we,” “us,” “our,” or “Grateful Marketing”) is a Canadian AI-powered digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based businesses. We are deeply committed to protecting the privacy and personal information of our clients, website visitors, email subscribers, and prospects.
+            Grateful Marketing®️ (“we,” “us,” “our,” or “Grateful Marketing®️”) is a Canadian AI-powered digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based businesses. We are deeply committed to protecting the privacy and personal information of our clients, website visitors, email subscribers, and prospects.
           </p>
           <p>
             This Privacy Policy explains how we collect, use, disclose, store, and protect personal information. It also outlines your rights and choices regarding your personal information.
@@ -32,10 +32,10 @@ export default function PrivacyPolicyPage() {
 
           <h1 id="2-who-we-are">2. Who We Are</h1>
           <p>
-            Grateful Marketing is the data controller (GDPR) and organization accountable (PIPEDA) for the personal information described in this policy.
+            Grateful Marketing®️is the data controller (GDPR) and organization accountable (PIPEDA) for the personal information described in this policy.
           </p>
           <p className="bg-brand-soft p-6 border border-border mt-4 mb-4">
-            Grateful Marketing Inc. Business Address: 601 - 5 Hamilton St N, Waterdown, On, L8B 2A8. Incorporated in Ontario and Canada.
+            Grateful Marketing®️Inc. Business Address: 601 - 5 Hamilton St N, Waterdown, On, L8B 2A8. Incorporated in Ontario and Canada.
           </p>
           <p><strong>Contact for privacy matters:</strong></p>
           <div className="bg-brand-soft p-6 border border-border mt-4 mb-4 space-y-2">
@@ -174,7 +174,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 id="6-4-business-transfers">6.4 Business Transfers</h2>
           <p>
-            If Grateful Marketing is involved in a merger, acquisition, financing, or sale of assets, personal information may be transferred as part of that transaction, subject to the continued protections of this Privacy Policy or an equivalent successor policy.
+            If Grateful Marketing®️is involved in a merger, acquisition, financing, or sale of assets, personal information may be transferred as part of that transaction, subject to the continued protections of this Privacy Policy or an equivalent successor policy.
           </p>
 
           <h2 id="6-5-with-your-consent">6.5 With Your Consent</h2>
@@ -184,7 +184,7 @@ export default function PrivacyPolicyPage() {
 
           <h1 id="7-international-data-transfers">7. International Data Transfers</h1>
           <p>
-            Grateful Marketing is based in Canada. Personal information we collect may be processed, stored, or accessed in Canada, the United States, and other jurisdictions where our service providers operate.
+            Grateful Marketing®️is based in Canada. Personal information we collect may be processed, stored, or accessed in Canada, the United States, and other jurisdictions where our service providers operate.
           </p>
           <p>
             For transfers out of the European Union, United Kingdom, or Switzerland, we rely on appropriate safeguards such as:
@@ -332,7 +332,7 @@ export default function PrivacyPolicyPage() {
             We welcome your questions, comments, and concerns about this Privacy Policy or our privacy practices.
           </p>
           <div className="bg-brand-soft p-6 border border-border mt-4 mb-8 space-y-2">
-            <p className="font-semibold text-foreground m-0">Grateful Marketing — Privacy Officer</p>
+            <p className="font-semibold text-foreground m-0">Grateful Marketing®️— Privacy Officer</p>
             <p className="m-0">Andrea Gureckas</p>
             <p className="m-0">Clientservices@grateful-marketing.com</p>
             <p className="m-0">601 - 5 Hamilton St N, Waterdown, On, L8B 2A8</p>
@@ -359,7 +359,7 @@ export default function PrivacyPolicyPage() {
           </p>
           
           <p className="text-xl font-heading font-semibold text-brand italic mt-12 text-center">
-            Thank you for trusting Grateful Marketing®.<br/>Your privacy is part of our gratitude. <span className="text-brand font-bold">GM</span>
+            Thank you for trusting Grateful Marketing®️.<br/>Your privacy is part of our gratitude. <span className="text-brand font-bold">GM</span>
           </p>
 
         </div>

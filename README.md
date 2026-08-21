@@ -1,6 +1,6 @@
-# Grateful Marketing® Website
+# Grateful Marketing®️ Website
 
-Marketing website for **Grateful Marketing®** — a North American, human-first AI marketing consultancy. Built with Next.js, Tailwind CSS v4, and Framer Motion.
+Marketing website for **Grateful Marketing®️** — a North American, human-first AI marketing consultancy. Built with Next.js, Tailwind CSS v4, and Framer Motion.
 
 **Live preview (latest deploy):** [new-website-seven-blond.vercel.app](https://new-website-seven-blond.vercel.app)
 
@@ -443,4 +443,4 @@ Then run `npm run build` and fix any import/path differences in the other projec
 
 ## License
 
-Private — Grateful Marketing® client project.
+Private — Grateful Marketing®️ client project.
