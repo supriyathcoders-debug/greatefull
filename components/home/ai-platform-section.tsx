@@ -31,7 +31,7 @@ export function AiPlatformSection() {
             <StaggerItem>
               <BrandImage
                 src={IMAGES.aiPlatformDataConfidence}
-                alt="Data-driven confidence — Grateful Marketing AI platform"
+                alt="Data-driven confidence — Grateful Marketing®️AI platform"
                 className="max-w-[520px] mx-auto lg:ml-auto"
               />
             </StaggerItem>

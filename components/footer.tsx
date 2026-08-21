@@ -11,7 +11,7 @@ export function Footer() {
           <Link href="/" className="block mb-4">
             <img
               src="/logo.png"
-              alt="Grateful Marketing Logo"
+              alt="Grateful Marketing®️Logo"
               className="h-12 w-auto object-contain"
             />
           </Link>
@@ -68,8 +68,8 @@ export function Footer() {
       </div>
 
       <div className="flex items-center justify-between text-[0.68rem] text-foreground/40 flex-wrap gap-2 pt-2 relative z-10">
-        <span>&copy; {new Date().getFullYear()} Grateful Marketing®. All rights reserved. North America.</span>
-        {/* <span className="text-brand/50">Gratitude is a globally registered trademark of Grateful Marketing®.</span> */}
+        <span>&copy; {new Date().getFullYear()} Grateful Marketing®️. All rights reserved. North America.</span>
+        {/* <span className="text-brand/50">Gratitude is a globally registered trademark of Grateful Marketing®️.</span> */}
       </div>
     </footer>
   );

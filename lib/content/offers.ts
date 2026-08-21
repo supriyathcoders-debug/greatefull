@@ -1,7 +1,7 @@
 import { IMAGES, REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
 
 /**
- * Grateful Marketing® — Five Offers (website display order)
+ * Grateful Marketing®️ — Five Offers (website display order)
  *
  * DO NOT REORDER `OFFER_ORDER`. All pages derive display sequence from it.
  *
