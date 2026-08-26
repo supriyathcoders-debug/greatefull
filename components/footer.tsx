@@ -19,7 +19,7 @@ export function Footer() {
             Innovating · Creating · Leading
           </div>
           <p className="text-sm text-muted leading-[1.82] font-light max-w-[325px]">
-            north american, digital marketing consultancy, serving service-based businesses, business to business, direct to consumer and non-profit organizations - through the human-first, Gratitude methodology.
+            North American, digital marketing consultancy, serving service-based businesses, business to business, direct to consumer and non-profit organizations - through the human-first, Gratitude methodology.
           </p>
         </div>
 
