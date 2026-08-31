@@ -10,6 +10,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { CASE_STUDIES } from "@/lib/content/home";
 
+
 type Props = {
   hideHeading?: boolean;
   categoryFilter?: CaseStudyCategory;
@@ -100,43 +101,41 @@ export function CaseStudiesSection({ hideHeading, categoryFilter, excludeIds, hi
 
         <ScrollReveal delay={0.1}>
           {!categoryFilter && !hideTabs && (
-          <div
-            role="tablist"
-            aria-label="Case Study Categories"
-            className="flex flex-wrap gap-2 mb-10"
-          >
-            <button
-              role="tab"
-              aria-selected={activeCategory === null}
-              onClick={() => setActiveCategory(null)}
-              className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
-                activeCategory === null
-                  ? "bg-brand text-background border-brand"
-                  : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
-              }`}
+            <div
+              role="tablist"
+              aria-label="Case Study Categories"
+              className="flex flex-wrap gap-2 mb-10"
             >
-              All
-            </button>
-            {CASE_STUDY_CATEGORIES.map((cat) => (
               <button
-                key={cat}
                 role="tab"
-                aria-selected={activeCategory === cat}
-                onClick={() =>
-                  setActiveCategory((current) =>
-                    current === cat ? null : cat,
-                  )
-                }
-                className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
-                  activeCategory === cat
+                aria-selected={activeCategory === null}
+                onClick={() => setActiveCategory(null)}
+                className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${activeCategory === null
                     ? "bg-brand text-background border-brand"
                     : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
-                }`}
+                  }`}
               >
-                {cat}
+                All
               </button>
-            ))}
-          </div>
+              {CASE_STUDY_CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  role="tab"
+                  aria-selected={activeCategory === cat}
+                  onClick={() =>
+                    setActiveCategory((current) =>
+                      current === cat ? null : cat,
+                    )
+                  }
+                  className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${activeCategory === cat
+                      ? "bg-brand text-background border-brand"
+                      : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
+                    }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           )}
         </ScrollReveal>
 
@@ -165,11 +164,10 @@ export function CaseStudiesSection({ hideHeading, categoryFilter, excludeIds, hi
                     key={i}
                     onClick={() => goTo(i)}
                     aria-label={`Go to slide ${i + 1}`}
-                    className={`h-1 transition-all duration-300 ${
-                      i === currentIndex
+                    className={`h-1 transition-all duration-300 ${i === currentIndex
                         ? "w-8 bg-brand"
                         : "w-4 bg-border-subtle hover:bg-brand/40"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
