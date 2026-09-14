@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
           <p><strong>Contact for privacy matters:</strong></p>
           <div className="bg-brand-soft p-6 border border-border mt-4 mb-4 space-y-2">
             <p className="m-0">Andrea Gureckas</p>
-            <p className="m-0">Clientservices@grateful-marketing.com</p>
+            <p className="m-0">sales@grateful-marketing.ca</p>
             <p className="m-0">226-332-9712</p>
             <p className="m-0">601 - 5 Hamilton St N, Waterdown, On, L8B 2A8, Canada.</p>
           </div>
@@ -334,7 +334,7 @@ export default function PrivacyPolicyPage() {
           <div className="bg-brand-soft p-6 border border-border mt-4 mb-8 space-y-2">
             <p className="font-semibold text-foreground m-0">Grateful Marketing®️— Privacy Officer</p>
             <p className="m-0">Andrea Gureckas</p>
-            <p className="m-0">Clientservices@grateful-marketing.com</p>
+            <p className="m-0">sales@grateful-marketing.ca</p>
             <p className="m-0">601 - 5 Hamilton St N, Waterdown, On, L8B 2A8</p>
             <p className="m-0">226-332-9712</p>
           </div>
