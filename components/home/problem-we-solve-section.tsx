@@ -5,7 +5,6 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { PremiumButton } from "@/components/ui/premium-button";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { PROBLEM } from "@/lib/content/home";
-import { REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
 
 export function ProblemWeSolveSection() {
   return (
@@ -172,11 +171,8 @@ export function ProblemWeSolveSection() {
               {PROBLEM.ctaLabel}
             </p>
             <div className="flex flex-wrap gap-4">
-              <PremiumButton href={REVENUE_AUDIT_URL} external>
-                Get your AI Revenue Audit
-              </PremiumButton>
-              <PremiumButton href={BOOKING_URL} variant="secondary">
-                Let&apos;s have a conversation
+              <PremiumButton href="/contact">
+                Contact Us
               </PremiumButton>
             </div>
           </StaggerItem>

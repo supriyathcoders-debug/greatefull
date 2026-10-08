@@ -1,8 +1,6 @@
-export const BOOKING_URL =
-  "https://api.growthhub365.com/widget/bookings/lets-have-a-conversation-001";
+export const BOOKING_URL = "/contact";
 
-export const REVENUE_AUDIT_URL =
-  "https://api.growthhub365.com/widget/booking/6D97y6VMZLywxgkoRdJI";
+export const REVENUE_AUDIT_URL = "/contact";
 
 /** Client handoff images — paths match README_Developer_Handoff.md */
 export const IMAGES = {

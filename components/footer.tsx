@@ -54,15 +54,8 @@ export function Footer() {
         <div>
           <h4 className="text-[0.64rem] tracking-[0.2em] uppercase text-brand mb-5 font-normal">Connect</h4>
           <ul className="list-none space-y-2.5">
-            <li><a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-              client-services@grateful-marketing.com
-            </a></li>
-            <li><a href="tel:+12263329712" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-              +1 (226) 332-9712
-            </a></li>
+            <li><Link href="/contact" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Contact Us</Link></li>
             <li><span className="text-[0.79rem] text-muted font-light">North America</span></li>
-            <li><a href="https://www.instagram.com/grateful.marketing/" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Instagram</a></li>
-            <li><a href="https://www.facebook.com/people/Grateful-Marketing/61572075292335/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Facebook</a></li>
           </ul>
         </div>
       </div>

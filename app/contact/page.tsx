@@ -1,47 +1,31 @@
 import type { Metadata } from "next";
-// Contact form removed per client instructions — we now show direct contact details only
-import { CtaButton } from "@/components/ui/cta-button";
-import { Section } from "@/components/ui/section";
-import { REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
+import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact Grateful Marketing®️ and book a strategy call.",
+  title: "Contact Us",
+  description: "Contact Grateful Marketing®️ to discuss your AI marketing and automation solutions.",
 };
 
 export default function ContactPage() {
   return (
-    <div className="pt-28">
+    <div className="pt-28 pb-20 min-h-screen">
       <section className="section-fade">
-        <div className="mx-auto w-full max-w-6xl px-4 pb-12 pt-14 sm:px-6 md:pt-20">
-          <p className="inline-flex rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-brand">
-            Contact
+        <div className="mx-auto w-full max-w-4xl px-6 pb-12 pt-14 md:pt-20">
+          <p className="inline-flex items-center gap-2.5 text-[0.66rem] tracking-[0.24em] uppercase text-brand font-normal mb-5">
+            <span className="w-7 h-px bg-brand" aria-hidden="true" />
+            Contact Us
           </p>
-          <h1 className="mt-5 text-5xl font-bold tracking-tight sm:text-6xl">Let&apos;s Build Your AI Revenue System</h1>
-          <p className="mt-4 max-w-2xl text-lg text-muted">
-            Share your goals and current challenges. We&apos;ll map out the fastest route to better lead conversion.
+          <h1 className="font-heading text-[clamp(2.4rem,5vw,4rem)] font-semibold leading-[1.1] mb-6">
+            Get in{" "}
+            <em className="italic text-brand font-light">Touch.</em>
+          </h1>
+          <p className="max-w-2xl text-base md:text-lg text-muted font-light leading-relaxed mb-12">
+            Share your goals and challenges. Send us a message and our team will get back to you with the right approach for your organization.
           </p>
+
+          <ContactForm />
         </div>
       </section>
-
-      {/* Contact details block removed per client request */}
-
-      <Section title="Let's have a conversation">
-        <div className="flex flex-wrap gap-3">
-          <CtaButton href={REVENUE_AUDIT_URL}>Get Your AI Revenue Audit</CtaButton>
-          <CtaButton href={BOOKING_URL}>Let&apos;s have a conversation</CtaButton>
-          <CtaButton href="https://app.growthhub365.com/v2/preview/QAuss4a9CGC8EExSO5WE" variant="secondary">
-            Book your &quot;Voice AI Agent&quot; demo
-          </CtaButton>
-        </div>
-      </Section>
-
-      <Section title="Other Ways to Reach Us">
-        <div className="flex flex-col gap-2">
-          <a href="mailto:client-services@grateful-marketing.com" className="text-[0.95rem] text-muted no-underline font-medium hover:text-brand">client-services@grateful-marketing.com</a>
-          <a href="tel:+12263329712" className="text-[0.95rem] text-muted no-underline font-medium hover:text-brand">+1 (226) 332-9712</a>
-        </div>
-      </Section>
     </div>
   );
 }

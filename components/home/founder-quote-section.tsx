@@ -43,10 +43,10 @@ export function FounderQuoteSection() {
                 </cite>
                 <div className="mt-8 pt-8 border-t border-brand/10 flex flex-col items-start gap-4">
                   <p className="text-[0.85rem] text-muted font-light">
-                    This is the philosophy behind every strategy call.
+                    This is the philosophy behind our human-first approach.
                   </p>
-                  <PremiumButton href="https://api.growthhub365.com/widget/bookings/ai-audit-calendar-3ttpow-79caa778-4b01-49b0-a035-ace978ef81de-51a69f4d-0a01-4198-b17b-201bdf1d1031-8eef8d1b-02a3-43d9-b33f-7c850af15489" variant="primary">
-                    Book a Strategy call &rarr;
+                  <PremiumButton href="/contact" variant="primary">
+                    Contact Us &rarr;
                   </PremiumButton>
                 </div>
               </footer>

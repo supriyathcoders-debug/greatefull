@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import CaseStudiesSection from "@/components/case-studies-section";
 
 export const metadata: Metadata = {
@@ -79,14 +80,14 @@ export default function CaseStudiesPage() {
 
       <section className="section-fade py-20 border-t border-border mt-12 relative section-noise">
         <div className="mx-auto w-full max-w-[800px] px-6 text-center">
-          <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6">Let’s Talk</h2>
+          <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6">Get in Touch</h2>
           <h3 className="text-xl md:text-2xl text-brand mb-8 italic">Bring This Experience to Your Team</h3>
           <p className="text-muted text-lg mb-10 leading-relaxed">
             Every case study here started the same way: a business goal, a stakeholder who needed to trust the plan, and a team ready to execute — managed with the same rigor whether the deliverable was a digital campaign, a full marketing program, a multi-workstream project, or an AI deployment. That’s the same starting point for every Grateful Marketing®️ engagement today.
           </p>
-          <a href="/contact" className="btn-primary">
-            Book an AI Audit or an Introductory Call
-          </a>
+          <Link href="/contact" className="btn-primary">
+            Contact Us
+          </Link>
         </div>
       </section>
     </div>

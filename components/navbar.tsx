@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { BOOKING_URL } from "@/lib/constants";
 
 const navItems = [
   { href: "/#about", label: "About Us" },
@@ -68,12 +67,12 @@ export function Navbar() {
             ))}
           </ul>
           
-          <a 
-            href={BOOKING_URL} 
+          <Link 
+            href="/contact" 
             className="hidden lg:inline-block text-[0.73rem] font-medium tracking-[0.12em] uppercase text-brand bg-transparent border border-brand px-6 py-2.5 no-underline transition-all hover:bg-brand hover:text-background"
           >
-            Let&apos;s have a conversation
-          </a>
+            Contact Us
+          </Link>
 
           {/* MOBILE HAMBURGER - Label triggers checkbox */}
           <label 
@@ -127,10 +126,10 @@ export function Navbar() {
         
         <div className="w-full px-12 mt-auto">
           <a 
-            href={BOOKING_URL} 
+            href="/contact" 
             className="block w-full text-sm font-semibold tracking-widest uppercase text-background bg-brand px-8 py-5 no-underline shadow-2xl text-center font-sans mobile-nav-link"
           >
-            Let&apos;s have a conversation
+            Contact Us
           </a>
         </div>
       </div>

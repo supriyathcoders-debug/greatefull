@@ -6,7 +6,6 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
-import { BOOKING_URL } from "@/lib/constants";
 import { IMAGES } from "@/lib/content/home";
 
 const CHECK_ICON = (
@@ -72,7 +71,7 @@ export default function PreBookingPage() {
         <div className="relative z-10 w-full section-shell pt-32 pb-20">
           <StaggerReveal className="max-w-[800px]">
             <StaggerItem>
-              <Eyebrow className="mb-8">Let&apos;s have a conversation</Eyebrow>
+              <Eyebrow className="mb-8">Contact Us</Eyebrow>
             </StaggerItem>
             <StaggerItem>
               <h1 className="font-heading text-[clamp(2.4rem,5vw,4.5rem)] font-semibold leading-[1.08] mb-8">
@@ -80,17 +79,17 @@ export default function PreBookingPage() {
                 <br />
                 of Growth —
                 <br />
-                <em className="italic text-brand font-light">In 30 Minutes or Less!</em>
+                <em className="italic text-brand font-light">With Human-First AI.</em>
               </h1>
             </StaggerItem>
             <StaggerItem>
               <p className="max-w-[620px] text-base font-light leading-[1.86] text-muted mb-10">
-                Book your complimentary strategy session and discover how to streamline your business, close more deals, and free up hours every week—using a proven blend of strategy, automation, and the right AI tools.
+                Send us a message and discover how to streamline your business, close more deals, and free up hours every week—using a proven blend of strategy, automation, and the right AI tools.
               </p>
             </StaggerItem>
             <StaggerItem>
-              <PremiumButton href={BOOKING_URL} external>
-                Schedule My Strategy Session
+              <PremiumButton href="/contact">
+                Contact Us
               </PremiumButton>
             </StaggerItem>
           </StaggerReveal>
@@ -146,8 +145,8 @@ export default function PreBookingPage() {
             </StaggerItem>
             <StaggerItem>
               <div className="mt-8">
-                <PremiumButton href={BOOKING_URL} external>
-                  Schedule My Strategy Session
+                <PremiumButton href="/contact">
+                  Contact Us
                 </PremiumButton>
               </div>
             </StaggerItem>
@@ -162,9 +161,9 @@ export default function PreBookingPage() {
           <StaggerItem>
             <Eyebrow className="mb-4 justify-center">What You&apos;ll Get</Eyebrow>
             <SectionHeading className="mb-16 text-center">
-              In this complimentary strategy session,
+              When you partner with us,
               <br />
-              <em className="italic text-brand font-light">I&apos;ll help you:</em>
+              <em className="italic text-brand font-light">we help you:</em>
             </SectionHeading>
           </StaggerItem>
         </StaggerReveal>
@@ -219,8 +218,8 @@ export default function PreBookingPage() {
             </StaggerItem>
             <StaggerItem>
               <div className="mt-8">
-                <PremiumButton href={BOOKING_URL} external>
-                  Let&apos;s have a conversation
+                <PremiumButton href="/contact">
+                  Contact Us
                 </PremiumButton>
               </div>
             </StaggerItem>
@@ -306,12 +305,12 @@ export default function PreBookingPage() {
             <SectionHeading className="mb-8 text-center">
               Don&apos;t Wait Another Month.
               <br />
-              <em className="italic text-brand font-light">Book Your Free Strategy Session Today.</em>
+              <em className="italic text-brand font-light">Get in Touch With Our Team Today.</em>
             </SectionHeading>
           </StaggerItem>
           <StaggerItem>
-            <PremiumButton href={BOOKING_URL} external>
-              Let&apos;s have a conversation
+            <PremiumButton href="/contact">
+              Contact Us
             </PremiumButton>
           </StaggerItem>
         </StaggerReveal>

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { PremiumButton } from "@/components/ui/premium-button";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { BOOKING_URL } from "@/lib/constants";
 import { HERO, IMAGES } from "@/lib/content/home";
 
 const DESKTOP_MQ = "(min-width: 1024px)";
@@ -31,7 +30,7 @@ function HeroContent() {
 
       <StaggerItem>
         <div className="flex flex-col gap-4 lg:flex-row lg:flex-wrap lg:items-center lg:gap-5">
-          <PremiumButton href={BOOKING_URL} external className="w-full lg:w-auto text-center">
+          <PremiumButton href="/contact" className="w-full lg:w-auto text-center">
             {HERO.ctaPrimary}
           </PremiumButton>
           <PremiumButton

@@ -8,7 +8,7 @@ export const HERO = {
   headline: "Here's the",
   headlineEm: "Problem.",
   supporting: "Leads go unanswered. Teams drown in repetitive tasks. Growth stalls because there’s no real AI strategy — just guesswork. Grateful Marketing®️ fixes this for Direct to Consumer Businesses, Business to Business Companies, Service-Based Businesses, and Non-Profits — with AI Voice Agents that capture every lead, an AI Growth Retainer that pairs strategy with execution, AI Employees  and AI Marketing Content Engines that handle the busywork — so your team can focus on what actually grows the business.",
-  ctaPrimary: "Let's have a conversation",
+  ctaPrimary: "Contact Us",
   ctaSecondary: "See How We Work",
   ctaSecondaryHref: "#about",
 } as const;
@@ -344,10 +344,10 @@ export const PLATFORM = {
 
 export const FINAL_CTA = {
   heading: "Your people are ready. Let's make sure your marketing is too.",
-  subheading: "One real conversation is where every one of these outcomes starts.",
-  buttonPrimary: "Get your AI Revenue Audit",
-  buttonSecondary: "Let's have a conversation",
+  subheading: "Send us a message to discover what's possible for your business.",
+  buttonPrimary: "Contact Us",
+  buttonSecondary: "Get in Touch",
   tagline: "Innovating · Creating · Leading",
   body: "North American digital marketing consultancy serving legal, financial, insurance, Business-to-Business, Direct-to-Customer and service-based organizations — through the human-first, Gratitude methodology.",
-  ctaPrimary: "Let's have a conversation",
+  ctaPrimary: "Contact Us",
 } as const;
