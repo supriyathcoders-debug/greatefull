@@ -1,22 +1,13 @@
 import { CtaButton } from "@/components/ui/cta-button";
-import { REVENUE_AUDIT_URL, BOOKING_URL } from "@/lib/constants";
 
 const funnelLinks = [
   {
-    title: "Get Your AI Revenue Audit",
-    href: REVENUE_AUDIT_URL,
+    title: "Contact Us",
+    href: "/contact",
   },
   {
-    title: "Get Your AI Employee Demo",
-    href: "https://app.growthhub365.com/v2/preview/QAuss4a9CGC8EExSO5WE",
-  },
-  {
-    title: "See Demo",
-    href: "https://app.growthhub365.com/v2/preview/QAuss4a9CGC8EExSO5WE",
-  },
-  {
-    title: "Let's have a conversation",
-    href: BOOKING_URL,
+    title: "Get in Touch",
+    href: "/contact",
   },
 ];
 
