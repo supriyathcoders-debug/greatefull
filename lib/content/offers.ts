@@ -128,7 +128,7 @@ const OFFERS_BY_ID: Record<OfferId, Offer> = {
     promise: "Your AI Content Engine will be live and producing your first batch of on-brand content within 21 days of kickoff.",
     limitedAvailability: "We onboard a limited number of Content Ops clients each month to protect editorial quality — 3 spots open now.",
     riskReversal: "If the first month's content doesn't match your brand voice, we'll revise it free of charge until it does.",
-    bonus: "Start this month and receive a complimentary Content Calendar Template & Prompt Library (a $350 value) to jumpstart your first 30 days.",
+    bonus: "Start this month and receive a complimentary Content Planner Template & Prompt Library (a $350 value) to jumpstart your first 30 days.",
   },
 };
 

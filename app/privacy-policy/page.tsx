@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
             <li>Our website and any subdomains we operate</li>
             <li>Our consulting, strategy, and training engagements with clients</li>
             <li>Email marketing, newsletters, and business communications</li>
-            <li>AI-powered tools and platforms we use to deliver services (including but not limited to Growth Hub 365 and our internal AI agent team)</li>
+            <li>AI-powered tools and platforms we use to deliver services (including our internal AI agent team)</li>
             <li>Business development activities, proposals, and discovery conversations</li>
           </ul>
           <p>

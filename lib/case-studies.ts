@@ -40,7 +40,7 @@ export const caseStudies: CaseStudy[] = [
     impact:
       "A digital marketing management relationship built on consistency — accessible, accurate content delivered on schedule, with governance that never lapsed.",
     capabilities:
-      "Social platform management, CMS/website management, editorial calendar & analytics ownership, accessibility-conscious marketing management.",
+      "Social platform management, CMS/website management, editorial schedule & analytics ownership, accessibility-conscious marketing management.",
   },
   {
     id: "cs-healthcare-clinic",
@@ -143,10 +143,10 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "Alongside enterprise marketing and project management work, the portfolio includes hands-on digital marketing management for consumer, animal-health, beauty, and cultural-institution clients — proof the same discipline scales down to fast-moving, platform-native campaigns.",
     approach: [
-      "Merial (Animal Health) — Managed social media channels and content calendars for a veterinary/animal-health brand and social media launch, adapting digital marketing management to pet-owner audiences.",
+      "Merial (Animal Health) — Managed social media channels and content schedules for a veterinary/animal-health brand and social media launch, adapting digital marketing management to pet-owner audiences.",
       "LaCoupe (Beauty) — Planned and published social content and managed community engagement for a beauty-sector client, keeping brand voice consistent across fast-turnaround content cycles.",
       "Body Worlds 2 — Ontario Science Centre — Managed the marketing including digital marketing, partnership marketing, PR, advertising for a major cultural-institution exhibit, adapting messaging for a broad public audience. The exhibition had half a million visitors, in less then 6 months.",
-      "CDA — Managed social channels for major special events, and content calendars, monitoring community engagement and reporting performance to stakeholders.",
+      "CDA — Managed social channels for major special events, and content schedules, monitoring community engagement and reporting performance to stakeholders.",
       "Community Spotlight: Habitat for Humanity — As a volunteer Marketing Advisor, provided informal marketing guidance sitting on the Marketing Board and also helped to build homes for the homeless — pro bono, reflecting Grateful Marketing®️’s purpose-driven roots.",
     ],
     impact: "",

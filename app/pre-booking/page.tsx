@@ -49,7 +49,7 @@ const TESTIMONIALS = [
     author: "Founder, Law Firm",
   },
   {
-    quote: "My leads no longer slip away. The system follows up automatically and my calendar stays full.",
+    quote: "My leads no longer slip away. The system follows up automatically and my schedule stays full.",
     author: "Managing Partner, Law Firm",
   },
   {
