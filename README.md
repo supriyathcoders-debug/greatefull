@@ -248,8 +248,6 @@ Vercel auto-deploys on push to `main`.
 
 ## External Integrations
 
-- **Booking widget:** GrowthHub365 (`BOOKING_URL` in `lib/constants.ts`)  
-- **Chat widget:** LeadConnector HQ (loaded in `app/layout.tsx`)  
 - **Google Search Console:** Verification meta tag in `app/layout.tsx`  
 
 ---

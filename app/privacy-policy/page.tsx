@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
             <li>Our website and any subdomains we operate</li>
             <li>Our consulting, strategy, and training engagements with clients</li>
             <li>Email marketing, newsletters, and business communications</li>
-            <li>AI-powered tools and platforms we use to deliver services (including but not limited to Growth Hub 365 and our internal AI agent team)</li>
+            <li>AI-powered tools and platforms we use to deliver services (including our internal AI agent team)</li>
             <li>Business development activities, proposals, and discovery conversations</li>
           </ul>
           <p>
@@ -35,14 +35,13 @@ export default function PrivacyPolicyPage() {
             Grateful Marketing®️is the data controller (GDPR) and organization accountable (PIPEDA) for the personal information described in this policy.
           </p>
           <p className="bg-brand-soft p-6 border border-border mt-4 mb-4">
-            Grateful Marketing®️Inc. Business Address: 601 - 5 Hamilton St N, Waterdown, On, L8B 2A8. Incorporated in Ontario and Canada.
+            Grateful Marketing®️Inc. Incorporated in Ontario and Canada.
           </p>
           <p><strong>Contact for privacy matters:</strong></p>
           <div className="bg-brand-soft p-6 border border-border mt-4 mb-4 space-y-2">
             <p className="m-0">Andrea Gureckas</p>
             <p className="m-0">Clientservices@grateful-marketing.com</p>
             <p className="m-0">226-332-9712</p>
-            <p className="m-0">601 - 5 Hamilton St N, Waterdown, On, L8B 2A8, Canada.</p>
           </div>
           <p>
             For residents of the European Union or United Kingdom, we can be reached at the contact details above. If you require a local representative under Article 27 GDPR, please contact us to request current representative details.
@@ -335,7 +334,6 @@ export default function PrivacyPolicyPage() {
             <p className="font-semibold text-foreground m-0">Grateful Marketing®️— Privacy Officer</p>
             <p className="m-0">Andrea Gureckas</p>
             <p className="m-0">Clientservices@grateful-marketing.com</p>
-            <p className="m-0">601 - 5 Hamilton St N, Waterdown, On, L8B 2A8</p>
             <p className="m-0">226-332-9712</p>
           </div>
           

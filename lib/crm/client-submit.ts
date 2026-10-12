@@ -1,5 +1,5 @@
 /**
- * Client-side GrowthHub365 / LeadConnector lead submission.
+ * Client-side CRM lead submission.
  * This function runs in the browser and sends data directly to the CRM.
  */
 
@@ -29,7 +29,7 @@ function splitFullName(full: string): { firstName: string; lastName: string } {
  * Uses NEXT_PUBLIC_ environment variables for configuration.
  */
 export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise<{ ok: true } | { ok: false; error: string; detail?: string }> {
-  const webhookUrl = process.env.NEXT_PUBLIC_GROWTHHUB365_WEBHOOK_URL?.trim();
+  const webhookUrl = (process.env.NEXT_PUBLIC_CRM_WEBHOOK_URL || process.env.NEXT_PUBLIC_GROWTHHUB365_WEBHOOK_URL)?.trim();
 
   if (webhookUrl) {
     try {
@@ -50,11 +50,11 @@ export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise
   }
 
   // Fallback to direct API if no webhook but credentials exist
-  const token = process.env.NEXT_PUBLIC_GROWTHHUB365_ACCESS_TOKEN?.trim();
-  const locationId = process.env.NEXT_PUBLIC_GROWTHHUB365_LOCATION_ID?.trim();
+  const token = (process.env.NEXT_PUBLIC_CRM_ACCESS_TOKEN || process.env.NEXT_PUBLIC_GROWTHHUB365_ACCESS_TOKEN)?.trim();
+  const locationId = (process.env.NEXT_PUBLIC_CRM_LOCATION_ID || process.env.NEXT_PUBLIC_GROWTHHUB365_LOCATION_ID)?.trim();
 
   if (!token || !locationId) {
-    return { ok: false, error: "CRM Configuration Missing", detail: "Please set NEXT_PUBLIC_GROWTHHUB365_WEBHOOK_URL or API credentials in your environment." };
+    return { ok: false, error: "CRM Configuration Missing", detail: "Please configure CRM webhook or API credentials in your environment." };
   }
 
   const base = (process.env.NEXT_PUBLIC_GROWTHHUB365_API_BASE?.trim() || "https://services.leadconnectorhq.com").replace(/\/$/, "");
