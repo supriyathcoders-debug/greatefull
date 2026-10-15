@@ -29,6 +29,21 @@ function splitFullName(full: string): { firstName: string; lastName: string } {
  * Uses NEXT_PUBLIC_ environment variables for configuration.
  */
 export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise<{ ok: true } | { ok: false; error: string; detail?: string }> {
+  // Temporary: GrowthHub saving disabled as requested.
+  // Form submission succeeds and displays the confirmation message without saving data to GrowthHub.
+  console.log("Form submitted (GrowthHub saving disabled):", payload);
+
+  // Small delay to simulate submission for smooth UI feedback
+  await new Promise((resolve) => setTimeout(resolve, 400));
+
+  return { ok: true };
+
+  /*
+  // =========================================================================
+  // GROWTH HUB / CRM SUBMISSION LOGIC (TEMPORARILY COMMENTED OUT)
+  // Uncomment below to re-enable saving leads into GrowthHub.
+  // =========================================================================
+
   const webhookUrl = (process.env.NEXT_PUBLIC_CRM_WEBHOOK_URL || process.env.NEXT_PUBLIC_GROWTHHUB365_WEBHOOK_URL)?.trim();
 
   if (webhookUrl) {
@@ -148,4 +163,5 @@ export async function submitLeadDirectly(payload: CanonicalLeadPayload): Promise
   } catch (err: any) {
     return { ok: false, error: "Network error", detail: err.message };
   }
+  */
 }
